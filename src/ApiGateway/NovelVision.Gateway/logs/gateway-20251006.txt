@@ -1,0 +1,36 @@
+2025-10-06 11:18:21.826 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-06 11:18:23.935 +02:00 [INF] API Gateway started successfully
+2025-10-06 11:18:23.941 +02:00 [INF] Environment: Development
+2025-10-06 11:18:23.942 +02:00 [INF] Base URL: https://localhost:7000
+2025-10-06 11:18:23.943 +02:00 [INF] Swagger UI: https://localhost:7000/swagger
+2025-10-06 11:18:23.944 +02:00 [INF] Health Check: https://localhost:7000/health
+2025-10-06 11:18:27.840 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 208.6978 ms
+2025-10-06 11:18:27.867 +02:00 [INF] HTTP GET /swagger/index.js responded 200 in 12.1845 ms
+2025-10-06 11:18:28.055 +02:00 [INF] HTTP GET /swagger/gateway/swagger.json responded 200 in 17.0070 ms
+2025-10-06 11:19:28.914 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-06 11:19:30.991 +02:00 [INF] API Gateway started successfully
+2025-10-06 11:19:30.999 +02:00 [INF] Environment: Development
+2025-10-06 11:19:31.000 +02:00 [INF] Base URL: https://localhost:7000
+2025-10-06 11:19:31.001 +02:00 [INF] Swagger UI: https://localhost:7000/swagger
+2025-10-06 11:19:31.002 +02:00 [INF] Health Check: https://localhost:7000/health
+2025-10-06 11:19:33.088 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 263.5530 ms
+2025-10-06 11:19:33.101 +02:00 [INF] HTTP GET /swagger/index.js responded 200 in 4.1914 ms
+2025-10-06 11:19:33.239 +02:00 [INF] HTTP GET /swagger/gateway/swagger.json responded 200 in 33.4394 ms
+2025-10-06 11:25:21.589 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-06 11:25:23.169 +02:00 [INF] API Gateway started successfully
+2025-10-06 11:25:23.175 +02:00 [INF] Environment: Development
+2025-10-06 11:25:23.177 +02:00 [INF] Base URL: https://localhost:7000
+2025-10-06 11:25:23.178 +02:00 [INF] Swagger UI: https://localhost:7000/swagger
+2025-10-06 11:25:23.179 +02:00 [INF] Health Check: https://localhost:7000/health
+2025-10-06 11:25:25.913 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 229.2406 ms
+2025-10-06 11:25:25.923 +02:00 [INF] HTTP GET /swagger/index.js responded 200 in 8.7348 ms
+2025-10-06 11:25:26.070 +02:00 [INF] HTTP GET /swagger/gateway/swagger.json responded 200 in 31.7135 ms
+2025-10-06 11:29:45.334 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-06 11:29:46.601 +02:00 [INF] API Gateway started successfully
+2025-10-06 11:29:46.607 +02:00 [INF] Environment: Development
+2025-10-06 11:29:46.608 +02:00 [INF] Base URL: https://localhost:7000
+2025-10-06 11:29:46.609 +02:00 [INF] Swagger UI: https://localhost:7000/swagger
+2025-10-06 11:29:46.609 +02:00 [INF] Health Check: https://localhost:7000/health
+2025-10-06 11:29:48.740 +02:00 [INF] HTTP GET /swagger/index.html responded 200 in 186.4723 ms
+2025-10-06 11:29:48.750 +02:00 [INF] HTTP GET /swagger/index.js responded 200 in 3.4050 ms
+2025-10-06 11:29:48.887 +02:00 [INF] HTTP GET /swagger/gateway/swagger.json responded 200 in 33.8874 ms

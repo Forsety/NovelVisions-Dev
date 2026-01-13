@@ -1,0 +1,76 @@
+2025-10-06 11:19:28.915 +02:00 [INF] Starting NovelVision Catalog API
+2025-10-06 11:19:31.470 +02:00 [INF] Initializing UI Database
+2025-10-06 11:19:32.175 +02:00 [INF] Saving healthchecks configuration to database
+2025-10-06 11:19:33.477 +02:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2025-10-06 11:19:47.866 +02:00 [ERR] HTTP GET /health responded 500 in 14377.0274 ms
+System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at NovelVision.Services.Catalog.Infrastructure.DependencyInjection.<>c__DisplayClass0_0.<AddInfrastructure>b__4(JwtBearerOptions options) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Infrastructure\DependencyInjection.cs:line 123
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c.<Get>b__10_0(String name, IOptionsFactory`1 factory)
+   at Microsoft.Extensions.Options.OptionsCache`1.<>c__DisplayClass3_1`1.<GetOrAdd>b__2()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2025-10-06 11:19:48.051 +02:00 [ERR] An unhandled exception occurred
+System.ArgumentException: IDX10703: Cannot create a 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey', key length is zero.
+   at Microsoft.IdentityModel.Tokens.SymmetricSecurityKey..ctor(Byte[] key)
+   at NovelVision.Services.Catalog.Infrastructure.DependencyInjection.<>c__DisplayClass0_0.<AddInfrastructure>b__4(JwtBearerOptions options) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Infrastructure\DependencyInjection.cs:line 123
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c.<Get>b__10_0(String name, IOptionsFactory`1 factory)
+   at Microsoft.Extensions.Options.OptionsCache`1.<>c__DisplayClass3_1`1.<GetOrAdd>b__2()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at NovelVision.Services.Catalog.API.Middleware.RequestLoggingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Middleware\RequestLoggingMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.ResponseCaching.ResponseCachingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at NovelVision.Services.Catalog.API.Middleware.CorrelationIdMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Middleware\CorrelationIdMiddleware.cs:line 18
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at NovelVision.Services.Catalog.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Middleware\ExceptionHandlingMiddleware .cs:line 26
+2025-10-06 11:25:21.584 +02:00 [INF] Starting NovelVision Catalog API
+2025-10-06 11:25:23.515 +02:00 [INF] Initializing UI Database
+2025-10-06 11:25:24.131 +02:00 [INF] Saving healthchecks configuration to database
+2025-10-06 11:25:25.784 +02:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2025-10-06 11:29:45.325 +02:00 [INF] Starting NovelVision Catalog API
+2025-10-06 11:29:46.826 +02:00 [INF] Initializing UI Database
+2025-10-06 11:29:47.389 +02:00 [INF] Saving healthchecks configuration to database
+2025-10-06 11:29:48.578 +02:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2025-10-06 11:29:48.722 +02:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-10-06 11:29:49.170 +02:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-10-06 11:29:49.179 +02:00 [WRN] The property 'Author.BookIds' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-10-06 11:29:49.185 +02:00 [WRN] The property 'Author.SocialLinks' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-10-06 11:29:49.190 +02:00 [WRN] The property 'Book.Genres' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-10-06 11:29:49.192 +02:00 [WRN] The property 'Book.Tags' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-10-06 11:29:49.195 +02:00 [WRN] The property 'Page._visualizationPrompts' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2025-10-06 11:29:49.647 +02:00 [INF] HTTP GET /health responded 200 in 1057.2723 ms
+2025-10-06 11:29:49.652 +02:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 1090, Body: {"status":"Healthy","totalDuration":"00:00:00.9187249","entries":{"catalog-db":{"data":{},"duration":"00:00:00.8268951","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0014221","status":"Healthy","tags":["self"]}}}
+2025-10-06 11:29:49.654 +02:00 [WRN] Slow request detected: GET /health took 1090ms
+2025-10-06 11:30:19.885 +02:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2025-10-06 11:30:20.089 +02:00 [INF] HTTP GET /health responded 200 in 199.5704 ms
+2025-10-06 11:30:20.091 +02:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 205, Body: {"status":"Healthy","totalDuration":"00:00:00.1979987","entries":{"catalog-db":{"data":{},"duration":"00:00:00.1315480","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000350","status":"Healthy","tags":["self"]}}}
+2025-10-06 11:30:50.144 +02:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2025-10-06 11:30:50.201 +02:00 [INF] HTTP GET /health responded 200 in 53.2804 ms
+2025-10-06 11:30:50.203 +02:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 58, Body: {"status":"Healthy","totalDuration":"00:00:00.0515672","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0481792","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000031","status":"Healthy","tags":["self"]}}}

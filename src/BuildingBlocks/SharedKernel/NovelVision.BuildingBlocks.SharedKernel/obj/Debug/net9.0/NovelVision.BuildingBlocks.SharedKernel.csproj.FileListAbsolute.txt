@@ -1,0 +1,13 @@
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\bin\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.deps.json
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\bin\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.dll
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\bin\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.pdb
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.csproj.AssemblyReference.cache
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.AssemblyInfoInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.AssemblyInfo.cs
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.csproj.CoreCompileInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.sourcelink.json
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.dll
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\refint\NovelVision.BuildingBlocks.SharedKernel.dll
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.pdb
+C:\Users\DATART\Desktop\NovelVision\src\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\obj\Debug\net9.0\ref\NovelVision.BuildingBlocks.SharedKernel.dll

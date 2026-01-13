@@ -1,0 +1,6 @@
+@NovelVision.Services.Music.API_HostAddress = http://localhost:5051
+
+GET {{NovelVision.Services.Music.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

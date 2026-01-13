@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog" Version="4.3.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\SharedKernel\NovelVision.BuildingBlocks.SharedKernel\NovelVision.BuildingBlocks.SharedKernel.csproj" />
+    <ProjectReference Include="..\NovelVision.Services.Catalog.Application\NovelVision.Services.Catalog.Application.csproj" />
+    <ProjectReference Include="..\NovelVision.Services.Catalog.Domain\NovelVision.Services.Catalog.Domain.csproj" />
+    <ProjectReference Include="..\NovelVision.Services.Catalog.Infrastructure\NovelVision.Services.Catalog.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

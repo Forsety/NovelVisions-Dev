@@ -1,0 +1,12 @@
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\bin\Debug\net9.0\NovelVision.Services.Visualization.Application.deps.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\bin\Debug\net9.0\NovelVision.Services.Visualization.Application.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\bin\Debug\net9.0\NovelVision.Services.Visualization.Application.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVision.Services.Visualization.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVision.Services.Visualization.Application.AssemblyInfoInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVision.Services.Visualization.Application.AssemblyInfo.cs
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVision.Services.Visualization.Application.csproj.CoreCompileInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVision.Services.Visualization.Application.sourcelink.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVision.Services.Visualization.Application.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\refint\NovelVision.Services.Visualization.Application.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVision.Services.Visualization.Application.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\ref\NovelVision.Services.Visualization.Application.dll

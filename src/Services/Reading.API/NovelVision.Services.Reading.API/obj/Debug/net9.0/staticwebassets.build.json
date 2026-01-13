@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "d+AFthKX6NddXbH3v1T/Mkc/pIoWvKHRe6/MqHgtGf8=",
+  "Source": "NovelVision.Services.Reading.API",
+  "BasePath": "_content/NovelVision.Services.Reading.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

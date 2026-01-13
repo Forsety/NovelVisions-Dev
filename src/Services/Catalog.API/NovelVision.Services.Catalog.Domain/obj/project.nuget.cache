@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "kEIv7Bq1RAE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Catalog.API\\NovelVision.Services.Catalog.Domain\\NovelVision.Services.Catalog.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DATART\\.nuget\\packages\\ardalis.guardclauses\\4.3.0\\ardalis.guardclauses.4.3.0.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\ardalis.smartenum\\7.0.0\\ardalis.smartenum.7.0.0.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\ardalis.specification\\7.0.0\\ardalis.specification.7.0.0.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}

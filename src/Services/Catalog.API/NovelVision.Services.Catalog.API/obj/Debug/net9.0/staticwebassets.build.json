@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "7dacgr97F2wwxAY6iCkQeAOa00S9baITyeyqGZ77fpw=",
+  "Source": "NovelVision.Services.Catalog.API",
+  "BasePath": "_content/NovelVision.Services.Catalog.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

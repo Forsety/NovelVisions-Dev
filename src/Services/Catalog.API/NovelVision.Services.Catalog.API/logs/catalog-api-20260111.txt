@@ -1,0 +1,5 @@
+2026-01-11 00:00:26.803 +01:00 [INF] Starting NovelVision Catalog API
+2026-01-11 00:00:28.954 +01:00 [INF] Initializing UI Database
+2026-01-11 00:00:29.676 +01:00 [INF] Saving healthchecks configuration to database
+2026-01-11 00:00:30.879 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-11 00:00:31.098 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.

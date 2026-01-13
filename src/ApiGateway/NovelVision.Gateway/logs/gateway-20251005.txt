@@ -1,0 +1,58 @@
+2025-10-05 12:32:23.568 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 12:32:23.905 +02:00 [FTL] Gateway terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator Lifetime: Transient ImplementationType: Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator': No constructor for type 'Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator' can be instantiated using services from the service container and default values.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator Lifetime: Transient ImplementationType: Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator': No constructor for type 'Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator' can be instantiated using services from the service container and default values.
+ ---> System.InvalidOperationException: No constructor for type 'Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator' can be instantiated using services from the service container and default values.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 45
+2025-10-05 12:39:36.676 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 12:46:18.471 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 12:48:36.439 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 12:49:06.669 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 12:51:55.666 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 12:52:34.664 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 13:07:32.328 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 13:43:09.957 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 13:43:10.837 +02:00 [FTL] Gateway terminated unexpectedly
+System.InvalidOperationException: JWT Secret is not configured
+   at Program.<<Main>$>g__ConfigureAuthentication|0_1(IServiceCollection services, IConfiguration configuration) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 201
+   at Program.<<Main>$>g__ConfigureServices|0_0(IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 88
+   at Program.<Main>$(String[] args) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 48
+2025-10-05 13:48:37.821 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 13:48:39.663 +02:00 [FTL] Gateway terminated unexpectedly
+System.Exception: Unable to start Ocelot, errors are: Unable to start Ocelot, errors are: Unable to start Ocelot because either a Route or GlobalConfiguration are using ServiceDiscoveryOptions but no ServiceDiscoveryFinderDelegate has been registered in dependency injection container. Are you missing a package like Ocelot.Provider.Consul and services.AddConsul() or Ocelot.Provider.Eureka and services.AddEureka()?
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.ThrowToStopOcelotStarting(Response config)
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.CreateConfiguration(IApplicationBuilder builder)
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.UseOcelot(IApplicationBuilder builder, OcelotPipelineConfiguration pipelineConfiguration)
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.UseOcelot(IApplicationBuilder builder)
+   at Program.<<Main>$>g__ConfigureAsync|0_3(WebApplication app, IWebHostEnvironment env, IConfiguration configuration) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 353
+   at Program.<Main>$(String[] args) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 55
+2025-10-05 13:54:33.967 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 13:54:35.279 +02:00 [FTL] Gateway terminated unexpectedly
+System.Exception: Unable to start Ocelot, errors are: Unable to start Ocelot, errors are: Unable to start Ocelot because either a Route or GlobalConfiguration are using ServiceDiscoveryOptions but no ServiceDiscoveryFinderDelegate has been registered in dependency injection container. Are you missing a package like Ocelot.Provider.Consul and services.AddConsul() or Ocelot.Provider.Eureka and services.AddEureka()?
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.ThrowToStopOcelotStarting(Response config)
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.CreateConfiguration(IApplicationBuilder builder)
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.UseOcelot(IApplicationBuilder builder, OcelotPipelineConfiguration pipelineConfiguration)
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.UseOcelot(IApplicationBuilder builder)
+   at Program.<<Main>$>g__ConfigureAsync|0_3(WebApplication app, IWebHostEnvironment env, IConfiguration configuration) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 353
+   at Program.<Main>$(String[] args) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 55
+2025-10-05 13:56:03.465 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-05 13:56:04.895 +02:00 [FTL] Gateway terminated unexpectedly
+System.Exception: Unable to start Ocelot, errors are: Unable to start Ocelot, errors are: Unable to start Ocelot because either a Route or GlobalConfiguration are using ServiceDiscoveryOptions but no ServiceDiscoveryFinderDelegate has been registered in dependency injection container. Are you missing a package like Ocelot.Provider.Consul and services.AddConsul() or Ocelot.Provider.Eureka and services.AddEureka()?
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.ThrowToStopOcelotStarting(Response config)
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.CreateConfiguration(IApplicationBuilder builder)
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.UseOcelot(IApplicationBuilder builder, OcelotPipelineConfiguration pipelineConfiguration)
+   at Ocelot.Middleware.OcelotMiddlewareExtensions.UseOcelot(IApplicationBuilder builder)
+   at Program.<<Main>$>g__ConfigureAsync|0_3(WebApplication app, IWebHostEnvironment env, IConfiguration configuration) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 353
+   at Program.<Main>$(String[] args) in C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\Program.cs:line 55

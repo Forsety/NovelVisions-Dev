@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "NovelVision.Services.Visualization.Domain/1.0.0": {
+        "runtime": {
+          "NovelVision.Services.Visualization.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NovelVision.Services.Visualization.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

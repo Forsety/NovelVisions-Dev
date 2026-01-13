@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\NovelVision.Services.Visualization.API.props" />
+</Project>

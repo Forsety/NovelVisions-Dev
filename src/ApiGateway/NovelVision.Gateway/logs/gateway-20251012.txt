@@ -1,0 +1,6 @@
+2025-10-12 17:16:22.481 +02:00 [INF] Starting NovelVision API Gateway
+2025-10-12 17:16:23.320 +02:00 [INF] API Gateway started successfully
+2025-10-12 17:16:23.328 +02:00 [INF] Environment: Development
+2025-10-12 17:16:23.329 +02:00 [INF] Base URL: https://localhost:7000
+2025-10-12 17:16:23.332 +02:00 [INF] Swagger UI: https://localhost:7000/swagger
+2025-10-12 17:16:23.334 +02:00 [INF] Health Check: https://localhost:7000/health

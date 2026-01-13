@@ -1,0 +1,12 @@
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\bin\Debug\net9.0\NovelVision.Services.Reading.Domain.deps.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\bin\Debug\net9.0\NovelVision.Services.Reading.Domain.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\bin\Debug\net9.0\NovelVision.Services.Reading.Domain.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\obj\Debug\net9.0\NovelVision.Services.Reading.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\obj\Debug\net9.0\NovelVision.Services.Reading.Domain.AssemblyInfoInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\obj\Debug\net9.0\NovelVision.Services.Reading.Domain.AssemblyInfo.cs
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\obj\Debug\net9.0\NovelVision.Services.Reading.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\obj\Debug\net9.0\NovelVision.Services.Reading.Domain.sourcelink.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\obj\Debug\net9.0\NovelVision.Services.Reading.Domain.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\obj\Debug\net9.0\refint\NovelVision.Services.Reading.Domain.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\obj\Debug\net9.0\NovelVision.Services.Reading.Domain.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Domain\obj\Debug\net9.0\ref\NovelVision.Services.Reading.Domain.dll

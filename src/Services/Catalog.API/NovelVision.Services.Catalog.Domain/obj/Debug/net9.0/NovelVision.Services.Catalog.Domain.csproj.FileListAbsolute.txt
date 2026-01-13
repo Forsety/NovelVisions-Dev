@@ -1,0 +1,16 @@
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\bin\Debug\net9.0\NovelVision.Services.Catalog.Domain.deps.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\bin\Debug\net9.0\NovelVision.Services.Catalog.Domain.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\bin\Debug\net9.0\NovelVision.Services.Catalog.Domain.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\bin\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\bin\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\NovelVision.Services.Catalog.Domain.csproj.AssemblyReference.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\NovelVision.Services.Catalog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\NovelVision.Services.Catalog.Domain.AssemblyInfoInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\NovelVision.Services.Catalog.Domain.AssemblyInfo.cs
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\NovelVision.Services.Catalog.Domain.csproj.CoreCompileInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\NovelVision.Services.Catalog.Domain.sourcelink.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\NovelVis.B0B1668A.Up2Date
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\NovelVision.Services.Catalog.Domain.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\refint\NovelVision.Services.Catalog.Domain.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\NovelVision.Services.Catalog.Domain.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Domain\obj\Debug\net9.0\ref\NovelVision.Services.Catalog.Domain.dll

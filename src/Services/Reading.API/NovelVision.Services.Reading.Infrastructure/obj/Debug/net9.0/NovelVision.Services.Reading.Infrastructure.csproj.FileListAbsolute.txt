@@ -1,0 +1,12 @@
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\bin\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.deps.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\bin\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\bin\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\obj\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\obj\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\obj\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.AssemblyInfo.cs
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\obj\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\obj\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.sourcelink.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\obj\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\obj\Debug\net9.0\refint\NovelVision.Services.Reading.Infrastructure.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\obj\Debug\net9.0\NovelVision.Services.Reading.Infrastructure.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Reading.API\NovelVision.Services.Reading.Infrastructure\obj\Debug\net9.0\ref\NovelVision.Services.Reading.Infrastructure.dll

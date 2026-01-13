@@ -1,0 +1,12 @@
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\bin\Debug\net9.0\NovelVision.Services.Music.Application.deps.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\bin\Debug\net9.0\NovelVision.Services.Music.Application.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\bin\Debug\net9.0\NovelVision.Services.Music.Application.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\obj\Debug\net9.0\NovelVision.Services.Music.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\obj\Debug\net9.0\NovelVision.Services.Music.Application.AssemblyInfoInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\obj\Debug\net9.0\NovelVision.Services.Music.Application.AssemblyInfo.cs
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\obj\Debug\net9.0\NovelVision.Services.Music.Application.csproj.CoreCompileInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\obj\Debug\net9.0\NovelVision.Services.Music.Application.sourcelink.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\obj\Debug\net9.0\NovelVision.Services.Music.Application.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\obj\Debug\net9.0\refint\NovelVision.Services.Music.Application.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\obj\Debug\net9.0\NovelVision.Services.Music.Application.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Music.API\NovelVision.Services.Music.Application\obj\Debug\net9.0\ref\NovelVision.Services.Music.Application.dll
