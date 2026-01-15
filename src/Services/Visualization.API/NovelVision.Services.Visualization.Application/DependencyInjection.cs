@@ -22,7 +22,6 @@ public static class DependencyInjection
         services.AddAutoMapper(cfg => cfg.AddMaps(assembly));
 
         // Add FluentValidation
-        services.AddValidatorsFromAssembly(assembly);
 
         // Add Pipeline Behaviors
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));

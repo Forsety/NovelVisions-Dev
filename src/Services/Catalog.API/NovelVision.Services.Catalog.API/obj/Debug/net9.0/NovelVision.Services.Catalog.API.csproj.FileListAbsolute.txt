@@ -255,7 +255,6 @@ C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Service
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.AssemblyInfoInputs.cache
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.AssemblyInfo.cs
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.csproj.CoreCompileInputs.cache
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.sourcelink.json
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\scopedcss\bundle\NovelVision.Services.Catalog.API.styles.css
@@ -274,3 +273,5 @@ C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Service
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.pdb
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.genruntimeconfig.cache
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\ref\NovelVision.Services.Catalog.API.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.MvcApplicationPartsAssemblyInfo.cs

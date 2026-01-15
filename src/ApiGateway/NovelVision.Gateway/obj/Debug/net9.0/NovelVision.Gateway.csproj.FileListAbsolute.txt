@@ -105,3 +105,4 @@ C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\bin\Debug
 C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\bin\Debug\net9.0\HealthChecks.Uris.dll
+C:\Users\DATART\Desktop\NovelVision\src\ApiGateway\NovelVision.Gateway\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

@@ -1,5 +1,6 @@
 ﻿// src/Services/Catalog.API/NovelVision.Services.Catalog.Domain/Events/BookImportedEvent.cs
 using NovelVision.BuildingBlocks.SharedKernel.Primitives;
+using NovelVision.Services.Catalog.Domain.Enums;
 using NovelVision.Services.Catalog.Domain.StronglyTypedIds;
 using NovelVision.Services.Catalog.Domain.ValueObjects;
 

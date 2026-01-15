@@ -13,10 +13,11 @@ public class SubjectConfiguration : IEntityTypeConfiguration<Subject>
     {
         builder.ToTable("Subjects", "Catalog");
 
-        // Primary Key
+        // ═══════════════════════════════════════════════════════════════
+        // PRIMARY KEY
+        // ═══════════════════════════════════════════════════════════════
         builder.HasKey(s => s.Id);
 
-        // StronglyTypedId conversion
         builder.Property(s => s.Id)
             .HasConversion(
                 v => v.Value,
@@ -24,38 +25,57 @@ public class SubjectConfiguration : IEntityTypeConfiguration<Subject>
             .ValueGeneratedNever()
             .HasColumnName("SubjectId");
 
-        // Properties
+        // ═══════════════════════════════════════════════════════════════
+        // PROPERTIES - все маппятся в БД
+        // ═══════════════════════════════════════════════════════════════
+
+        // Name - публичное свойство с private setter
         builder.Property(s => s.Name)
             .HasMaxLength(200)
             .IsRequired()
             .HasColumnName("Name");
 
+        // Type - SmartEnum с явным конвертером
         builder.Property(s => s.Type)
-            .HasConversion<int>()
+            .HasConversion(
+                type => type.Value,
+                value => SubjectType.FromValue(value))
             .IsRequired()
             .HasColumnName("SubjectType");
 
+        // Description - nullable string
         builder.Property(s => s.Description)
             .HasMaxLength(1000)
             .HasColumnName("Description");
 
+        // Slug - теперь хранится в БД (не computed)
         builder.Property(s => s.Slug)
             .HasMaxLength(200)
             .IsRequired()
             .HasColumnName("Slug");
 
+        // ExternalMapping - для связи с внешними источниками
         builder.Property(s => s.ExternalMapping)
             .HasMaxLength(500)
             .HasColumnName("ExternalMapping");
 
-        // ParentId - self-referencing relationship
+        // BookCount - denormalized counter для производительности
+        builder.Property(s => s.BookCount)
+            .HasColumnName("BookCount")
+            .HasDefaultValue(0);
+
+        // ═══════════════════════════════════════════════════════════════
+        // PARENT ID - self-referencing relationship
+        // ═══════════════════════════════════════════════════════════════
         builder.Property(s => s.ParentId)
             .HasConversion(
                 v => v != null ? v.Value : (Guid?)null,
                 v => v.HasValue ? SubjectId.From(v.Value) : null)
             .HasColumnName("ParentSubjectId");
 
-        // Timestamps
+        // ═══════════════════════════════════════════════════════════════
+        // BASE ENTITY PROPERTIES
+        // ═══════════════════════════════════════════════════════════════
         builder.Property(s => s.CreatedAt)
             .IsRequired()
             .HasColumnType("datetime2")
@@ -66,14 +86,20 @@ public class SubjectConfiguration : IEntityTypeConfiguration<Subject>
             .HasColumnType("datetime2")
             .HasColumnName("UpdatedAt");
 
-        // Self-referencing relationship
+        // ═══════════════════════════════════════════════════════════════
+        // RELATIONSHIPS
+        // ═══════════════════════════════════════════════════════════════
+
+        // Self-referencing hierarchy
         builder.HasOne<Subject>()
             .WithMany()
             .HasForeignKey(s => s.ParentId)
             .OnDelete(DeleteBehavior.Restrict)
             .IsRequired(false);
 
-        // Indexes
+        // ═══════════════════════════════════════════════════════════════
+        // INDEXES
+        // ═══════════════════════════════════════════════════════════════
         builder.HasIndex(s => s.Name)
             .HasDatabaseName("IX_Subjects_Name");
 
@@ -87,7 +113,20 @@ public class SubjectConfiguration : IEntityTypeConfiguration<Subject>
         builder.HasIndex(s => s.ParentId)
             .HasDatabaseName("IX_Subjects_ParentId");
 
-        // Ignore computed properties
+        builder.HasIndex(s => s.ExternalMapping)
+            .HasDatabaseName("IX_Subjects_ExternalMapping");
+
+        // ═══════════════════════════════════════════════════════════════
+        // IGNORE - только runtime-only свойства
+        // ═══════════════════════════════════════════════════════════════
+
+        // DomainEvents - transient, не хранится в БД
         builder.Ignore(s => s.DomainEvents);
+
+        // BookIds - runtime-only HashSet, relationship через BookSubjects
+        builder.Ignore(s => s.BookIds);
+
+        // IsRoot - простое вычисление от ParentId, не нужно хранить
+        builder.Ignore(s => s.IsRoot);
     }
 }

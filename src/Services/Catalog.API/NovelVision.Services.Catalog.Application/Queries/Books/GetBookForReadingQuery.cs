@@ -153,11 +153,11 @@ public sealed class GetBookForReadingQueryHandler
                 AuthorName = authorName,
                 AuthorId = book.AuthorId.Value,
                 CoverImageUrl = book.CoverImage?.Url,
-                Language = book.Metadata.Language.DisplayName,
+                Language = book.Metadata.Language,
                 TotalPages = book.Chapters.Sum(c => c.Pages.Count),
                 TotalChapters = book.Chapters.Count,
                 WordCount = book.TotalWordCount,
-                EstimatedReadingTime = book.Metadata.EstimatedReadingTime,
+                EstimatedReadingTime = TimeSpan.FromMinutes(book.TotalWordCount / 200.0),
 
                 // Visualization settings
                 VisualizationMode = book.VisualizationMode.Name,

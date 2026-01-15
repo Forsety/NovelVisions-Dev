@@ -7,16 +7,17 @@ namespace NovelVision.Services.Visualization.Domain.Events;
 /// Domain event raised when a new visualization job is created
 /// </summary>
 public sealed record VisualizationJobCreatedEvent(
-    VisualizationJobId JobId,
-    BookId BookId,
-    UserId UserId) : DomainEvent;
+    Guid VisualizationJobId,
+    Guid BookId,
+    Guid UserId
+) : DomainEvent;
 
 /// <summary>
 /// Domain event raised when a visualization job is successfully completed
 /// </summary>
 public sealed record VisualizationJobCompletedEvent(
     VisualizationJobId JobId,
-    BookId BookId,
+    Guid BookId,
     string ImageUrl) : DomainEvent;
 
 /// <summary>
@@ -24,5 +25,5 @@ public sealed record VisualizationJobCompletedEvent(
 /// </summary>
 public sealed record VisualizationJobFailedEvent(
     VisualizationJobId JobId,
-    BookId BookId,
+   Guid BookId,
     string Error) : DomainEvent;

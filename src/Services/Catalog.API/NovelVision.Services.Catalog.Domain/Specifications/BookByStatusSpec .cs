@@ -55,7 +55,7 @@ public sealed class BooksByLanguageSpec : Specification<Book>
     public BooksByLanguageSpec(Language language)
     {
         Query
-            .Where(book => book.Metadata.Language == language)
+            .Where(book => book.Metadata.Language == language.ToString())
             .Where(book => book.Status == BookStatus.Published);
     }
 }
@@ -98,7 +98,7 @@ public sealed class BookSearchSpec : Specification<Book>
 
         if (language != null)
         {
-            Query.Where(book => book.Metadata.Language == language);
+            Query.Where(book => book.Metadata.Language == language.ToString());
         }
 
         if (!string.IsNullOrWhiteSpace(genre))

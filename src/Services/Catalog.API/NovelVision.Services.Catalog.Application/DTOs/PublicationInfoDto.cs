@@ -9,9 +9,9 @@ namespace NovelVision.Services.Catalog.Domain.ValueObjects;
 /// <summary>
 /// Информация о публикации книги
 /// </summary>
-public sealed class PublicationInfo : ValueObject
+public sealed class PublicationInfoDto : ValueObject
 {
-    private PublicationInfo(
+    private PublicationInfoDto(
         string? publisher,
         DateTime? publicationDate,
         string? edition)
@@ -53,12 +53,12 @@ public sealed class PublicationInfo : ValueObject
     /// <summary>
     /// Пустая информация о публикации
     /// </summary>
-    public static PublicationInfo Empty => new(null, null, null);
+    public static PublicationInfoDto Empty => new(null, null, null);
 
     /// <summary>
     /// Создаёт информацию о публикации
     /// </summary>
-    public static PublicationInfo Create(
+    public static PublicationInfoDto Create(
         string? publisher = null,
         DateTime? publicationDate = null,
         string? edition = null)
@@ -68,13 +68,13 @@ public sealed class PublicationInfo : ValueObject
             throw new ArgumentException("Publication date cannot be in the future");
         }
 
-        return new PublicationInfo(publisher?.Trim(), publicationDate, edition?.Trim());
+        return new PublicationInfoDto(publisher?.Trim(), publicationDate, edition?.Trim());
     }
 
     /// <summary>
     /// Создаёт информацию о публикации с годом
     /// </summary>
-    public static PublicationInfo CreateWithYear(
+    public static PublicationInfoDto CreateWithYear(
         string? publisher,
         int year,
         string? edition = null)
@@ -85,7 +85,7 @@ public sealed class PublicationInfo : ValueObject
         }
 
         var publicationDate = new DateTime(year, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-        return new PublicationInfo(publisher?.Trim(), publicationDate, edition?.Trim());
+        return new PublicationInfoDto(publisher?.Trim(), publicationDate, edition?.Trim());
     }
 
     #endregion
@@ -95,25 +95,25 @@ public sealed class PublicationInfo : ValueObject
     /// <summary>
     /// Возвращает копию с изменённым издателем
     /// </summary>
-    public PublicationInfo WithPublisher(string? publisher)
+    public PublicationInfoDto WithPublisher(string? publisher)
     {
-        return new PublicationInfo(publisher?.Trim(), PublicationDate, Edition);
+        return new PublicationInfoDto(publisher?.Trim(), PublicationDate, Edition);
     }
 
     /// <summary>
     /// Возвращает копию с изменённой датой публикации
     /// </summary>
-    public PublicationInfo WithPublicationDate(DateTime? publicationDate)
+    public PublicationInfoDto WithPublicationDate(DateTime? publicationDate)
     {
-        return new PublicationInfo(Publisher, publicationDate, Edition);
+        return new PublicationInfoDto(Publisher, publicationDate, Edition);
     }
 
     /// <summary>
     /// Возвращает копию с изменённым изданием
     /// </summary>
-    public PublicationInfo WithEdition(string? edition)
+    public PublicationInfoDto WithEdition(string? edition)
     {
-        return new PublicationInfo(Publisher, PublicationDate, edition?.Trim());
+        return new PublicationInfoDto(Publisher, PublicationDate, edition?.Trim());
     }
 
     #endregion

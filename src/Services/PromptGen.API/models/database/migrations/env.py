@@ -1,3 +1,10 @@
+# models/database/migrations/env.py
+"""
+Alembic migrations environment.
+
+РЕФАКТОРИНГ: Удалены импорты User и Story.
+"""
+
 import asyncio
 from logging.config import fileConfig
 from sqlalchemy import pool
@@ -8,14 +15,19 @@ from alembic import context
 from app.config import settings
 from models.database.base import Base
 
+# ===========================================
 # Import all models to ensure they're registered
-from models.domain.user import User
-from models.domain.prompt import Prompt
+# ===========================================
+
+# Consistency models (book_id based)
 from models.domain.character import Character
 from models.domain.scene import Scene
-from models.domain.object import Object
-from models.domain.story import Story
-from models.domain.style import Style
+from models.domain.story_object import StoryObject
+from models.domain.prompt_history import PromptHistory
+
+# NOTE: User and Story models are REMOVED
+# - User: Identity is now handled by Catalog.API
+# - Story: Book data comes from Catalog.API via HTTP
 
 # Alembic Config object
 config = context.config
@@ -32,7 +44,16 @@ config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
 
 
 def run_migrations_offline() -> None:
-    """Run migrations in 'offline' mode."""
+    """Run migrations in 'offline' mode.
+    
+    This configures the context with just a URL
+    and not an Engine, though an Engine is acceptable
+    here as well. By skipping the Engine creation
+    we don't even need a DBAPI to be available.
+
+    Calls to context.execute() here emit the given string to the
+    script output.
+    """
     url = config.get_main_option("sqlalchemy.url")
     context.configure(
         url=url,
@@ -46,14 +67,20 @@ def run_migrations_offline() -> None:
 
 
 def do_run_migrations(connection: Connection) -> None:
-    context.configure(connection=connection, target_metadata=target_metadata)
+    """Run migrations with the given connection."""
+    context.configure(
+        connection=connection, 
+        target_metadata=target_metadata,
+        compare_type=True,  # Detect column type changes
+        compare_server_default=True,  # Detect default value changes
+    )
 
     with context.begin_transaction():
         context.run_migrations()
 
 
 async def run_async_migrations() -> None:
-    """Run migrations in 'online' mode."""
+    """Run migrations in 'online' mode with async engine."""
     
     configuration = config.get_section(config.config_ini_section)
     configuration["sqlalchemy.url"] = settings.DATABASE_URL
@@ -79,31 +106,3 @@ if context.is_offline_mode():
     run_migrations_offline()
 else:
     run_migrations_online()
-
-
-# models/database/migrations/script.py.mako
-"""Alembic migration template"""
-"""${message}
-
-Revision ID: ${up_revision}
-Revises: ${down_revision | comma,n}
-Create Date: ${create_date}
-
-"""
-from alembic import op
-import sqlalchemy as sa
-${imports if imports else ""}
-
-# revision identifiers, used by Alembic.
-revision = ${repr(up_revision)}
-down_revision = ${repr(down_revision)}
-branch_labels = ${repr(branch_labels)}
-depends_on = ${repr(depends_on)}
-
-
-def upgrade() -> None:
-    ${upgrades if upgrades else "pass"}
-
-
-def downgrade() -> None:
-    ${downgrades if downgrades else "pass"}

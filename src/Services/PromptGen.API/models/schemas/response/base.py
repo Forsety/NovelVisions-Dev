@@ -1,43 +1,90 @@
-# src/Services/PromptGen.API/models/schemas/response/base.py
+# models/schemas/response/base.py
 """
-Base response schemas
+Base response schemas.
 """
-from typing import TypeVar, Generic, Optional, List, Any
-from pydantic import BaseModel, Field
 
-T = TypeVar("T")
+from typing import TypeVar, Generic, Optional, List, Any, Dict
+from pydantic import BaseModel, Field
+from datetime import datetime
+
+T = TypeVar('T')
 
 
 class SuccessResponse(BaseModel, Generic[T]):
-    """Успешный ответ"""
+    """Стандартный успешный response."""
     
     success: bool = True
-    message: str
+    message: str = "Operation completed successfully"
     data: Optional[T] = None
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    
+    class Config:
+        from_attributes = True
 
 
 class ErrorResponse(BaseModel):
-    """Ответ с ошибкой"""
+    """Стандартный error response."""
     
     success: bool = False
     error: str
-    details: Optional[List[str]] = None
-    code: Optional[str] = None
+    error_code: Optional[str] = None
+    details: Optional[Dict[str, Any]] = None
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+
+
+class PaginationMeta(BaseModel):
+    """Метаданные пагинации."""
+    
+    page: int
+    page_size: int
+    total_items: int
+    total_pages: int
+    has_next: bool
+    has_prev: bool
 
 
 class PaginatedResponse(BaseModel, Generic[T]):
-    """Пагинированный ответ"""
+    """Response с пагинацией."""
     
-    items: List[T]
-    total: int
-    page: int
-    page_size: int
-    total_pages: int
+    success: bool = True
+    message: str = "Data retrieved successfully"
+    data: List[T] = []
+    pagination: PaginationMeta
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
     
-    @property
-    def has_next(self) -> bool:
-        return self.page < self.total_pages
+    class Config:
+        from_attributes = True
     
-    @property
-    def has_previous(self) -> bool:
-        return self.page > 1
+    @classmethod
+    def create(
+        cls,
+        items: List[T],
+        page: int,
+        page_size: int,
+        total_items: int,
+        message: str = "Data retrieved successfully"
+    ) -> 'PaginatedResponse[T]':
+        total_pages = (total_items + page_size - 1) // page_size if page_size > 0 else 0
+        
+        return cls(
+            message=message,
+            data=items,
+            pagination=PaginationMeta(
+                page=page,
+                page_size=page_size,
+                total_items=total_items,
+                total_pages=total_pages,
+                has_next=page < total_pages,
+                has_prev=page > 1
+            )
+        )
+
+
+class HealthResponse(BaseModel):
+    """Health check response."""
+    
+    status: str = "healthy"
+    service: str = "promptgen-api"
+    version: str = "1.0.0"
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    dependencies: Dict[str, str] = {}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovelVision.Gateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35383fa28f8126bf212fa8f92f14bde323b2cd05")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e2e6f3c84784d42b6f7638d55fb0f747f33b7b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovelVision.Gateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovelVision.Gateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

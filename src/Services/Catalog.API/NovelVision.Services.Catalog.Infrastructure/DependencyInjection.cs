@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NovelVision.BuildingBlocks.SharedKernel.Repositories;
 using NovelVision.Services.Catalog.Application.Common.Interfaces;
+using NovelVision.Services.Catalog.Application.Interfaces;
 using NovelVision.Services.Catalog.Domain.Repositories;
 using NovelVision.Services.Catalog.Domain.Services;
 using NovelVision.Services.Catalog.Infrastructure.Identity.Entities;
@@ -26,6 +27,8 @@ using NovelVision.Services.Catalog.Infrastructure.Services;
 using NovelVision.Services.Catalog.Infrastructure.Services.Cache;
 using NovelVision.Services.Catalog.Infrastructure.Services.DateTime;
 using NovelVision.Services.Catalog.Infrastructure.Services.Email;
+using NovelVision.Services.Catalog.Infrastructure.Services.External;
+using NovelVision.Services.Catalog.Infrastructure.Services.Import;
 using NovelVision.Services.Catalog.Infrastructure.Services.Storage;
 using SendGrid;
 using SendGrid.Extensions.DependencyInjection;
@@ -48,6 +51,10 @@ public static class DependencyInjection
         // Register Interceptors as Scoped
         services.AddScoped<AuditableEntitySaveChangesInterceptor>();
         services.AddScoped<DispatchDomainEventsInterceptor>();
+
+        // ============================================
+        // DATABASE CONTEXTS
+        // ============================================
 
         // Configure Main Database Context
         services.AddDbContext<CatalogDbContext>((serviceProvider, options) =>
@@ -77,18 +84,28 @@ public static class DependencyInjection
                 b => b.MigrationsAssembly(typeof(ApplicationIdentityDbContext).Assembly.FullName));
         });
 
+        // ============================================
+        // IDENTITY CONFIGURATION
+        // ============================================
+
+        // Configure JWT Settings
+        var jwtSettingsSection = configuration.GetSection("JwtSettings");
+        services.Configure<JwtSettings>(jwtSettingsSection);
+        var jwtSettings = jwtSettingsSection.Get<JwtSettings>() ?? new JwtSettings();
+
         // Configure Identity
         services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
         {
             // Password settings
-            options.Password.RequiredLength = 6;
             options.Password.RequireDigit = true;
             options.Password.RequireLowercase = true;
             options.Password.RequireUppercase = true;
             options.Password.RequireNonAlphanumeric = true;
+            options.Password.RequiredLength = 8;
+            options.Password.RequiredUniqueChars = 4;
 
             // Lockout settings
-            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
             options.Lockout.MaxFailedAccessAttempts = 5;
             options.Lockout.AllowedForNewUsers = true;
 
@@ -96,24 +113,20 @@ public static class DependencyInjection
             options.User.RequireUniqueEmail = true;
             options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
 
-            // Sign-in settings
-            options.SignIn.RequireConfirmedEmail = configuration.GetValue<bool>("Identity:RequireConfirmedEmail", false);
-            options.SignIn.RequireConfirmedPhoneNumber = false;
+            // SignIn settings
+            options.SignIn.RequireConfirmedEmail = false;
+            options.SignIn.RequireConfirmedAccount = false;
         })
         .AddEntityFrameworkStores<ApplicationIdentityDbContext>()
         .AddDefaultTokenProviders();
 
         // Configure JWT Authentication
-        var jwtSettings = new JwtSettings();
-        configuration.GetSection(JwtSettings.SectionName).Bind(jwtSettings);
-        services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
+        var key = Encoding.ASCII.GetBytes(jwtSettings.Secret ?? "DefaultSecretKeyForDevelopmentOnly123456789!");
 
-        var key = Encoding.ASCII.GetBytes(jwtSettings.Secret);
         services.AddAuthentication(options =>
         {
             options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
             options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
         })
         .AddJwtBearer(options =>
         {
@@ -131,19 +144,15 @@ public static class DependencyInjection
                 ClockSkew = TimeSpan.FromMinutes(jwtSettings.ClockSkewMinutes)
             };
 
-            // Configure events for token validation
             options.Events = new JwtBearerEvents
             {
                 OnTokenValidated = context =>
                 {
-                    var userService = context.HttpContext.RequestServices.GetRequiredService<IIdentityService>();
                     var userId = context.Principal?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-
-                    if (string.IsNullOrEmpty(userId) || !Guid.TryParse(userId, out var userGuid))
+                    if (string.IsNullOrEmpty(userId) || !Guid.TryParse(userId, out _))
                     {
                         context.Fail("Unauthorized");
                     }
-
                     return System.Threading.Tasks.Task.CompletedTask;
                 },
                 OnAuthenticationFailed = context =>
@@ -181,19 +190,48 @@ public static class DependencyInjection
                 policy => policy.RequireClaim("permission", "users.manage"));
         });
 
-        // Register Unit of Work
-        services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<CatalogDbContext>());
+        // ============================================
+        // UNIT OF WORK & REPOSITORIES
+        // ============================================
 
-        // Register Repositories
+        services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<CatalogDbContext>());
         services.AddScoped<IBookRepository, BookRepository>();
         services.AddScoped<IAuthorRepository, AuthorRepository>();
         services.AddScoped<IPageRepository, PageRepository>();
+        services.AddScoped<ISubjectRepository, SubjectRepository>();
 
-        // Register Domain Services
+        // ============================================
+        // DOMAIN SERVICES
+        // ============================================
+
         services.AddScoped<IBookDomainService, BookDomainService>();
         services.AddScoped<IVisualizationSettingsService, VisualizationSettingsService>();
 
-        // Configure Redis Cache
+        // ============================================
+        // GUTENBERG IMPORT SERVICES (ИСПРАВЛЕНИЕ!)
+        // ============================================
+
+        // HttpClient для Gutendex API
+        services.AddHttpClient<IGutendexService, GutendexService>(client =>
+        {
+            client.BaseAddress = new Uri("https://gutendex.com");
+            client.Timeout = TimeSpan.FromSeconds(30);
+            client.DefaultRequestHeaders.Add("User-Agent", "NovelVision/1.0");
+        });
+
+        // Text parser для разбора книг Gutenberg
+        services.AddScoped<GutenbergTextParser>();
+
+        // Text parsing service для парсинга текста
+        services.AddScoped<ITextParsingService, TextParsingService>();
+
+        // Book import service
+        services.AddScoped<IBookImportService, BookImportService>();
+
+        // ============================================
+        // CACHING
+        // ============================================
+
         var redisConnection = configuration.GetConnectionString("Redis");
         if (!string.IsNullOrEmpty(redisConnection))
         {
@@ -206,12 +244,14 @@ public static class DependencyInjection
         }
         else
         {
-            // Use in-memory cache if Redis is not configured
             services.AddDistributedMemoryCache();
             services.AddScoped<ICacheService, RedisCacheService>();
         }
 
-        // Configure Email Service
+        // ============================================
+        // EMAIL SERVICE
+        // ============================================
+
         var sendGridApiKey = configuration["SendGrid:ApiKey"];
         if (!string.IsNullOrEmpty(sendGridApiKey))
         {
@@ -223,11 +263,13 @@ public static class DependencyInjection
         }
         else
         {
-            // Register a mock email service for development
             services.AddScoped<IEmailService, MockEmailService>();
         }
 
-        // Configure Storage Service
+        // ============================================
+        // STORAGE SERVICE
+        // ============================================
+
         var azureStorageConnection = configuration.GetConnectionString("AzureStorage");
         if (!string.IsNullOrEmpty(azureStorageConnection))
         {
@@ -236,7 +278,6 @@ public static class DependencyInjection
         }
         else
         {
-            // Register a local file storage for development
             services.AddScoped<IFileStorageService, LocalFileStorageService>();
         }
 

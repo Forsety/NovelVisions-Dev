@@ -121,6 +121,8 @@ public sealed class Book : AggregateRoot<BookId>
     /// </summary>
     public IReadOnlyList<Subject> BookSubjects => _bookSubjects.AsReadOnly();
 
+
+
     /// <summary>
     /// Жанры книги
     /// </summary>

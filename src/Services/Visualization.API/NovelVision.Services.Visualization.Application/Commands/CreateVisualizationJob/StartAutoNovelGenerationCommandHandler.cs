@@ -124,7 +124,6 @@ public sealed class StartAutoNovelGenerationCommandHandler
 
             job.Enqueue(queuePosition, estimatedWait);
             
-            _jobRepository.Add(job);
             createdJobs.Add(job);
         }
 

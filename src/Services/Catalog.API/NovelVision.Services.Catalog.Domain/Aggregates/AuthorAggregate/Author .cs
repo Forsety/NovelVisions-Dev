@@ -56,7 +56,7 @@ public sealed class Author : AggregateRoot<AuthorId>
     /// Отображаемое имя автора
     /// </summary>
     public string DisplayName => _displayName;
-
+    public int? GutenbergAuthorId { get; private set; }
     /// <summary>
     /// Email автора
     /// </summary>

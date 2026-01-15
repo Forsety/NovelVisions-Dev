@@ -78,7 +78,7 @@ public sealed class ExternalSourceType : SmartEnum<ExternalSourceType>
         return Name switch
         {
             nameof(Manual) => BookSource.UserCreated,
-            nameof(Gutenberg) => BookSource.ProjectGutenberg,
+            nameof(Gutenberg) => BookSource.Gutenberg,
             nameof(OpenLibrary) => BookSource.OpenLibrary,
             nameof(GoogleBooks) => BookSource.External,
             nameof(InternetArchive) => BookSource.External,
@@ -104,7 +104,7 @@ public static class ExternalSourceTypeExtensions
         return sourceType.Name switch
         {
             nameof(ExternalSourceType.Manual) => BookSource.UserCreated,
-            nameof(ExternalSourceType.Gutenberg) => BookSource.ProjectGutenberg,
+            nameof(ExternalSourceType.Gutenberg) => BookSource.Gutenberg,
             nameof(ExternalSourceType.OpenLibrary) => BookSource.OpenLibrary,
             nameof(ExternalSourceType.GoogleBooks) => BookSource.External,
             nameof(ExternalSourceType.InternetArchive) => BookSource.External,

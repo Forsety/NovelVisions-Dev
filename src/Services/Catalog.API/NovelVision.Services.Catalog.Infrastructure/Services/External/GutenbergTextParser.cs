@@ -84,7 +84,7 @@ public class GutenbergTextParser
     /// <summary>
     /// Разбивает текст на главы
     /// </summary>
-    public List<ParsedChapter> ParseChapters(string text)
+    public List<ParsedChapter> ParseChapters(string text, bool parseChapters)
     {
         var chapters = new List<ParsedChapter>();
 
@@ -226,6 +226,56 @@ public class GutenbergTextParser
 
         return title;
     }
+    public ParsedBookText Parse(string rawText, bool parseChapters, int wordsPerPage = 300)
+    {
+        var mainText = ExtractMainText(rawText);
+        var totalWords = CountWords(mainText);
+
+        // 1) Главы
+        var chapters = ParseChapters(mainText, parseChapters);
+
+        // 2) Страницы + summary
+        var resultChapters = new List<ParsedChapterData>(chapters.Count);
+
+        foreach (var ch in chapters)
+        {
+            var pages = ParsePages(ch.Content, wordsPerPage)
+                .Select(p => p.Content)
+                .ToList();
+
+            resultChapters.Add(new ParsedChapterData
+            {
+                Title = string.IsNullOrWhiteSpace(ch.Title) ? $"Chapter {ch.OrderIndex}" : ch.Title,
+                Summary = BuildSummary(ch.Content),
+                Pages = pages
+            });
+        }
+
+        return new ParsedBookText
+        {
+            Chapters = resultChapters,
+            TotalWordCount = totalWords
+        };
+    }
+
+    // Для совместимости с текущим BookImportService (если он вызывает ParseBookText)
+    public ParsedBookText ParseBookText(string rawText, bool parseChapters, int wordsPerPage = 300)
+        => Parse(rawText, parseChapters, wordsPerPage);
+
+    private static string? BuildSummary(string content)
+    {
+        if (string.IsNullOrWhiteSpace(content)) return null;
+
+        // Очень простой “summary”: первые ~250 символов без лишних пробелов.
+        var normalized = string.Join(" ", content
+            .Split(new[] { ' ', '\n', '\r', '\t' }, StringSplitOptions.RemoveEmptyEntries));
+
+        const int max = 250;
+        if (normalized.Length <= max) return normalized;
+
+        return normalized.Substring(0, max).Trim() + "…";
+    }
+
 }
 
 /// <summary>
@@ -247,4 +297,16 @@ public class ParsedPage
     public int PageNumber { get; set; }
     public string Content { get; set; } = string.Empty;
     public int WordCount { get; set; }
+}
+public sealed class ParsedBookText
+{
+    public List<ParsedChapterData> Chapters { get; init; } = new();
+    public int TotalWordCount { get; init; }
+}
+
+public sealed class ParsedChapterData
+{
+    public string Title { get; init; } = string.Empty;
+    public string? Summary { get; init; }
+    public List<string> Pages { get; init; } = new();
 }

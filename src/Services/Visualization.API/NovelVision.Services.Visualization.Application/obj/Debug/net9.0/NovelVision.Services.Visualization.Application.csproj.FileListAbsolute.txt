@@ -10,3 +10,9 @@ C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.S
 C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\refint\NovelVision.Services.Visualization.Application.dll
 C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVision.Services.Visualization.Application.pdb
 C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\ref\NovelVision.Services.Visualization.Application.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVision.Services.Visualization.Application.csproj.AssemblyReference.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\bin\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\bin\Debug\net9.0\NovelVision.Services.Visualization.Domain.dll
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\bin\Debug\net9.0\NovelVision.BuildingBlocks.SharedKernel.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\bin\Debug\net9.0\NovelVision.Services.Visualization.Domain.pdb
+C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\obj\Debug\net9.0\NovelVis.1F25A7B6.Up2Date

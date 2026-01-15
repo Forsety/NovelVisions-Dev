@@ -100,7 +100,6 @@ public sealed class CreatePageVisualizationCommandHandler
         }
 
         // Сохраняем
-        _jobRepository.Add(job);
         await _jobRepository.SaveChangesAsync(cancellationToken);
 
         _logger.LogInformation(

@@ -18,7 +18,7 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("Catalog")
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "9.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -29,10 +29,17 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("AuthorId");
 
+                    b.Property<string>("AvatarUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Biography")
                         .HasMaxLength(2000)
                         .HasColumnType("nvarchar(2000)")
                         .HasColumnName("Biography");
+
+                    b.Property<int?>("BirthYear")
+                        .HasColumnType("int")
+                        .HasColumnName("BirthYear");
 
                     b.Property<string>("BookIds")
                         .IsRequired()
@@ -42,6 +49,10 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2")
                         .HasColumnName("CreatedAt");
+
+                    b.Property<int?>("DeathYear")
+                        .HasColumnType("int")
+                        .HasColumnName("DeathYear");
 
                     b.Property<string>("DisplayName")
                         .IsRequired()
@@ -55,11 +66,19 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("Email");
 
+                    b.Property<int?>("GutenbergAuthorId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsVerified")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bit")
                         .HasDefaultValue(false)
                         .HasColumnName("IsVerified");
+
+                    b.Property<string>("Nationality")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("Nationality");
 
                     b.Property<string>("SocialLinks")
                         .IsRequired()
@@ -70,28 +89,47 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("UpdatedAt");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("VerifiedAt")
                         .HasColumnType("datetime2")
                         .HasColumnName("VerifiedAt");
 
                     b.Property<long>("Version")
-                        .IsConcurrencyToken()
-                        .HasColumnType("bigint")
-                        .HasColumnName("Version");
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("WikipediaUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BirthYear")
+                        .HasDatabaseName("IX_Authors_BirthYear");
 
                     b.HasIndex("DisplayName")
                         .HasDatabaseName("IX_Authors_DisplayName");
 
                     b.HasIndex("Email")
                         .IsUnique()
-                        .HasDatabaseName("IX_Authors_Email");
+                        .HasDatabaseName("UX_Authors_Email");
+
+                    b.HasIndex("GutenbergAuthorId")
+                        .IsUnique()
+                        .HasDatabaseName("UX_Authors_GutenbergAuthorId")
+                        .HasFilter("[GutenbergAuthorId] IS NOT NULL");
 
                     b.HasIndex("IsVerified")
                         .HasDatabaseName("IX_Authors_IsVerified");
 
-                    b.ToTable("Authors", "Catalog");
+                    b.ToTable("Authors", "Catalog", t =>
+                        {
+                            t.Property("GutenbergAuthorId")
+                                .HasColumnName("Author_GutenbergAuthorId");
+
+                            t.Property("WikipediaUrl")
+                                .HasColumnName("Author_WikipediaUrl");
+                        });
                 });
 
             modelBuilder.Entity("NovelVision.Services.Catalog.Domain.Aggregates.BookAggregate.Book", b =>
@@ -104,23 +142,43 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("AuthorId");
 
+                    b.Property<int>("CopyrightStatus")
+                        .HasColumnType("int")
+                        .HasColumnName("CopyrightStatus");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2")
                         .HasColumnName("CreatedAt");
 
-                    b.Property<string>("Genres")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Genres");
+                    b.Property<int>("DownloadCount")
+                        .HasColumnType("int")
+                        .HasColumnName("DownloadCount");
+
+                    b.Property<string>("FullTextUrl")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)")
+                        .HasColumnName("FullTextUrl");
+
+                    b.Property<bool>("HasFullText")
+                        .HasColumnType("bit")
+                        .HasColumnName("HasFullText");
+
+                    b.Property<int?>("OriginalPublicationYear")
+                        .HasColumnType("int")
+                        .HasColumnName("OriginalPublicationYear");
+
+                    b.Property<double?>("ReadingDifficulty")
+                        .HasPrecision(5, 2)
+                        .HasColumnType("float(5)")
+                        .HasColumnName("ReadingDifficulty");
+
+                    b.Property<int>("Source")
+                        .HasColumnType("int")
+                        .HasColumnName("Source");
 
                     b.Property<int>("Status")
                         .HasColumnType("int")
-                        .HasColumnName("StatusId");
-
-                    b.Property<string>("Tags")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Tags");
+                        .HasColumnName("Status");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2")
@@ -135,13 +193,35 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                         .HasColumnType("int")
                         .HasColumnName("VisualizationModeId");
 
+                    b.Property<int>("WordCount")
+                        .HasColumnType("int")
+                        .HasColumnName("WordCount");
+
+                    b.Property<string>("_genres")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)")
+                        .HasColumnName("Genres");
+
+                    b.Property<string>("_tags")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)")
+                        .HasColumnName("Tags");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AuthorId")
                         .HasDatabaseName("IX_Books_AuthorId");
 
+                    b.HasIndex("CopyrightStatus")
+                        .HasDatabaseName("IX_Books_CopyrightStatus");
+
                     b.HasIndex("CreatedAt")
                         .HasDatabaseName("IX_Books_CreatedAt");
+
+                    b.HasIndex("Source")
+                        .HasDatabaseName("IX_Books_Source");
 
                     b.HasIndex("Status")
                         .HasDatabaseName("IX_Books_Status");
@@ -200,28 +280,66 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("PageId");
 
+                    b.Property<string>("AuthorVisualizationHint")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)")
+                        .HasColumnName("AuthorVisualizationHint");
+
                     b.Property<Guid>("ChapterId")
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("ChapterId");
 
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Content");
-
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedAt");
+
+                    b.Property<bool>("IsVisualizationPoint")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false)
+                        .HasColumnName("IsVisualizationPoint");
 
                     b.Property<int>("PageNumber")
                         .HasColumnType("int")
                         .HasColumnName("PageNumber");
 
                     b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2")
+                        .HasColumnName("UpdatedAt");
+
+                    b.Property<DateTime?>("VisualizationGeneratedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("VisualizationGeneratedAt");
+
+                    b.Property<string>("VisualizationImageUrl")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)")
+                        .HasColumnName("VisualizationImageUrl");
+
+                    b.Property<Guid?>("VisualizationJobId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("VisualizationJobId");
+
+                    b.Property<int>("VisualizationStatus")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0)
+                        .HasColumnName("VisualizationStatus");
+
+                    b.Property<string>("VisualizationThumbnailUrl")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)")
+                        .HasColumnName("VisualizationThumbnailUrl");
+
+                    b.Property<string>("_content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Content");
 
                     b.Property<string>("_visualizationPrompts")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasMaxLength(4000)
+                        .HasColumnType("nvarchar(4000)")
                         .HasColumnName("VisualizationPrompts");
 
                     b.HasKey("Id");
@@ -229,15 +347,137 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                     b.HasIndex("ChapterId")
                         .HasDatabaseName("IX_Pages_ChapterId");
 
+                    b.HasIndex("IsVisualizationPoint")
+                        .HasDatabaseName("IX_Pages_IsVisualizationPoint")
+                        .HasFilter("[IsVisualizationPoint] = 1");
+
+                    b.HasIndex("VisualizationStatus")
+                        .HasDatabaseName("IX_Pages_VisualizationStatus");
+
                     b.HasIndex("ChapterId", "PageNumber")
                         .IsUnique()
-                        .HasDatabaseName("UX_Pages_ChapterId_PageNumber");
+                        .HasDatabaseName("IX_Pages_ChapterId_PageNumber");
 
                     b.ToTable("Pages", "Catalog");
                 });
 
+            modelBuilder.Entity("NovelVision.Services.Catalog.Domain.Entities.Subject", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("SubjectId");
+
+                    b.Property<int>("BookCount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0)
+                        .HasColumnName("BookCount");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedAt");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)")
+                        .HasColumnName("Description");
+
+                    b.Property<string>("ExternalMapping")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)")
+                        .HasColumnName("ExternalMapping");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
+                        .HasColumnName("Name");
+
+                    b.Property<Guid?>("ParentId")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("ParentSubjectId");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)")
+                        .HasColumnName("Slug");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int")
+                        .HasColumnName("SubjectType");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("UpdatedAt");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExternalMapping")
+                        .HasDatabaseName("IX_Subjects_ExternalMapping");
+
+                    b.HasIndex("Name")
+                        .HasDatabaseName("IX_Subjects_Name");
+
+                    b.HasIndex("ParentId")
+                        .HasDatabaseName("IX_Subjects_ParentId");
+
+                    b.HasIndex("Slug")
+                        .IsUnique()
+                        .HasDatabaseName("UX_Subjects_Slug");
+
+                    b.HasIndex("Type")
+                        .HasDatabaseName("IX_Subjects_Type");
+
+                    b.ToTable("Subjects", "Catalog");
+                });
+
+            modelBuilder.Entity("NovelVision.Services.Catalog.Domain.Aggregates.AuthorAggregate.Author", b =>
+                {
+                    b.OwnsOne("NovelVision.Services.Catalog.Domain.ValueObjects.ExternalAuthorIdentifiers", "ExternalIds", b1 =>
+                        {
+                            b1.Property<Guid>("AuthorId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<int?>("GutenbergAuthorId")
+                                .HasColumnType("int")
+                                .HasColumnName("GutenbergAuthorId");
+
+                            b1.Property<string>("OpenLibraryAuthorId")
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("OpenLibraryAuthorId");
+
+                            b1.Property<string>("WikidataId")
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("WikidataId");
+
+                            b1.Property<string>("WikipediaUrl")
+                                .HasMaxLength(500)
+                                .HasColumnType("nvarchar(500)")
+                                .HasColumnName("WikipediaUrl");
+
+                            b1.HasKey("AuthorId");
+
+                            b1.ToTable("Authors", "Catalog");
+
+                            b1.WithOwner()
+                                .HasForeignKey("AuthorId");
+                        });
+
+                    b.Navigation("ExternalIds")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("NovelVision.Services.Catalog.Domain.Aggregates.BookAggregate.Book", b =>
                 {
+                    b.HasOne("NovelVision.Services.Catalog.Domain.Aggregates.AuthorAggregate.Author", null)
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.OwnsOne("NovelVision.Services.Catalog.Domain.ValueObjects.BookISBN", "ISBN", b1 =>
                         {
                             b1.Property<Guid>("BookId")
@@ -251,11 +491,6 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
 
                             b1.HasKey("BookId");
 
-                            b1.HasIndex("Value")
-                                .IsUnique()
-                                .HasDatabaseName("IX_Books_ISBN")
-                                .HasFilter("[ISBN] IS NOT NULL");
-
                             b1.ToTable("Books", "Catalog");
 
                             b1.WithOwner()
@@ -268,32 +503,166 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                                 .HasColumnType("uniqueidentifier");
 
                             b1.Property<string>("Description")
-                                .HasMaxLength(2000)
-                                .HasColumnType("nvarchar(2000)")
+                                .HasMaxLength(10000)
+                                .HasColumnType("nvarchar(max)")
                                 .HasColumnName("Description");
 
-                            b1.Property<double>("EstimatedReadingTime")
-                                .HasColumnType("float")
-                                .HasColumnName("EstimatedReadingTimeMinutes");
+                            b1.Property<string>("Language")
+                                .IsRequired()
+                                .HasMaxLength(10)
+                                .HasColumnType("nvarchar(10)")
+                                .HasColumnName("Language");
 
-                            b1.Property<int>("Language")
-                                .HasColumnType("int")
-                                .HasColumnName("LanguageId");
+                            b1.Property<string>("OriginalTitle")
+                                .HasMaxLength(500)
+                                .HasColumnType("nvarchar(500)")
+                                .HasColumnName("OriginalTitle");
 
                             b1.Property<int>("PageCount")
                                 .HasColumnType("int")
                                 .HasColumnName("PageCount");
 
                             b1.Property<string>("Subtitle")
-                                .HasMaxLength(200)
-                                .HasColumnType("nvarchar(200)")
+                                .HasMaxLength(500)
+                                .HasColumnType("nvarchar(500)")
                                 .HasColumnName("Subtitle");
 
                             b1.Property<string>("Title")
                                 .IsRequired()
-                                .HasMaxLength(200)
-                                .HasColumnType("nvarchar(200)")
+                                .HasMaxLength(500)
+                                .HasColumnType("nvarchar(500)")
                                 .HasColumnName("Title");
+
+                            b1.Property<int>("WordCount")
+                                .HasColumnType("int");
+
+                            b1.HasKey("BookId");
+
+                            b1.ToTable("Books", "Catalog");
+
+                            b1.WithOwner()
+                                .HasForeignKey("BookId");
+                        });
+
+                    b.OwnsOne("NovelVision.Services.Catalog.Domain.ValueObjects.BookStatistics", "Statistics", b1 =>
+                        {
+                            b1.Property<Guid>("BookId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<decimal>("AverageRating")
+                                .HasPrecision(3, 2)
+                                .HasColumnType("decimal(3,2)")
+                                .HasColumnName("Stats_AverageRating");
+
+                            b1.Property<int>("CompletedReadCount")
+                                .HasColumnType("int")
+                                .HasColumnName("Stats_CompletedReadCount");
+
+                            b1.Property<int>("DownloadCount")
+                                .HasColumnType("int")
+                                .HasColumnName("Stats_DownloadCount");
+
+                            b1.Property<int>("FavoriteCount")
+                                .HasColumnType("int")
+                                .HasColumnName("Stats_FavoriteCount");
+
+                            b1.Property<int>("RatingCount")
+                                .HasColumnType("int")
+                                .HasColumnName("Stats_RatingCount");
+
+                            b1.Property<int>("ReviewCount")
+                                .HasColumnType("int")
+                                .HasColumnName("Stats_ReviewCount");
+
+                            b1.Property<int>("ViewCount")
+                                .HasColumnType("int")
+                                .HasColumnName("Stats_ViewCount");
+
+                            b1.Property<int>("VisualizationCount")
+                                .HasColumnType("int")
+                                .HasColumnName("Stats_VisualizationCount");
+
+                            b1.HasKey("BookId");
+
+                            b1.ToTable("Books", "Catalog");
+
+                            b1.WithOwner()
+                                .HasForeignKey("BookId");
+                        });
+
+                    b.OwnsOne("NovelVision.Services.Catalog.Domain.ValueObjects.CoverImage", "CoverImage", b1 =>
+                        {
+                            b1.Property<Guid>("BookId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("AltText")
+                                .HasMaxLength(500)
+                                .HasColumnType("nvarchar(500)")
+                                .HasColumnName("CoverAltText");
+
+                            b1.Property<string>("Source")
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<string>("ThumbnailUrl")
+                                .HasMaxLength(2000)
+                                .HasColumnType("nvarchar(2000)")
+                                .HasColumnName("CoverThumbnailUrl");
+
+                            b1.Property<string>("Url")
+                                .IsRequired()
+                                .HasMaxLength(2000)
+                                .HasColumnType("nvarchar(2000)")
+                                .HasColumnName("CoverImageUrl");
+
+                            b1.HasKey("BookId");
+
+                            b1.ToTable("Books", "Catalog");
+
+                            b1.WithOwner()
+                                .HasForeignKey("BookId");
+                        });
+
+                    b.OwnsOne("NovelVision.Services.Catalog.Domain.ValueObjects.ExternalBookId", "ExternalIds", b1 =>
+                        {
+                            b1.Property<Guid>("BookId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<string>("ExternalId")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("ExternalId");
+
+                            b1.Property<int?>("GutenbergId")
+                                .HasColumnType("int")
+                                .HasColumnName("GutenbergId");
+
+                            b1.Property<DateTime>("ImportedAt")
+                                .HasColumnType("datetime2")
+                                .HasColumnName("ExternalImportedAt");
+
+                            b1.Property<DateTime?>("LastSyncedAt")
+                                .HasColumnType("datetime2")
+                                .HasColumnName("ExternalLastSyncedAt");
+
+                            b1.Property<string>("OpenLibraryEditionId")
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("OpenLibraryEditionId");
+
+                            b1.Property<string>("OpenLibraryWorkId")
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("OpenLibraryWorkId");
+
+                            b1.Property<int>("SourceType")
+                                .HasColumnType("int")
+                                .HasColumnName("ExternalSourceType");
+
+                            b1.Property<string>("SourceUrl")
+                                .HasMaxLength(2000)
+                                .HasColumnType("nvarchar(2000)")
+                                .HasColumnName("ExternalSourceUrl");
 
                             b1.HasKey("BookId");
 
@@ -330,12 +699,71 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                                 .HasForeignKey("BookId");
                         });
 
+                    b.OwnsOne("NovelVision.Services.Catalog.Domain.ValueObjects.VisualizationSettings", "VisualizationSettings", b1 =>
+                        {
+                            b1.Property<Guid>("BookId")
+                                .HasColumnType("uniqueidentifier");
+
+                            b1.Property<bool>("AllowReaderChoice")
+                                .HasColumnType("bit")
+                                .HasColumnName("VS_AllowReaderChoice");
+
+                            b1.Property<string>("AllowedModesJson")
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)")
+                                .HasColumnName("VS_AllowedModes");
+
+                            b1.Property<bool>("AutoGenerateOnPublish")
+                                .HasColumnType("bit")
+                                .HasColumnName("VS_AutoGenerateOnPublish");
+
+                            b1.Property<bool>("IsEnabled")
+                                .HasColumnType("bit")
+                                .HasColumnName("VS_IsEnabled");
+
+                            b1.Property<int>("MaxImagesPerPage")
+                                .HasColumnType("int")
+                                .HasColumnName("VS_MaxImagesPerPage");
+
+                            b1.Property<string>("PreferredProvider")
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("VS_PreferredProvider");
+
+                            b1.Property<string>("PreferredStyle")
+                                .HasMaxLength(50)
+                                .HasColumnType("nvarchar(50)")
+                                .HasColumnName("VS_PreferredStyle");
+
+                            b1.Property<int>("PrimaryMode")
+                                .HasColumnType("int")
+                                .HasColumnName("VS_PrimaryMode");
+
+                            b1.HasKey("BookId");
+
+                            b1.ToTable("Books", "Catalog");
+
+                            b1.WithOwner()
+                                .HasForeignKey("BookId");
+                        });
+
+                    b.Navigation("CoverImage")
+                        .IsRequired();
+
+                    b.Navigation("ExternalIds");
+
                     b.Navigation("ISBN");
 
                     b.Navigation("Metadata")
                         .IsRequired();
 
                     b.Navigation("PublicationInfo")
+                        .IsRequired();
+
+                    b.Navigation("Statistics")
+                        .IsRequired();
+
+                    b.Navigation("VisualizationSettings")
                         .IsRequired();
                 });
 
@@ -355,6 +783,14 @@ namespace NovelVision.Services.Catalog.Infrastructure.Persistence.Migrations
                         .HasForeignKey("ChapterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("NovelVision.Services.Catalog.Domain.Entities.Subject", b =>
+                {
+                    b.HasOne("NovelVision.Services.Catalog.Domain.Entities.Subject", null)
+                        .WithMany()
+                        .HasForeignKey("ParentId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("NovelVision.Services.Catalog.Domain.Aggregates.BookAggregate.Book", b =>

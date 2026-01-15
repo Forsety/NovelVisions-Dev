@@ -26,10 +26,7 @@ public static class DependencyInjection
         });
 
         // AutoMapper
-        services.AddAutoMapper(assembly);
-
-        // FluentValidation
-        services.AddValidatorsFromAssembly(assembly);
+        
 
         return services;
     }

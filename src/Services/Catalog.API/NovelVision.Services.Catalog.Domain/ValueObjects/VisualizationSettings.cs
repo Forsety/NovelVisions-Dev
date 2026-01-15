@@ -15,7 +15,12 @@ public sealed class VisualizationSettings : ValueObject
 {
     private readonly List<VisualizationMode> _allowedModes = new();
 
-    private VisualizationSettings() { }
+    #region Constructors
+
+    private VisualizationSettings()
+    {
+        PrimaryMode = VisualizationMode.None;
+    }
 
     private VisualizationSettings(
         VisualizationMode primaryMode,
@@ -36,6 +41,8 @@ public sealed class VisualizationSettings : ValueObject
         IsEnabled = primaryMode != VisualizationMode.None;
     }
 
+    #endregion
+
     #region Properties
 
     /// <summary>
@@ -54,6 +61,37 @@ public sealed class VisualizationSettings : ValueObject
     public IReadOnlyList<VisualizationMode> AllowedModes => _allowedModes.AsReadOnly();
 
     /// <summary>
+    /// Backing property для EF Core - сериализация AllowedModes как строка
+    /// </summary>
+    public string? AllowedModesJson
+    {
+        get => _allowedModes.Count > 0
+            ? string.Join(",", _allowedModes.Select(m => m.Value))
+            : null;
+        set
+        {
+            _allowedModes.Clear();
+            if (!string.IsNullOrEmpty(value))
+            {
+                var values = value.Split(',', StringSplitOptions.RemoveEmptyEntries);
+                foreach (var v in values)
+                {
+                    if (int.TryParse(v.Trim(), out var intValue))
+                    {
+                        var mode = VisualizationMode.TryFromValue(intValue, out var result)
+                            ? result
+                            : null;
+                        if (mode != null)
+                        {
+                            _allowedModes.Add(mode);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /// <summary>
     /// Предпочтительный стиль (manga, realistic, fantasy, etc.)
     /// </summary>
     public string? PreferredStyle { get; private set; }
@@ -64,7 +102,7 @@ public sealed class VisualizationSettings : ValueObject
     public string? PreferredProvider { get; private set; }
 
     /// <summary>
-    /// Максимальное количество изображений на страницу
+    /// Максимум изображений на страницу
     /// </summary>
     public int MaxImagesPerPage { get; private set; } = 1;
 
@@ -78,11 +116,6 @@ public sealed class VisualizationSettings : ValueObject
     /// </summary>
     public bool IsEnabled { get; private set; }
 
-    /// <summary>
-    /// Требуется ли визуализация
-    /// </summary>
-    public bool RequiresVisualization => IsEnabled && PrimaryMode != VisualizationMode.None;
-
     #endregion
 
     #region Factory Methods
@@ -95,7 +128,7 @@ public sealed class VisualizationSettings : ValueObject
         bool allowReaderChoice = false,
         IEnumerable<VisualizationMode>? allowedModes = null,
         string? preferredStyle = null,
-        string? preferredProvider = "dalle3",
+        string? preferredProvider = null,
         int maxImagesPerPage = 1,
         bool autoGenerateOnPublish = false)
     {
@@ -112,19 +145,22 @@ public sealed class VisualizationSettings : ValueObject
     /// <summary>
     /// Настройки по умолчанию (визуализация отключена)
     /// </summary>
-    public static VisualizationSettings Default() => new(
-        VisualizationMode.None,
-        false,
-        null,
-        null,
-        null,
-        1,
-        false);
+    public static VisualizationSettings Default()
+    {
+        return new VisualizationSettings(
+            VisualizationMode.None,
+            false,
+            null,
+            null,
+            null,
+            1,
+            false);
+    }
 
     /// <summary>
     /// Пустые настройки (алиас для Default)
     /// </summary>
-    public static VisualizationSettings Empty() => Default();
+    public static VisualizationSettings Empty => Default();
 
     /// <summary>
     /// Настройки для режима "на каждую страницу"
@@ -132,12 +168,12 @@ public sealed class VisualizationSettings : ValueObject
     public static VisualizationSettings PerPage(
         string? style = null,
         string? provider = "dalle3",
-        bool autoGenerate = true)
+        bool autoGenerate = false)
     {
         return Create(
             VisualizationMode.PerPage,
-            allowReaderChoice: true,
-            allowedModes: new[] { VisualizationMode.PerPage, VisualizationMode.PerChapter },
+            allowReaderChoice: false,
+            allowedModes: new[] { VisualizationMode.PerPage },
             preferredStyle: style,
             preferredProvider: provider,
             maxImagesPerPage: 1,
@@ -332,6 +368,21 @@ public sealed class VisualizationSettings : ValueObject
             PreferredProvider,
             MaxImagesPerPage,
             autoGenerate);
+    }
+
+    #endregion
+
+    #region Validation Methods
+
+    /// <summary>
+    /// Проверяет, разрешён ли указанный режим
+    /// </summary>
+    public bool IsModeAllowed(VisualizationMode mode)
+    {
+        if (!AllowReaderChoice)
+            return mode == PrimaryMode;
+
+        return _allowedModes.Count == 0 || _allowedModes.Contains(mode);
     }
 
     #endregion

@@ -14,13 +14,27 @@ namespace NovelVision.Services.Catalog.Domain.Entities;
 /// </summary>
 public sealed class Subject : Entity<SubjectId>
 {
+    // ═══════════════════════════════════════════════════════════════
+    // BACKING FIELDS
+    // ═══════════════════════════════════════════════════════════════
     private string _name = string.Empty;
     private string? _description;
+    private string _slug = string.Empty;  // ДОБАВЛЕНО: backing field для Slug
+    private int _bookCount;               // ДОБАВЛЕНО: denormalized counter
+
+    // Для runtime использования (не хранится в БД)
     private readonly HashSet<BookId> _bookIds = new();
 
-    // Private parameterless constructor for EF Core
+    // ═══════════════════════════════════════════════════════════════
+    // CONSTRUCTORS
+    // ═══════════════════════════════════════════════════════════════
+
+    /// <summary>
+    /// Private parameterless constructor for EF Core
+    /// </summary>
     private Subject() : base(default!)
     {
+        // EF Core заполнит все поля через reflection
     }
 
     private Subject(
@@ -31,22 +45,35 @@ public sealed class Subject : Entity<SubjectId>
         string? description,
         string? externalMapping) : base(id)
     {
-        _name = name;
+        _name = Guard.Against.NullOrWhiteSpace(name, nameof(name));
+        _slug = GenerateSlug(name);  // Генерируем slug при создании
         Type = type;
         ParentId = parentId;
         _description = description;
         ExternalMapping = externalMapping;
     }
 
+    // ═══════════════════════════════════════════════════════════════
+    // PROPERTIES (с backing fields)
+    // ═══════════════════════════════════════════════════════════════
+
     /// <summary>
     /// Название категории
     /// </summary>
-    public string Name => _name;
+    public string Name
+    {
+        get => _name;
+        private set
+        {
+            _name = value;
+            _slug = GenerateSlug(value);  // Обновляем slug при изменении name
+        }
+    }
 
     /// <summary>
     /// Тип категории (Genre, Topic, Era и т.д.)
     /// </summary>
-    public SubjectType Type { get; private set; } = null!;
+    public SubjectType Type { get; private set; } = SubjectType.Topic;
 
     /// <summary>
     /// ID родительской категории (для иерархии)
@@ -56,7 +83,11 @@ public sealed class Subject : Entity<SubjectId>
     /// <summary>
     /// Описание категории
     /// </summary>
-    public string? Description => _description;
+    public string? Description
+    {
+        get => _description;
+        private set => _description = value;
+    }
 
     /// <summary>
     /// Маппинг на внешний источник (например, Gutenberg bookshelf name)
@@ -64,24 +95,41 @@ public sealed class Subject : Entity<SubjectId>
     public string? ExternalMapping { get; private set; }
 
     /// <summary>
-    /// Slug для URL (автоматически генерируется из имени)
+    /// Slug для URL (хранится в БД)
     /// </summary>
-    public string Slug => GenerateSlug(_name);
+    public string Slug
+    {
+        get => _slug;
+        private set => _slug = value;
+    }
 
     /// <summary>
-    /// Количество книг в этой категории
+    /// Количество книг в этой категории (denormalized для производительности)
     /// </summary>
-    public int BookCount => _bookIds.Count;
-
-    /// <summary>
-    /// ID книг в этой категории
-    /// </summary>
-    public IReadOnlySet<BookId> BookIds => _bookIds;
+    public int BookCount
+    {
+        get => _bookCount;
+        private set => _bookCount = value;
+    }
 
     /// <summary>
     /// Является ли корневой категорией (без родителя)
     /// </summary>
     public bool IsRoot => ParentId is null;
+
+    // ═══════════════════════════════════════════════════════════════
+    // RUNTIME-ONLY PROPERTIES (не хранятся в БД)
+    // ═══════════════════════════════════════════════════════════════
+
+    /// <summary>
+    /// ID книг в этой категории (для runtime использования)
+    /// Заполняется через Include() или отдельные запросы
+    /// </summary>
+    public IReadOnlySet<BookId> BookIds => _bookIds;
+
+    // ═══════════════════════════════════════════════════════════════
+    // FACTORY METHODS
+    // ═══════════════════════════════════════════════════════════════
 
     /// <summary>
     /// Создание новой категории
@@ -96,13 +144,6 @@ public sealed class Subject : Entity<SubjectId>
         Guard.Against.NullOrWhiteSpace(name, nameof(name));
         Guard.Against.Null(type, nameof(type));
 
-        // Проверяем поддержку иерархии
-        if (parentId is not null && !type.SupportsHierarchy)
-        {
-            throw new InvalidOperationException(
-                $"Subject type '{type.Name}' does not support hierarchy");
-        }
-
         return new Subject(
             SubjectId.Create(),
             name.Trim(),
@@ -113,50 +154,34 @@ public sealed class Subject : Entity<SubjectId>
     }
 
     /// <summary>
-    /// Создание жанра
+    /// Создание категории из Gutenberg bookshelf
     /// </summary>
-    public static Subject CreateGenre(
-        string name,
-        SubjectId? parentId = null,
-        string? description = null)
+    public static Subject CreateFromGutenberg(string bookshelfName)
     {
-        return Create(name, SubjectType.Genre, parentId, description);
+        Guard.Against.NullOrWhiteSpace(bookshelfName, nameof(bookshelfName));
+
+        var type = InferTypeFromName(bookshelfName);
+
+        return new Subject(
+            SubjectId.Create(),
+            bookshelfName.Trim(),
+            type,
+            null,
+            null,
+            bookshelfName);
     }
 
-    /// <summary>
-    /// Создание темы/топика
-    /// </summary>
-    public static Subject CreateTopic(
-        string name,
-        SubjectId? parentId = null,
-        string? description = null)
-    {
-        return Create(name, SubjectType.Topic, parentId, description);
-    }
+    // ═══════════════════════════════════════════════════════════════
+    // MODIFICATION METHODS
+    // ═══════════════════════════════════════════════════════════════
 
     /// <summary>
-    /// Создание из Gutenberg bookshelf
+    /// Обновление названия категории
     /// </summary>
-    public static Subject CreateFromGutenbergBookshelf(
-        string bookshelfName,
-        SubjectType? typeOverride = null)
+    public void UpdateName(string name)
     {
-        var type = typeOverride ?? InferTypeFromName(bookshelfName);
-
-        return Create(
-            name: bookshelfName,
-            type: type,
-            externalMapping: bookshelfName);
-    }
-
-    /// <summary>
-    /// Обновление названия
-    /// </summary>
-    public void UpdateName(string newName)
-    {
-        Guard.Against.NullOrWhiteSpace(newName, nameof(newName));
-
-        _name = newName.Trim();
+        Guard.Against.NullOrWhiteSpace(name, nameof(name));
+        Name = name.Trim();  // Setter обновит и _slug
         UpdateTimestamp();
     }
 
@@ -165,7 +190,17 @@ public sealed class Subject : Entity<SubjectId>
     /// </summary>
     public void UpdateDescription(string? description)
     {
-        _description = description?.Trim();
+        Description = description?.Trim();
+        UpdateTimestamp();
+    }
+
+    /// <summary>
+    /// Обновление типа категории
+    /// </summary>
+    public void UpdateType(SubjectType type)
+    {
+        Guard.Against.Null(type, nameof(type));
+        Type = type;
         UpdateTimestamp();
     }
 
@@ -174,69 +209,95 @@ public sealed class Subject : Entity<SubjectId>
     /// </summary>
     public void SetParent(SubjectId? parentId)
     {
-        if (parentId is not null && !Type.SupportsHierarchy)
-        {
-            throw new InvalidOperationException(
-                $"Subject type '{Type.Name}' does not support hierarchy");
-        }
-
-        // Предотвращаем циклические ссылки
-        if (parentId == Id)
-        {
-            throw new InvalidOperationException("Subject cannot be its own parent");
-        }
-
         ParentId = parentId;
         UpdateTimestamp();
     }
 
     /// <summary>
-    /// Добавление книги в категорию
+    /// Обновление внешнего маппинга
     /// </summary>
-    public void AddBook(BookId bookId)
-    {
-        Guard.Against.Null(bookId, nameof(bookId));
-
-        if (_bookIds.Add(bookId))
-        {
-            UpdateTimestamp();
-        }
-    }
-
-    /// <summary>
-    /// Удаление книги из категории
-    /// </summary>
-    public void RemoveBook(BookId bookId)
-    {
-        Guard.Against.Null(bookId, nameof(bookId));
-
-        if (_bookIds.Remove(bookId))
-        {
-            UpdateTimestamp();
-        }
-    }
-
-    /// <summary>
-    /// Установка маппинга на внешний источник
-    /// </summary>
-    public void SetExternalMapping(string? mapping)
+    public void UpdateExternalMapping(string? mapping)
     {
         ExternalMapping = mapping?.Trim();
         UpdateTimestamp();
     }
 
     /// <summary>
+    /// Инкремент счётчика книг
+    /// </summary>
+    public void IncrementBookCount()
+    {
+        _bookCount++;
+        UpdateTimestamp();
+    }
+
+    /// <summary>
+    /// Декремент счётчика книг
+    /// </summary>
+    public void DecrementBookCount()
+    {
+        if (_bookCount > 0)
+        {
+            _bookCount--;
+            UpdateTimestamp();
+        }
+    }
+
+    /// <summary>
+    /// Установка счётчика книг (для синхронизации)
+    /// </summary>
+    public void SetBookCount(int count)
+    {
+        _bookCount = Math.Max(0, count);
+        UpdateTimestamp();
+    }
+
+    /// <summary>
+    /// Добавление книги (runtime only)
+    /// </summary>
+    public void AddBook(BookId bookId)
+    {
+        if (_bookIds.Add(bookId))
+        {
+            IncrementBookCount();
+        }
+    }
+
+    /// <summary>
+    /// Удаление книги (runtime only)
+    /// </summary>
+    public void RemoveBook(BookId bookId)
+    {
+        if (_bookIds.Remove(bookId))
+        {
+            DecrementBookCount();
+        }
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // PRIVATE HELPERS
+    // ═══════════════════════════════════════════════════════════════
+
+    /// <summary>
     /// Генерация slug из названия
     /// </summary>
     private static string GenerateSlug(string name)
     {
+        if (string.IsNullOrWhiteSpace(name))
+            return string.Empty;
+
         return name
             .ToLowerInvariant()
             .Replace(" ", "-")
             .Replace("'", "")
             .Replace("\"", "")
             .Replace("&", "and")
-            .Replace(",", "");
+            .Replace(",", "")
+            .Replace(".", "")
+            .Replace(":", "")
+            .Replace(";", "")
+            .Replace("!", "")
+            .Replace("?", "");
     }
 
     /// <summary>
