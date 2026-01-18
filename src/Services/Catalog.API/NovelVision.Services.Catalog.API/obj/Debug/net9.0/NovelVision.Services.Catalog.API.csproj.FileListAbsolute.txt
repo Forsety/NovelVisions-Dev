@@ -267,7 +267,6 @@ C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Service
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.NovelVision.Services.Catalog.API.props
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.NovelVision.Services.Catalog.API.props
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVis.C93D7CC8.Up2Date
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.dll
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\refint\NovelVision.Services.Catalog.API.dll
