@@ -1,10 +1,12 @@
 # models/database/session.py
 """
 Асинхронная сессия SQLAlchemy и управление подключениями.
+Поддержка: SQLite, PostgreSQL, SQL Server
 """
 
 from typing import AsyncGenerator, Optional
 from contextlib import asynccontextmanager
+import os
 
 from sqlalchemy.ext.asyncio import (
     AsyncSession, 
@@ -12,8 +14,8 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine,
     async_sessionmaker
 )
-from sqlalchemy.pool import NullPool, QueuePool
-from sqlalchemy import text
+from sqlalchemy.pool import NullPool, QueuePool, StaticPool
+from sqlalchemy import text, event
 
 from app.config import settings
 
@@ -23,6 +25,7 @@ class DatabaseManager:
     Менеджер базы данных.
     
     Управляет подключениями, сессиями и пулом соединений.
+    Поддерживает SQLite, PostgreSQL и SQL Server.
     """
     
     _instance: Optional["DatabaseManager"] = None
@@ -55,60 +58,102 @@ class DatabaseManager:
         return self._session_factory
     
     def _create_engine(self) -> AsyncEngine:
-        """Создаёт асинхронный engine"""
+        """Создаёт асинхронный engine с учётом типа БД"""
         
-        # Получаем URL базы данных
         database_url = self._get_database_url()
+        is_sqlite = database_url.startswith("sqlite")
+        is_testing = getattr(settings, 'TESTING', False)
         
-        # Параметры пула
-        pool_size = getattr(settings, 'DB_POOL_SIZE', 5)
-        max_overflow = getattr(settings, 'DB_MAX_OVERFLOW', 10)
-        pool_timeout = getattr(settings, 'DB_POOL_TIMEOUT', 30)
-        pool_recycle = getattr(settings, 'DB_POOL_RECYCLE', 1800)
-        
-        # Определяем тип пула
-        # Для тестов используем NullPool
-        if getattr(settings, 'TESTING', False):
-            pool_class = NullPool
-            pool_kwargs = {}
+        # Параметры зависят от типа БД
+        if is_sqlite:
+            # SQLite: используем StaticPool для async
+            engine = create_async_engine(
+                database_url,
+                echo=getattr(settings, 'DB_ECHO', False),
+                poolclass=StaticPool,
+                connect_args={"check_same_thread": False}
+            )
+            
+            # Включаем foreign keys для SQLite
+            @event.listens_for(engine.sync_engine, "connect")
+            def set_sqlite_pragma(dbapi_connection, connection_record):
+                cursor = dbapi_connection.cursor()
+                cursor.execute("PRAGMA foreign_keys=ON")
+                cursor.close()
+                
+        elif is_testing:
+            # Тестовый режим: NullPool
+            engine = create_async_engine(
+                database_url,
+                echo=getattr(settings, 'DB_ECHO', False),
+                poolclass=NullPool
+            )
         else:
-            pool_class = QueuePool
-            pool_kwargs = {
-                "pool_size": pool_size,
-                "max_overflow": max_overflow,
-                "pool_timeout": pool_timeout,
-                "pool_recycle": pool_recycle,
-                "pool_pre_ping": True  # Проверка соединения перед использованием
-            }
-        
-        engine = create_async_engine(
-            database_url,
-            echo=getattr(settings, 'DB_ECHO', False),
-            poolclass=pool_class,
-            **pool_kwargs
-        )
+            # PostgreSQL/SQL Server: QueuePool с настройками
+            pool_size = getattr(settings, 'DB_POOL_SIZE', 5)
+            max_overflow = getattr(settings, 'DB_MAX_OVERFLOW', 10)
+            pool_timeout = getattr(settings, 'DB_POOL_TIMEOUT', 30)
+            pool_recycle = getattr(settings, 'DB_POOL_RECYCLE', 1800)
+            
+            engine = create_async_engine(
+                database_url,
+                echo=getattr(settings, 'DB_ECHO', False),
+                poolclass=QueuePool,
+                pool_size=pool_size,
+                max_overflow=max_overflow,
+                pool_timeout=pool_timeout,
+                pool_recycle=pool_recycle,
+                pool_pre_ping=True
+            )
         
         return engine
     
     def _get_database_url(self) -> str:
         """Формирует URL базы данных"""
         
-        # Пробуем получить готовый URL
+        # 1. Пробуем получить готовый URL из настроек
         if hasattr(settings, 'DATABASE_URL') and settings.DATABASE_URL:
             url = settings.DATABASE_URL
-            # Конвертируем в async версию если нужно
+            
+            # Конвертируем sync URL в async если нужно
             if url.startswith("postgresql://"):
                 url = url.replace("postgresql://", "postgresql+asyncpg://")
+            elif url.startswith("sqlite:///"):
+                url = url.replace("sqlite:///", "sqlite+aiosqlite:///")
+            
             return url
         
-        # Собираем из отдельных параметров
-        db_host = getattr(settings, 'DB_HOST', 'localhost')
-        db_port = getattr(settings, 'DB_PORT', 5432)
-        db_name = getattr(settings, 'DB_NAME', 'promptgen')
-        db_user = getattr(settings, 'DB_USER', 'postgres')
-        db_password = getattr(settings, 'DB_PASSWORD', 'postgres')
+        # 2. Проверяем тип БД из настроек
+        db_type = getattr(settings, 'DB_TYPE', 'sqlite').lower()
         
-        return f"postgresql+asyncpg://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+        if db_type == 'sqlite':
+            # SQLite - файл в папке data
+            db_path = getattr(settings, 'DB_PATH', './data/promptgen.db')
+            # Создаём папку если не существует
+            os.makedirs(os.path.dirname(db_path), exist_ok=True)
+            return f"sqlite+aiosqlite:///{db_path}"
+        
+        elif db_type == 'postgresql':
+            # PostgreSQL
+            db_host = getattr(settings, 'DB_HOST', 'localhost')
+            db_port = getattr(settings, 'DB_PORT', 5432)
+            db_name = getattr(settings, 'DB_NAME', 'promptgen')
+            db_user = getattr(settings, 'DB_USER', 'postgres')
+            db_password = getattr(settings, 'DB_PASSWORD', 'postgres')
+            return f"postgresql+asyncpg://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+        
+        elif db_type == 'mssql':
+            # SQL Server
+            db_host = getattr(settings, 'DB_HOST', 'localhost')
+            db_name = getattr(settings, 'DB_NAME', 'PromptGenDb')
+            db_user = getattr(settings, 'DB_USER', 'sa')
+            db_password = getattr(settings, 'DB_PASSWORD', '')
+            driver = getattr(settings, 'DB_DRIVER', 'ODBC+Driver+17+for+SQL+Server')
+            return f"mssql+aioodbc://{db_user}:{db_password}@{db_host}/{db_name}?driver={driver}"
+        
+        else:
+            # По умолчанию SQLite
+            return "sqlite+aiosqlite:///./data/promptgen.db"
     
     async def get_session(self) -> AsyncGenerator[AsyncSession, None]:
         """

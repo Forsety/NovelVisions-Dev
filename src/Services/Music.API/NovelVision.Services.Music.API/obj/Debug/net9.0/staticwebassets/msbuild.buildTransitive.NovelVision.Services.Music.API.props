@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\NovelVision.Services.Music.API.props" />
-</Project>

@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\NovelVision.Services.Reading.API.props" />
-</Project>

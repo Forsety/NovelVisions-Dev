@@ -1,3 +1,4 @@
+// src/Services/Catalog.API/NovelVision.Services.Catalog.Application/Behaviors/LoggingBehavior.cs
 using System;
 using System.Diagnostics;
 using System.Threading;
@@ -7,8 +8,12 @@ using Microsoft.Extensions.Logging;
 
 namespace NovelVision.Services.Catalog.Application.Behaviors;
 
+/// <summary>
+/// Pipeline behavior для логирования запросов MediatR.
+/// Совместим с MediatR 12+
+/// </summary>
 public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : IRequest<TResponse>
+    where TRequest : notnull
 {
     private readonly ILogger<LoggingBehavior<TRequest, TResponse>> _logger;
 
@@ -35,6 +40,7 @@ public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, 
 
         try
         {
+            // MediatR 12+: просто await next()
             var response = await next();
 
             stopwatch.Stop();

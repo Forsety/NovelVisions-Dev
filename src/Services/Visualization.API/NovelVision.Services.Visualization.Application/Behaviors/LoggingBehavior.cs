@@ -1,12 +1,11 @@
+// src/Services/Visualization.API/NovelVision.Services.Visualization.Application/Common/Behaviors/LoggingBehavior.cs
+
 using System.Diagnostics;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace NovelVision.Services.Visualization.Application.Behaviors;
 
-/// <summary>
-/// Pipeline behavior для логирования
-/// </summary>
 public sealed class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
 {
@@ -23,33 +22,32 @@ public sealed class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRe
         CancellationToken cancellationToken)
     {
         var requestName = typeof(TRequest).Name;
-        var requestGuid = Guid.NewGuid().ToString();
 
         _logger.LogInformation(
-            "[START] {RequestName} [{RequestGuid}]",
-            requestName, requestGuid);
+            "Handling {RequestName}",
+            requestName);
 
-        var stopwatch = Stopwatch.StartNew();
+        var sw = Stopwatch.StartNew();
 
         try
         {
             var response = await next();
 
-            stopwatch.Stop();
+            sw.Stop();
 
             _logger.LogInformation(
-                "[END] {RequestName} [{RequestGuid}] completed in {ElapsedMs}ms",
-                requestName, requestGuid, stopwatch.ElapsedMilliseconds);
+                "Handled {RequestName} in {ElapsedMs}ms",
+                requestName, sw.ElapsedMilliseconds);
 
             return response;
         }
         catch (Exception ex)
         {
-            stopwatch.Stop();
+            sw.Stop();
 
             _logger.LogError(ex,
-                "[ERROR] {RequestName} [{RequestGuid}] failed after {ElapsedMs}ms: {Message}",
-                requestName, requestGuid, stopwatch.ElapsedMilliseconds, ex.Message);
+                "Error handling {RequestName} after {ElapsedMs}ms",
+                requestName, sw.ElapsedMilliseconds);
 
             throw;
         }

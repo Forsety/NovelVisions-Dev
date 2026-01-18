@@ -1,3 +1,5 @@
+// src/Services/Visualization.API/NovelVision.Services.Visualization.Application/Extensions/DependencyInjection.cs
+
 using System.Reflection;
 using FluentValidation;
 using MediatR;
@@ -18,10 +20,14 @@ public static class DependencyInjection
             cfg.RegisterServicesFromAssembly(assembly);
         });
 
-        // Add AutoMapper
-        services.AddAutoMapper(cfg => cfg.AddMaps(assembly));
+        // Add AutoMapper - явно указываем assemblies
+        services.AddAutoMapper(cfg =>
+        {
+            cfg.AddMaps(assembly);
+        }, assembly);
 
         // Add FluentValidation
+        services.AddValidatorsFromAssembly(assembly);
 
         // Add Pipeline Behaviors
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));

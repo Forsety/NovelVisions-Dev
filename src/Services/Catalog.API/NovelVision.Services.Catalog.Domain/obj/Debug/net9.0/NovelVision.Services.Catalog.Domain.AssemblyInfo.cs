@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovelVision.Services.Catalog.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e2e6f3c84784d42b6f7638d55fb0f747f33b7b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dea01e160a288f0e7c1381fa14ea0525c2639555")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovelVision.Services.Catalog.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovelVision.Services.Catalog.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

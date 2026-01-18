@@ -4,14 +4,14 @@
     "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Infrastructure\\NovelVision.Services.Visualization.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Infrastructure\\NovelVision.Services.Visualization.Infrastructure.csproj": {
+    "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\BuildingBlocks\\SharedKernel\\NovelVision.BuildingBlocks.SharedKernel\\NovelVision.BuildingBlocks.SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Infrastructure\\NovelVision.Services.Visualization.Infrastructure.csproj",
-        "projectName": "NovelVision.Services.Visualization.Infrastructure",
-        "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Infrastructure\\NovelVision.Services.Visualization.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\BuildingBlocks\\SharedKernel\\NovelVision.BuildingBlocks.SharedKernel\\NovelVision.BuildingBlocks.SharedKernel.csproj",
+        "projectName": "NovelVision.BuildingBlocks.SharedKernel",
+        "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\BuildingBlocks\\SharedKernel\\NovelVision.BuildingBlocks.SharedKernel\\NovelVision.BuildingBlocks.SharedKernel.csproj",
         "packagesPath": "C:\\Users\\DATART\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\BuildingBlocks\\SharedKernel\\NovelVision.BuildingBlocks.SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,343 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Ardalis.SmartEnum": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Ardalis.Specification": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.15.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Application\\NovelVision.Services.Visualization.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Application\\NovelVision.Services.Visualization.Application.csproj",
+        "projectName": "NovelVision.Services.Visualization.Application",
+        "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Application\\NovelVision.Services.Visualization.Application.csproj",
+        "packagesPath": "C:\\Users\\DATART\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DATART\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\BuildingBlocks\\SharedKernel\\NovelVision.BuildingBlocks.SharedKernel\\NovelVision.BuildingBlocks.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\BuildingBlocks\\SharedKernel\\NovelVision.BuildingBlocks.SharedKernel\\NovelVision.BuildingBlocks.SharedKernel.csproj"
+              },
+              "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Domain\\NovelVision.Services.Visualization.Domain.csproj": {
+                "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Domain\\NovelVision.Services.Visualization.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Domain\\NovelVision.Services.Visualization.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Domain\\NovelVision.Services.Visualization.Domain.csproj",
+        "projectName": "NovelVision.Services.Visualization.Domain",
+        "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Domain\\NovelVision.Services.Visualization.Domain.csproj",
+        "packagesPath": "C:\\Users\\DATART\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DATART\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\BuildingBlocks\\SharedKernel\\NovelVision.BuildingBlocks.SharedKernel\\NovelVision.BuildingBlocks.SharedKernel.csproj": {
+                "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\BuildingBlocks\\SharedKernel\\NovelVision.BuildingBlocks.SharedKernel\\NovelVision.BuildingBlocks.SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Ardalis.GuardClauses": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Infrastructure\\NovelVision.Services.Visualization.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Infrastructure\\NovelVision.Services.Visualization.Infrastructure.csproj",
+        "projectName": "NovelVision.Services.Visualization.Infrastructure",
+        "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Infrastructure\\NovelVision.Services.Visualization.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\DATART\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DATART\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Application\\NovelVision.Services.Visualization.Application.csproj": {
+                "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Application\\NovelVision.Services.Visualization.Application.csproj"
+              },
+              "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Domain\\NovelVision.Services.Visualization.Domain.csproj": {
+                "projectPath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Visualization.API\\NovelVision.Services.Visualization.Domain\\NovelVision.Services.Visualization.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.23.0, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Core": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Http.Polly": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.5.2, )"
+            },
+            "Polly.Extensions.Http": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.8.41, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

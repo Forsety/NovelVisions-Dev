@@ -129,3 +129,434 @@ Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
    at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
    at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
    at Program.<Main>$(String[] args) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Program.cs:line 51
+2026-01-15 19:36:29.295 +01:00 [INF] Starting NovelVision Catalog API
+2026-01-15 19:36:31.504 +01:00 [INF] Initializing UI Database
+2026-01-15 19:36:32.277 +01:00 [INF] Saving healthchecks configuration to database
+2026-01-15 19:36:33.145 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:36:33.411 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-15 19:36:33.877 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-15 19:36:33.890 +01:00 [WRN] The property 'Author.BookIds' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 19:36:33.896 +01:00 [WRN] The property 'Author.SocialLinks' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 19:36:34.332 +01:00 [INF] HTTP GET /health responded 200 in 1173.0758 ms
+2026-01-15 19:36:34.338 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 1223, Body: {"status":"Healthy","totalDuration":"00:00:00.9221820","entries":{"catalog-db":{"data":{},"duration":"00:00:00.8436250","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0090318","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:36:34.339 +01:00 [WRN] Slow request detected: GET /health took 1223ms
+2026-01-15 19:37:04.577 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:37:04.663 +01:00 [INF] HTTP GET /health responded 200 in 81.3534 ms
+2026-01-15 19:37:04.665 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 88, Body: {"status":"Healthy","totalDuration":"00:00:00.0796716","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0406574","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000468","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:37:34.725 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:37:34.783 +01:00 [INF] HTTP GET /health responded 200 in 54.8597 ms
+2026-01-15 19:37:34.786 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 61, Body: {"status":"Healthy","totalDuration":"00:00:00.0531858","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0498305","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000028","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:38:04.798 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:38:04.804 +01:00 [INF] HTTP GET /health responded 200 in 1.7160 ms
+2026-01-15 19:38:04.805 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7, Body: {"status":"Healthy","totalDuration":"00:00:00.0014016","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0011020","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:38:32.427 +01:00 [INF] HTTP Request Information: Method: GET, Path: /swagger, QueryString: , Headers: {"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7,ru;q=0.6,pl;q=0.5,cs;q=0.4","Upgrade-Insecure-Requests":"1","sec-ch-ua":"\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","priority":"u=0, i"}, Body: 
+2026-01-15 19:38:32.438 +01:00 [INF] HTTP GET /swagger responded 404 in 0.4064 ms
+2026-01-15 19:38:32.440 +01:00 [INF] HTTP Response Information: StatusCode: 404, ElapsedMs: 12, Body: 
+2026-01-15 19:38:34.831 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:38:34.835 +01:00 [INF] HTTP GET /health responded 200 in 1.9552 ms
+2026-01-15 19:38:34.837 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 6, Body: {"status":"Healthy","totalDuration":"00:00:00.0015740","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0012920","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000036","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:39:04.854 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:39:04.864 +01:00 [INF] HTTP GET /health responded 200 in 6.1800 ms
+2026-01-15 19:39:04.866 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 12, Body: {"status":"Healthy","totalDuration":"00:00:00.0058597","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0013330","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000141","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:39:18.040 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Connection":"keep-alive","Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; uk-UA) WindowsPowerShell/5.1.26100.7462"}, Body: 
+2026-01-15 19:39:18.046 +01:00 [INF] HTTP GET /health responded 200 in 1.5080 ms
+2026-01-15 19:39:18.047 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7, Body: {"status":"Healthy","totalDuration":"00:00:00.0012311","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009129","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000024","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:39:34.883 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:39:34.889 +01:00 [INF] HTTP GET /health responded 200 in 2.0552 ms
+2026-01-15 19:39:34.891 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 8, Body: {"status":"Healthy","totalDuration":"00:00:00.0016154","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0012863","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000026","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:39:46.531 +01:00 [INF] HTTP Request Information: Method: GET, Path: /api/v1/books, QueryString: , Headers: {"Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; uk-UA) WindowsPowerShell/5.1.26100.7462"}, Body: 
+2026-01-15 19:39:46.571 +01:00 [INF] Getting books list with filters: {"PageNumber":1,"PageSize":20,"AuthorId":null,"Status":null,"Genre":null,"SearchTerm":null,"Language":null,"MinPages":null,"MaxPages":null,"CopyrightStatus":null,"Source":null,"IsFreeToUse":null,"SubjectIds":null,"SortBy":null,"Descending":true,"$type":"GetBooksRequest"}
+2026-01-15 19:39:46.673 +01:00 [ERR] Error retrieving books
+System.MissingMethodException: Method not found: 'System.Threading.Tasks.Task`1<System.__Canon> MediatR.RequestHandlerDelegate`1.Invoke()'.
+   at NovelVision.Services.Catalog.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at NovelVision.Services.Catalog.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_1.<Handle>b__2(CancellationToken t)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at NovelVision.Services.Catalog.API.Controllers.BooksController.GetBooks(GetBooksRequest request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Controllers\v1\BooksController.cs:line 71
+2026-01-15 19:39:46.695 +01:00 [ERR] HTTP GET /api/v1/books responded 500 in 161.5500 ms
+2026-01-15 19:39:46.698 +01:00 [INF] HTTP Response Information: StatusCode: 500, ElapsedMs: 167, Body: {"success":false,"message":"An error occurred while retrieving books","errors":[],"timestamp":"2026-01-15T18:39:46.6848512Z"}
+2026-01-15 19:39:57.347 +01:00 [INF] HTTP Request Information: Method: GET, Path: /api/v1/books, QueryString: , Headers: {"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7,ru;q=0.6,pl;q=0.5,cs;q=0.4","Referer":"https://claude.ai/","Upgrade-Insecure-Requests":"1","sec-ch-ua":"\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","sec-fetch-site":"cross-site","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","priority":"u=0, i"}, Body: 
+2026-01-15 19:39:57.364 +01:00 [INF] Getting books list with filters: {"PageNumber":1,"PageSize":20,"AuthorId":null,"Status":null,"Genre":null,"SearchTerm":null,"Language":null,"MinPages":null,"MaxPages":null,"CopyrightStatus":null,"Source":null,"IsFreeToUse":null,"SubjectIds":null,"SortBy":null,"Descending":true,"$type":"GetBooksRequest"}
+2026-01-15 19:39:57.441 +01:00 [ERR] Error retrieving books
+System.MissingMethodException: Method not found: 'System.Threading.Tasks.Task`1<System.__Canon> MediatR.RequestHandlerDelegate`1.Invoke()'.
+   at NovelVision.Services.Catalog.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at NovelVision.Services.Catalog.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_1.<Handle>b__2(CancellationToken t)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at NovelVision.Services.Catalog.API.Controllers.BooksController.GetBooks(GetBooksRequest request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Controllers\v1\BooksController.cs:line 71
+2026-01-15 19:39:57.447 +01:00 [ERR] HTTP GET /api/v1/books responded 500 in 84.4607 ms
+2026-01-15 19:39:57.449 +01:00 [INF] HTTP Response Information: StatusCode: 500, ElapsedMs: 102, Body: {"success":false,"message":"An error occurred while retrieving books","errors":[],"timestamp":"2026-01-15T18:39:57.4455432Z"}
+2026-01-15 19:39:57.612 +01:00 [INF] HTTP Request Information: Method: GET, Path: /favicon.ico, QueryString: , Headers: {"Accept":"image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8","Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7,ru;q=0.6,pl;q=0.5,cs;q=0.4","Referer":"https://localhost:7295/api/v1/books","sec-ch-ua-platform":"\"Windows\"","sec-ch-ua":"\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-fetch-site":"same-origin","sec-fetch-mode":"no-cors","sec-fetch-dest":"image","priority":"u=1, i"}, Body: 
+2026-01-15 19:39:57.623 +01:00 [INF] HTTP GET /favicon.ico responded 404 in 0.3115 ms
+2026-01-15 19:39:57.626 +01:00 [INF] HTTP Response Information: StatusCode: 404, ElapsedMs: 13, Body: 
+2026-01-15 19:40:04.905 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:40:04.910 +01:00 [INF] HTTP GET /health responded 200 in 1.7172 ms
+2026-01-15 19:40:04.911 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 6, Body: {"status":"Healthy","totalDuration":"00:00:00.0014300","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0011960","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000026","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:40:34.934 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:40:34.938 +01:00 [INF] HTTP GET /health responded 200 in 1.4752 ms
+2026-01-15 19:40:34.939 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 5, Body: {"status":"Healthy","totalDuration":"00:00:00.0011702","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009326","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000021","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:41:04.952 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:41:04.985 +01:00 [INF] HTTP GET /health responded 200 in 29.9089 ms
+2026-01-15 19:41:04.988 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 35, Body: {"status":"Healthy","totalDuration":"00:00:00.0295359","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0011271","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:41:45.564 +01:00 [INF] Starting NovelVision Catalog API
+2026-01-15 19:41:46.786 +01:00 [INF] Initializing UI Database
+2026-01-15 19:41:47.268 +01:00 [INF] Saving healthchecks configuration to database
+2026-01-15 19:41:47.922 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:41:48.047 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-15 19:41:48.507 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-15 19:41:48.517 +01:00 [WRN] The property 'Author.BookIds' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 19:41:48.521 +01:00 [WRN] The property 'Author.SocialLinks' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 19:41:48.865 +01:00 [INF] HTTP GET /health responded 200 in 916.8057 ms
+2026-01-15 19:41:48.870 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 959, Body: {"status":"Healthy","totalDuration":"00:00:00.8074789","entries":{"catalog-db":{"data":{},"duration":"00:00:00.7651659","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0012410","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:42:03.912 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Connection":"keep-alive","Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; uk-UA) WindowsPowerShell/5.1.26100.7462"}, Body: 
+2026-01-15 19:42:03.929 +01:00 [INF] HTTP GET /health responded 200 in 12.2854 ms
+2026-01-15 19:42:03.930 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 18, Body: {"status":"Healthy","totalDuration":"00:00:00.0104751","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0097593","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000396","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:42:07.192 +01:00 [INF] HTTP Request Information: Method: GET, Path: /api/v1/books, QueryString: , Headers: {"Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; uk-UA) WindowsPowerShell/5.1.26100.7462"}, Body: 
+2026-01-15 19:42:07.232 +01:00 [INF] Getting books list with filters: {"PageNumber":1,"PageSize":20,"AuthorId":null,"Status":null,"Genre":null,"SearchTerm":null,"Language":null,"MinPages":null,"MaxPages":null,"CopyrightStatus":null,"Source":null,"IsFreeToUse":null,"SubjectIds":null,"SortBy":null,"Descending":true,"$type":"GetBooksRequest"}
+2026-01-15 19:42:07.330 +01:00 [ERR] Error retrieving books
+System.MissingMethodException: Method not found: 'System.Threading.Tasks.Task`1<System.__Canon> MediatR.RequestHandlerDelegate`1.Invoke()'.
+   at NovelVision.Services.Catalog.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at NovelVision.Services.Catalog.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_1.<Handle>b__2(CancellationToken t)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at NovelVision.Services.Catalog.API.Controllers.BooksController.GetBooks(GetBooksRequest request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Controllers\v1\BooksController.cs:line 71
+2026-01-15 19:42:07.351 +01:00 [ERR] HTTP GET /api/v1/books responded 500 in 156.0094 ms
+2026-01-15 19:42:07.355 +01:00 [INF] HTTP Response Information: StatusCode: 500, ElapsedMs: 163, Body: {"success":false,"message":"An error occurred while retrieving books","errors":[],"timestamp":"2026-01-15T18:42:07.3416269Z"}
+2026-01-15 19:42:19.041 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:42:19.092 +01:00 [INF] HTTP GET /health responded 200 in 47.7208 ms
+2026-01-15 19:42:19.095 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 54, Body: {"status":"Healthy","totalDuration":"00:00:00.0473464","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0470410","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000024","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:42:49.210 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:42:49.215 +01:00 [INF] HTTP GET /health responded 200 in 1.6024 ms
+2026-01-15 19:42:49.217 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 6, Body: {"status":"Healthy","totalDuration":"00:00:00.0012447","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009801","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000030","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:43:44.522 +01:00 [INF] Starting NovelVision Catalog API
+2026-01-15 19:43:45.888 +01:00 [INF] Initializing UI Database
+2026-01-15 19:43:46.382 +01:00 [INF] Saving healthchecks configuration to database
+2026-01-15 19:43:47.101 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:43:47.679 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-15 19:43:47.690 +01:00 [WRN] The property 'Author.BookIds' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 19:43:47.696 +01:00 [WRN] The property 'Author.SocialLinks' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 19:43:48.104 +01:00 [INF] HTTP GET /health responded 200 in 974.7955 ms
+2026-01-15 19:43:48.111 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 1021, Body: {"status":"Healthy","totalDuration":"00:00:00.8309853","entries":{"catalog-db":{"data":{},"duration":"00:00:00.7884811","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0016612","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:43:48.113 +01:00 [WRN] Slow request detected: GET /health took 1021ms
+2026-01-15 19:44:05.334 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Connection":"keep-alive","Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; uk-UA) WindowsPowerShell/5.1.26100.7462"}, Body: 
+2026-01-15 19:44:05.349 +01:00 [INF] HTTP GET /health responded 200 in 10.3369 ms
+2026-01-15 19:44:05.351 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 17, Body: {"status":"Healthy","totalDuration":"00:00:00.0088030","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0082363","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000322","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:44:07.041 +01:00 [INF] HTTP Request Information: Method: GET, Path: /api/v1/books, QueryString: , Headers: {"Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; uk-UA) WindowsPowerShell/5.1.26100.7462"}, Body: 
+2026-01-15 19:44:07.086 +01:00 [INF] Getting books list with filters: {"PageNumber":1,"PageSize":20,"AuthorId":null,"Status":null,"Genre":null,"SearchTerm":null,"Language":null,"MinPages":null,"MaxPages":null,"CopyrightStatus":null,"Source":null,"IsFreeToUse":null,"SubjectIds":null,"SortBy":null,"Descending":true,"$type":"GetBooksRequest"}
+2026-01-15 19:44:07.108 +01:00 [INF] Handling SearchBooksQuery [aefcaf9f-6320-4588-8f35-91edc9aa6a54] {"SearchTerm":null,"Status":null,"Genre":null,"Language":null,"MinPages":null,"MaxPages":null,"PageNumber":1,"PageSize":20,"AuthorId":null,"CopyrightStatus":null,"Source":null,"SortBy":null,"Descending":true,"$type":"SearchBooksQuery"}
+2026-01-15 19:44:07.405 +01:00 [ERR] Request SearchBooksQuery [aefcaf9f-6320-4588-8f35-91edc9aa6a54] failed after 288ms
+System.MissingMethodException: Method not found: 'Void AutoMapper.MapperConfiguration..ctor(AutoMapper.MapperConfigurationExpression)'.
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_3(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at NovelVision.Services.Catalog.Application.Behaviors.TransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Application\Behaviors\TransactionBehavior.cs:line 33
+   at NovelVision.Services.Catalog.Application.Behaviors.PerformanceBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Application\Behaviors\PerformanceBehavior.cs:line 28
+   at NovelVision.Services.Catalog.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Application\Behaviors\ValidationBehavior.cs:line 34
+   at NovelVision.Services.Catalog.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Application\Behaviors\LoggingBehavior.cs:line 44
+2026-01-15 19:44:07.475 +01:00 [ERR] Error retrieving books
+System.MissingMethodException: Method not found: 'Void AutoMapper.MapperConfiguration..ctor(AutoMapper.MapperConfigurationExpression)'.
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_3(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at NovelVision.Services.Catalog.Application.Behaviors.TransactionBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Application\Behaviors\TransactionBehavior.cs:line 33
+   at NovelVision.Services.Catalog.Application.Behaviors.PerformanceBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Application\Behaviors\PerformanceBehavior.cs:line 28
+   at NovelVision.Services.Catalog.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Application\Behaviors\ValidationBehavior.cs:line 34
+   at NovelVision.Services.Catalog.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.Application\Behaviors\LoggingBehavior.cs:line 44
+   at NovelVision.Services.Catalog.API.Controllers.BooksController.GetBooks(GetBooksRequest request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Controllers\v1\BooksController.cs:line 71
+2026-01-15 19:44:07.494 +01:00 [ERR] HTTP GET /api/v1/books responded 500 in 449.8602 ms
+2026-01-15 19:44:07.496 +01:00 [INF] HTTP Response Information: StatusCode: 500, ElapsedMs: 454, Body: {"success":false,"message":"An error occurred while retrieving books","errors":[],"timestamp":"2026-01-15T18:44:07.4842121Z"}
+2026-01-15 19:44:18.322 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:44:18.378 +01:00 [INF] HTTP GET /health responded 200 in 50.8659 ms
+2026-01-15 19:44:18.381 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 58, Body: {"status":"Healthy","totalDuration":"00:00:00.0503327","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0500057","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000028","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:44:48.470 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 19:44:48.504 +01:00 [INF] HTTP GET /health responded 200 in 2.2197 ms
+2026-01-15 19:44:48.518 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 50, Body: {"status":"Healthy","totalDuration":"00:00:00.0016079","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0012993","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000046","status":"Healthy","tags":["self"]}}}
+2026-01-15 19:51:56.210 +01:00 [INF] Starting NovelVision Catalog API
+2026-01-15 19:51:56.718 +01:00 [FTL] Application terminated unexpectedly
+System.MissingMethodException: Method not found: 'Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddAutoMapper(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Reflection.Assembly[])'.
+   at NovelVision.Services.Catalog.Application.DependencyInjection.AddApplication(IServiceCollection services)
+   at Program.<<Main>$>g__ConfigureServices|0_0(IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Program.cs:line 76
+   at Program.<Main>$(String[] args) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Program.cs:line 49
+2026-01-15 19:53:45.362 +01:00 [INF] Starting NovelVision Catalog API
+2026-01-15 19:53:45.915 +01:00 [FTL] Application terminated unexpectedly
+System.MissingMethodException: Method not found: 'Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddAutoMapper(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type[])'.
+   at NovelVision.Services.Catalog.Application.DependencyInjection.AddApplication(IServiceCollection services)
+   at Program.<<Main>$>g__ConfigureServices|0_0(IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Program.cs:line 76
+   at Program.<Main>$(String[] args) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Program.cs:line 49
+2026-01-15 20:02:42.579 +01:00 [INF] Starting NovelVision Catalog API
+2026-01-15 20:02:43.108 +01:00 [FTL] Application terminated unexpectedly
+System.MissingMethodException: Method not found: 'Microsoft.Extensions.DependencyInjection.IServiceCollection Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.AddAutoMapper(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Type[])'.
+   at NovelVision.Services.Catalog.Application.DependencyInjection.AddApplication(IServiceCollection services)
+   at Program.<<Main>$>g__ConfigureServices|0_0(IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Program.cs:line 76
+   at Program.<Main>$(String[] args) in C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\Program.cs:line 49
+2026-01-15 20:03:41.052 +01:00 [INF] Starting NovelVision Catalog API
+2026-01-15 20:03:42.413 +01:00 [INF] Initializing UI Database
+2026-01-15 20:03:42.914 +01:00 [INF] Saving healthchecks configuration to database
+2026-01-15 20:03:43.618 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:03:44.123 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-15 20:03:44.133 +01:00 [WRN] The property 'Author.BookIds' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 20:03:44.139 +01:00 [WRN] The property 'Author.SocialLinks' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 20:03:44.540 +01:00 [INF] HTTP GET /health responded 200 in 892.1205 ms
+2026-01-15 20:03:44.545 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 965, Body: {"status":"Healthy","totalDuration":"00:00:00.7691142","entries":{"catalog-db":{"data":{},"duration":"00:00:00.7310935","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0061286","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:04:14.771 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:04:14.886 +01:00 [INF] HTTP GET /health responded 200 in 110.4128 ms
+2026-01-15 20:04:14.889 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 117, Body: {"status":"Healthy","totalDuration":"00:00:00.1085963","entries":{"catalog-db":{"data":{},"duration":"00:00:00.1029951","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000224","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:04:29.924 +01:00 [INF] HTTP Request Information: Method: GET, Path: /api/v1/books, QueryString: , Headers: {"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7,ru;q=0.6,pl;q=0.5,cs;q=0.4","Upgrade-Insecure-Requests":"1","sec-ch-ua":"\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","priority":"u=0, i"}, Body: 
+2026-01-15 20:04:29.991 +01:00 [INF] Getting books list with filters: {"PageNumber":1,"PageSize":20,"AuthorId":null,"Status":null,"Genre":null,"SearchTerm":null,"Language":null,"MinPages":null,"MaxPages":null,"CopyrightStatus":null,"Source":null,"IsFreeToUse":null,"SubjectIds":null,"SortBy":null,"Descending":true,"$type":"GetBooksRequest"}
+2026-01-15 20:04:30.019 +01:00 [INF] Handling SearchBooksQuery [1b60d929-12c3-4150-b3d0-0d812ee53c0a] {"SearchTerm":null,"Status":null,"Genre":null,"Language":null,"MinPages":null,"MaxPages":null,"PageNumber":1,"PageSize":20,"AuthorId":null,"CopyrightStatus":null,"Source":null,"SortBy":null,"Descending":true,"$type":"SearchBooksQuery"}
+2026-01-15 20:07:57.849 +01:00 [INF] Starting NovelVision Catalog API
+2026-01-15 20:07:59.484 +01:00 [INF] Initializing UI Database
+2026-01-15 20:08:00.083 +01:00 [INF] Saving healthchecks configuration to database
+2026-01-15 20:08:01.048 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:08:01.827 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-15 20:08:01.840 +01:00 [WRN] The property 'Author.BookIds' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 20:08:01.845 +01:00 [WRN] The property 'Author.SocialLinks' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-01-15 20:08:02.373 +01:00 [INF] HTTP GET /health responded 200 in 1283.8983 ms
+2026-01-15 20:08:02.378 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 1346, Body: {"status":"Healthy","totalDuration":"00:00:01.1102837","entries":{"catalog-db":{"data":{},"duration":"00:00:01.0452996","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0016224","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:08:02.380 +01:00 [WRN] Slow request detected: GET /health took 1346ms
+2026-01-15 20:08:24.065 +01:00 [INF] HTTP Request Information: Method: GET, Path: /api/v1/books, QueryString: , Headers: {"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","Host":"localhost:7295","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36","Accept-Encoding":"gzip, deflate, br, zstd","Accept-Language":"uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7,ru;q=0.6,pl;q=0.5,cs;q=0.4","Upgrade-Insecure-Requests":"1","sec-ch-ua":"\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","priority":"u=0, i"}, Body: 
+2026-01-15 20:08:24.212 +01:00 [INF] Getting books list with filters: {"PageNumber":1,"PageSize":20,"AuthorId":null,"Status":null,"Genre":null,"SearchTerm":null,"Language":null,"MinPages":null,"MaxPages":null,"CopyrightStatus":null,"Source":null,"IsFreeToUse":null,"SubjectIds":null,"SortBy":null,"Descending":true,"$type":"GetBooksRequest"}
+2026-01-15 20:08:24.232 +01:00 [INF] Handling SearchBooksQuery [cf5c59a7-5798-452a-87d5-8d2cbb84a1c7] {"SearchTerm":null,"Status":null,"Genre":null,"Language":null,"MinPages":null,"MaxPages":null,"PageNumber":1,"PageSize":20,"AuthorId":null,"CopyrightStatus":null,"Source":null,"SortBy":null,"Descending":true,"$type":"SearchBooksQuery"}
+2026-01-15 20:08:24.390 +01:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-15 20:08:24.394 +01:00 [INF] Searching books with term: null, Page: 1
+2026-01-15 20:08:24.791 +01:00 [INF] Found 0 books, total 0
+2026-01-15 20:08:24.794 +01:00 [WRN] Long Running Request: SearchBooksQuery (547 milliseconds) {"SearchTerm":null,"Status":null,"Genre":null,"Language":null,"MinPages":null,"MaxPages":null,"PageNumber":1,"PageSize":20,"AuthorId":null,"CopyrightStatus":null,"Source":null,"SortBy":null,"Descending":true,"$type":"SearchBooksQuery"}
+2026-01-15 20:08:24.806 +01:00 [INF] Handled SearchBooksQuery [cf5c59a7-5798-452a-87d5-8d2cbb84a1c7] in 563ms
+2026-01-15 20:08:24.834 +01:00 [INF] HTTP GET /api/v1/books responded 200 in 753.6954 ms
+2026-01-15 20:08:24.838 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 772, Body: {"data":{"items":[],"pageNumber":1,"pageSize":20,"totalCount":0,"totalPages":0,"hasPreviousPage":false,"hasNextPage":false},"success":true,"message":"Books retrieved successfully","errors":[],"timestamp":"2026-01-15T19:08:24.8095436Z"}
+2026-01-15 20:08:32.587 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:08:32.639 +01:00 [INF] HTTP GET /health responded 200 in 47.6315 ms
+2026-01-15 20:08:32.642 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 54, Body: {"status":"Healthy","totalDuration":"00:00:00.0448885","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0415692","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000768","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:09:02.693 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:09:02.710 +01:00 [INF] HTTP GET /health responded 200 in 11.5198 ms
+2026-01-15 20:09:02.713 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 45, Body: {"status":"Healthy","totalDuration":"00:00:00.0109853","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0106767","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000032","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:09:32.756 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:09:32.762 +01:00 [INF] HTTP GET /health responded 200 in 1.5803 ms
+2026-01-15 20:09:32.765 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 38, Body: {"status":"Healthy","totalDuration":"00:00:00.0012221","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009591","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000024","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:10:02.790 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:10:02.820 +01:00 [INF] HTTP GET /health responded 200 in 25.5096 ms
+2026-01-15 20:10:02.822 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 32, Body: {"status":"Healthy","totalDuration":"00:00:00.0251559","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0013958","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000022","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:10:32.825 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:10:32.859 +01:00 [INF] HTTP GET /health responded 200 in 30.1130 ms
+2026-01-15 20:10:32.861 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 36, Body: {"status":"Healthy","totalDuration":"00:00:00.0297862","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0010410","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000024","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:11:02.870 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:11:02.881 +01:00 [INF] HTTP GET /health responded 200 in 2.7542 ms
+2026-01-15 20:11:02.884 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 13, Body: {"status":"Healthy","totalDuration":"00:00:00.0020198","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0017359","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000041","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:11:32.894 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:11:32.902 +01:00 [INF] HTTP GET /health responded 200 in 1.9103 ms
+2026-01-15 20:11:32.904 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 10, Body: {"status":"Healthy","totalDuration":"00:00:00.0014843","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0012567","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000022","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:12:02.926 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:12:02.931 +01:00 [INF] HTTP GET /health responded 200 in 1.5380 ms
+2026-01-15 20:12:02.933 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7, Body: {"status":"Healthy","totalDuration":"00:00:00.0012079","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009080","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000026","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:12:32.944 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:12:32.953 +01:00 [INF] HTTP GET /health responded 200 in 5.5283 ms
+2026-01-15 20:12:32.956 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 12, Body: {"status":"Healthy","totalDuration":"00:00:00.0051652","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009430","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000025","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:13:02.970 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:13:02.975 +01:00 [INF] HTTP GET /health responded 200 in 1.5160 ms
+2026-01-15 20:13:02.977 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7, Body: {"status":"Healthy","totalDuration":"00:00:00.0011008","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0008912","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000034","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:13:32.987 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:13:33.019 +01:00 [INF] HTTP GET /health responded 200 in 29.7167 ms
+2026-01-15 20:13:33.022 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 35, Body: {"status":"Healthy","totalDuration":"00:00:00.0293400","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0012545","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000087","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:14:03.034 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:14:03.039 +01:00 [INF] HTTP GET /health responded 200 in 1.5315 ms
+2026-01-15 20:14:03.041 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7, Body: {"status":"Healthy","totalDuration":"00:00:00.0012129","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0010328","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000026","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:14:33.057 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:14:33.067 +01:00 [INF] HTTP GET /health responded 200 in 6.7646 ms
+2026-01-15 20:14:33.069 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 12, Body: {"status":"Healthy","totalDuration":"00:00:00.0063241","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0033608","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000029","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:15:03.078 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:15:03.084 +01:00 [INF] HTTP GET /health responded 200 in 1.8243 ms
+2026-01-15 20:15:03.088 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 9, Body: {"status":"Healthy","totalDuration":"00:00:00.0014215","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0011663","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000038","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:15:33.096 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:15:33.105 +01:00 [INF] HTTP GET /health responded 200 in 1.8289 ms
+2026-01-15 20:15:33.107 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 11, Body: {"status":"Healthy","totalDuration":"00:00:00.0012446","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009643","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000030","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:16:03.173 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:16:03.189 +01:00 [INF] HTTP GET /health responded 200 in 3.2600 ms
+2026-01-15 20:16:03.198 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 24, Body: {"status":"Healthy","totalDuration":"00:00:00.0028063","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0022681","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000067","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:16:33.227 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:16:33.233 +01:00 [INF] HTTP GET /health responded 200 in 1.8574 ms
+2026-01-15 20:16:33.236 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 8, Body: {"status":"Healthy","totalDuration":"00:00:00.0015550","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0011649","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000050","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:17:03.279 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:17:03.284 +01:00 [INF] HTTP GET /health responded 200 in 1.3789 ms
+2026-01-15 20:17:03.286 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7, Body: {"status":"Healthy","totalDuration":"00:00:00.0010448","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0008725","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000036","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:17:33.301 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:17:33.360 +01:00 [INF] HTTP GET /health responded 200 in 54.8521 ms
+2026-01-15 20:17:33.363 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 62, Body: {"status":"Healthy","totalDuration":"00:00:00.0545114","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0325042","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000035","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:18:03.390 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:18:03.398 +01:00 [INF] HTTP GET /health responded 200 in 1.5153 ms
+2026-01-15 20:18:03.401 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 11, Body: {"status":"Healthy","totalDuration":"00:00:00.0011500","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009519","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000064","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:18:33.411 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:18:33.420 +01:00 [INF] HTTP GET /health responded 200 in 1.4135 ms
+2026-01-15 20:18:33.422 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 11, Body: {"status":"Healthy","totalDuration":"00:00:00.0011736","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009977","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000015","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:19:03.426 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:19:03.431 +01:00 [INF] HTTP GET /health responded 200 in 1.2913 ms
+2026-01-15 20:19:03.434 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 8, Body: {"status":"Healthy","totalDuration":"00:00:00.0010322","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0008493","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000027","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:19:33.446 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:19:33.484 +01:00 [INF] HTTP GET /health responded 200 in 28.7496 ms
+2026-01-15 20:19:33.488 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 41, Body: {"status":"Healthy","totalDuration":"00:00:00.0284389","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0011459","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000018","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:20:03.511 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:20:03.517 +01:00 [INF] HTTP GET /health responded 200 in 1.6928 ms
+2026-01-15 20:20:03.520 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 8, Body: {"status":"Healthy","totalDuration":"00:00:00.0012838","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0010630","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000020","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:20:33.567 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:20:33.583 +01:00 [INF] HTTP GET /health responded 200 in 2.5774 ms
+2026-01-15 20:20:33.590 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 22, Body: {"status":"Healthy","totalDuration":"00:00:00.0019856","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0013717","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000020","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:21:03.602 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:21:03.607 +01:00 [INF] HTTP GET /health responded 200 in 1.3741 ms
+2026-01-15 20:21:03.609 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7, Body: {"status":"Healthy","totalDuration":"00:00:00.0011385","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009189","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:21:33.616 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:21:33.654 +01:00 [INF] HTTP GET /health responded 200 in 34.4964 ms
+2026-01-15 20:21:33.656 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 40, Body: {"status":"Healthy","totalDuration":"00:00:00.0341824","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0334890","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:22:03.675 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:22:03.681 +01:00 [INF] HTTP GET /health responded 200 in 1.6359 ms
+2026-01-15 20:22:03.684 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 9, Body: {"status":"Healthy","totalDuration":"00:00:00.0013276","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0011268","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000027","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:22:33.758 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:22:33.769 +01:00 [INF] HTTP GET /health responded 200 in 6.4269 ms
+2026-01-15 20:22:33.771 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 41, Body: {"status":"Healthy","totalDuration":"00:00:00.0060518","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0010378","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000013","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:23:03.779 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:23:03.784 +01:00 [INF] HTTP GET /health responded 200 in 1.7160 ms
+2026-01-15 20:23:03.786 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7, Body: {"status":"Healthy","totalDuration":"00:00:00.0013297","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0011128","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000029","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:23:33.791 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:23:33.805 +01:00 [INF] HTTP GET /health responded 200 in 6.1797 ms
+2026-01-15 20:23:33.807 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 15, Body: {"status":"Healthy","totalDuration":"00:00:00.0059614","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0032112","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000028","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:24:03.848 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:24:03.852 +01:00 [INF] HTTP GET /health responded 200 in 1.3709 ms
+2026-01-15 20:24:03.853 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 5, Body: {"status":"Healthy","totalDuration":"00:00:00.0011402","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009305","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000019","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:24:33.871 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:24:33.887 +01:00 [INF] HTTP GET /health responded 200 in 7.0925 ms
+2026-01-15 20:24:33.889 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 18, Body: {"status":"Healthy","totalDuration":"00:00:00.0068796","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0034300","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000020","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:25:03.892 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:25:03.897 +01:00 [INF] HTTP GET /health responded 200 in 1.2544 ms
+2026-01-15 20:25:03.899 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7, Body: {"status":"Healthy","totalDuration":"00:00:00.0010675","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0009274","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000019","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:25:33.901 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:25:33.915 +01:00 [INF] HTTP GET /health responded 200 in 5.5180 ms
+2026-01-15 20:25:33.917 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 15, Body: {"status":"Healthy","totalDuration":"00:00:00.0053257","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0025487","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000018","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:26:03.920 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:26:03.929 +01:00 [INF] HTTP GET /health responded 200 in 1.1314 ms
+2026-01-15 20:26:03.931 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 10, Body: {"status":"Healthy","totalDuration":"00:00:00.0009522","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0007990","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:26:33.942 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:26:33.950 +01:00 [INF] HTTP GET /health responded 200 in 5.1610 ms
+2026-01-15 20:26:33.952 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 10, Body: {"status":"Healthy","totalDuration":"00:00:00.0050175","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0045417","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000014","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:27:03.966 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:27:03.971 +01:00 [INF] HTTP GET /health responded 200 in 1.1113 ms
+2026-01-15 20:27:03.973 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 6, Body: {"status":"Healthy","totalDuration":"00:00:00.0009370","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0007766","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:27:33.981 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:27:33.997 +01:00 [INF] HTTP GET /health responded 200 in 5.9361 ms
+2026-01-15 20:27:33.998 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 17, Body: {"status":"Healthy","totalDuration":"00:00:00.0057852","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0052679","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000015","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:28:04.041 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:28:04.051 +01:00 [INF] HTTP GET /health responded 200 in 1.3801 ms
+2026-01-15 20:28:04.053 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 12, Body: {"status":"Healthy","totalDuration":"00:00:00.0011720","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0010157","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:28:34.067 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:28:34.080 +01:00 [INF] HTTP GET /health responded 200 in 5.2520 ms
+2026-01-15 20:28:34.082 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 14, Body: {"status":"Healthy","totalDuration":"00:00:00.0050951","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0046253","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000012","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:29:04.085 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:29:04.089 +01:00 [INF] HTTP GET /health responded 200 in 0.9575 ms
+2026-01-15 20:29:04.091 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 6, Body: {"status":"Healthy","totalDuration":"00:00:00.0008091","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0006785","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000013","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:29:34.106 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:29:34.114 +01:00 [INF] HTTP GET /health responded 200 in 4.9386 ms
+2026-01-15 20:29:34.116 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 9, Body: {"status":"Healthy","totalDuration":"00:00:00.0048103","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0036948","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000013","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:30:04.126 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:30:04.129 +01:00 [INF] HTTP GET /health responded 200 in 0.9612 ms
+2026-01-15 20:30:04.131 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 5, Body: {"status":"Healthy","totalDuration":"00:00:00.0008220","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0006877","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000012","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:30:34.129 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:30:34.139 +01:00 [INF] HTTP GET /health responded 200 in 5.0998 ms
+2026-01-15 20:30:34.141 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 11, Body: {"status":"Healthy","totalDuration":"00:00:00.0049508","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0044369","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000014","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:31:04.145 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:31:04.150 +01:00 [INF] HTTP GET /health responded 200 in 1.2520 ms
+2026-01-15 20:31:04.153 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 8, Body: {"status":"Healthy","totalDuration":"00:00:00.0010511","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0008449","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000011","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:31:34.162 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:31:34.174 +01:00 [INF] HTTP GET /health responded 200 in 5.1605 ms
+2026-01-15 20:31:34.175 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 13, Body: {"status":"Healthy","totalDuration":"00:00:00.0050082","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0044987","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000014","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:32:04.188 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:32:04.197 +01:00 [INF] HTTP GET /health responded 200 in 1.1838 ms
+2026-01-15 20:32:04.199 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 10, Body: {"status":"Healthy","totalDuration":"00:00:00.0009916","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0008285","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:32:34.222 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:32:34.230 +01:00 [INF] HTTP GET /health responded 200 in 4.9207 ms
+2026-01-15 20:32:34.232 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 9, Body: {"status":"Healthy","totalDuration":"00:00:00.0047732","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0042739","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:33:04.233 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:33:04.237 +01:00 [INF] HTTP GET /health responded 200 in 0.9547 ms
+2026-01-15 20:33:04.238 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 5, Body: {"status":"Healthy","totalDuration":"00:00:00.0008298","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0007077","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000014","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:33:34.247 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:33:34.255 +01:00 [INF] HTTP GET /health responded 200 in 1.0901 ms
+2026-01-15 20:33:34.257 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 9, Body: {"status":"Healthy","totalDuration":"00:00:00.0009343","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0007925","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000013","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:34:04.272 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:34:04.281 +01:00 [INF] HTTP GET /health responded 200 in 1.1783 ms
+2026-01-15 20:34:04.283 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 10, Body: {"status":"Healthy","totalDuration":"00:00:00.0010183","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0008869","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000013","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:34:34.297 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:34:34.301 +01:00 [INF] HTTP GET /health responded 200 in 0.9232 ms
+2026-01-15 20:34:34.303 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 5, Body: {"status":"Healthy","totalDuration":"00:00:00.0007990","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0006704","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000011","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:35:04.311 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:35:04.329 +01:00 [INF] HTTP GET /health responded 200 in 14.1477 ms
+2026-01-15 20:35:04.331 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 19, Body: {"status":"Healthy","totalDuration":"00:00:00.0139451","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0134496","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000028","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:35:34.338 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:35:34.373 +01:00 [INF] HTTP GET /health responded 200 in 28.0745 ms
+2026-01-15 20:35:34.375 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 36, Body: {"status":"Healthy","totalDuration":"00:00:00.0279214","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0028837","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000011","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:36:55.826 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:36:55.829 +01:00 [INF] HTTP GET /health responded 200 in 1.0451 ms
+2026-01-15 20:36:55.831 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 5, Body: {"status":"Healthy","totalDuration":"00:00:00.0008550","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0007208","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000017","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:37:25.828 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:37:25.837 +01:00 [INF] HTTP GET /health responded 200 in 6.2183 ms
+2026-01-15 20:37:25.839 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 10, Body: {"status":"Healthy","totalDuration":"00:00:00.0060660","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0055938","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000012","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:37:55.856 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:37:55.861 +01:00 [INF] HTTP GET /health responded 200 in 1.7479 ms
+2026-01-15 20:37:55.863 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 6, Body: {"status":"Healthy","totalDuration":"00:00:00.0015331","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0012363","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000022","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:38:25.876 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:38:25.886 +01:00 [INF] HTTP GET /health responded 200 in 5.8894 ms
+2026-01-15 20:38:25.889 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 12, Body: {"status":"Healthy","totalDuration":"00:00:00.0055423","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0028636","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000040","status":"Healthy","tags":["self"]}}}
+2026-01-15 20:38:55.948 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:7295"}, Body: 
+2026-01-15 20:38:55.956 +01:00 [INF] HTTP GET /health responded 200 in 1.1680 ms
+2026-01-15 20:38:55.958 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 9, Body: {"status":"Healthy","totalDuration":"00:00:00.0009434","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0008043","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000036","status":"Healthy","tags":["self"]}}}

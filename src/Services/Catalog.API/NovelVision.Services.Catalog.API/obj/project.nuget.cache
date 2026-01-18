@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8hFc7Nb7iXY=",
+  "dgSpecHash": "lQWVQ5PBWkg=",
   "success": true,
   "projectFilePath": "C:\\Users\\DATART\\Desktop\\NovelVision\\src\\Services\\Catalog.API\\NovelVision.Services.Catalog.API\\NovelVision.Services.Catalog.API.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,6 @@
     "C:\\Users\\DATART\\.nuget\\packages\\aspnetcore.healthchecks.ui.inmemory.storage\\9.0.0\\aspnetcore.healthchecks.ui.inmemory.storage.9.0.0.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\aspnetcoreratelimit\\5.0.0\\aspnetcoreratelimit.5.0.0.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\automapper\\15.0.1\\automapper.15.0.1.nupkg.sha512",
-    "C:\\Users\\DATART\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\azure.storage.blobs\\12.25.1\\azure.storage.blobs.12.25.1.nupkg.sha512",
@@ -35,7 +34,7 @@
     "C:\\Users\\DATART\\.nuget\\packages\\identitymodel\\5.2.0\\identitymodel.5.2.0.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\identitymodel.oidcclient\\5.2.1\\identitymodel.oidcclient.5.2.1.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\kubernetesclient\\15.0.1\\kubernetesclient.15.0.1.nupkg.sha512",
-    "C:\\Users\\DATART\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
+    "C:\\Users\\DATART\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\microsoft.applicationinsights\\2.23.0\\microsoft.applicationinsights.2.23.0.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\microsoft.applicationinsights.aspnetcore\\2.23.0\\microsoft.applicationinsights.aspnetcore.2.23.0.nupkg.sha512",
@@ -189,16 +188,5 @@
     "C:\\Users\\DATART\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\DATART\\.nuget\\packages\\yamldotnet\\16.0.0\\yamldotnet.16.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Версия обнаруженного пакета нарушает ограничение зависимости: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 требуется AutoMapper (= 12.0.1), но в результате разрешения получена версия AutoMapper 15.0.1.",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

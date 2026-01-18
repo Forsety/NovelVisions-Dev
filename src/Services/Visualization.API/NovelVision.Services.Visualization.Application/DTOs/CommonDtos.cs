@@ -41,6 +41,7 @@ public sealed record QueueStatusDto
     public int ProcessingCount { get; init; }
     public int PendingCount { get; init; }
     public double AverageProcessingTimeSeconds { get; init; }
+    public DateTime UpdatedAt { get; set; }
 }
 
 /// <summary>

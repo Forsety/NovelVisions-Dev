@@ -1,20 +1,19 @@
+// src/Services/Visualization.API/NovelVision.Services.Visualization.Application/Behaviors/PerformanceBehavior.cs
+
 using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace NovelVision.Services.Catalog.Application.Behaviors;
+namespace NovelVision.Services.Visualization.Application.Behaviors;
 
-public class PerformanceBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+public sealed class PerformanceBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
 {
-    private readonly Stopwatch _timer;
     private readonly ILogger<PerformanceBehavior<TRequest, TResponse>> _logger;
+    private const int WarningThresholdMs = 500;
 
     public PerformanceBehavior(ILogger<PerformanceBehavior<TRequest, TResponse>> logger)
     {
-        _timer = new Stopwatch();
         _logger = logger;
     }
 
@@ -23,23 +22,14 @@ public class PerformanceBehavior<TRequest, TResponse> : IPipelineBehavior<TReque
         RequestHandlerDelegate<TResponse> next,
         CancellationToken cancellationToken)
     {
-        _timer.Start();
-
+        var timer = Stopwatch.StartNew();
         var response = await next();
+        timer.Stop();
 
-        _timer.Stop();
-
-        var elapsedMilliseconds = _timer.ElapsedMilliseconds;
-
-        if (elapsedMilliseconds > 500)
+        if (timer.ElapsedMilliseconds > WarningThresholdMs)
         {
-            var requestName = typeof(TRequest).Name;
-
-            _logger.LogWarning(
-                "Long Running Request: {Name} ({ElapsedMilliseconds} milliseconds) {@Request}",
-                requestName,
-                elapsedMilliseconds,
-                request);
+            _logger.LogWarning("Long running request: {RequestName} ({ElapsedMs}ms)",
+                typeof(TRequest).Name, timer.ElapsedMilliseconds);
         }
 
         return response;

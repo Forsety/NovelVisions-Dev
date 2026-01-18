@@ -1,33 +1,33 @@
 # models/database/migrations/env.py
 """
 Alembic migrations environment.
-
-РЕФАКТОРИНГ: Удалены импорты User и Story.
+Поддержка SQLite, PostgreSQL, SQL Server.
 """
 
 import asyncio
+import sys
+import os
 from logging.config import fileConfig
+
+# Добавляем корень проекта в путь
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
+
 from sqlalchemy import pool
 from sqlalchemy.engine import Connection
-from sqlalchemy.ext.asyncio import async_engine_from_config
+from sqlalchemy.ext.asyncio import create_async_engine
 from alembic import context
 
+# Импорт настроек
 from app.config import settings
-from models.database.base import Base
 
-# ===========================================
-# Import all models to ensure they're registered
-# ===========================================
+# Импорт Base - ТОЛЬКО Base, без других импортов из этого модуля
+from sqlalchemy.orm import DeclarativeBase
 
-# Consistency models (book_id based)
-from models.domain.character import Character
-from models.domain.scene import Scene
-from models.domain.story_object import StoryObject
-from models.domain.prompt_history import PromptHistory
 
-# NOTE: User and Story models are REMOVED
-# - User: Identity is now handled by Catalog.API
-# - Story: Book data comes from Catalog.API via HTTP
+class Base(DeclarativeBase):
+    """Временный Base для миграций"""
+    pass
+
 
 # Alembic Config object
 config = context.config
@@ -36,30 +36,57 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-# Add your model's MetaData object here for 'autogenerate' support
-target_metadata = Base.metadata
+# ===========================================
+# Import all models AFTER Base is defined
+# ===========================================
+try:
+    from models.domain.character import Character
+    from models.domain.scene import Scene
+    from models.domain.story_object import StoryObject
+    from models.domain.prompt_history import PromptHistory
+    
+    # Получаем metadata из реального Base
+    from models.database.base import Base as RealBase
+    target_metadata = RealBase.metadata
+except ImportError as e:
+    print(f"Warning: Could not import models: {e}")
+    target_metadata = Base.metadata
 
-# Override sqlalchemy.url with the one from settings
-config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
+
+def get_database_url() -> str:
+    """Получает URL базы данных"""
+    
+    if settings.DATABASE_URL:
+        url = settings.DATABASE_URL
+        
+        # Конвертируем sync URL в async
+        if url.startswith("postgresql://"):
+            return url.replace("postgresql://", "postgresql+asyncpg://")
+        elif url.startswith("sqlite:///") and "+aiosqlite" not in url:
+            return url.replace("sqlite:///", "sqlite+aiosqlite:///")
+        
+        return url
+    
+    # Default SQLite
+    return "sqlite+aiosqlite:///./data/promptgen.db"
 
 
 def run_migrations_offline() -> None:
-    """Run migrations in 'offline' mode.
+    """Run migrations in 'offline' mode."""
+    url = get_database_url()
     
-    This configures the context with just a URL
-    and not an Engine, though an Engine is acceptable
-    here as well. By skipping the Engine creation
-    we don't even need a DBAPI to be available.
-
-    Calls to context.execute() here emit the given string to the
-    script output.
-    """
-    url = config.get_main_option("sqlalchemy.url")
+    # Для offline используем sync драйвер
+    if "+aiosqlite" in url:
+        url = url.replace("+aiosqlite", "")
+    elif "+asyncpg" in url:
+        url = url.replace("+asyncpg", "")
+    
     context.configure(
         url=url,
         target_metadata=target_metadata,
         literal_binds=True,
         dialect_opts={"paramstyle": "named"},
+        render_as_batch=True,  # Важно для SQLite
     )
 
     with context.begin_transaction():
@@ -71,8 +98,9 @@ def do_run_migrations(connection: Connection) -> None:
     context.configure(
         connection=connection, 
         target_metadata=target_metadata,
-        compare_type=True,  # Detect column type changes
-        compare_server_default=True,  # Detect default value changes
+        compare_type=True,
+        compare_server_default=True,
+        render_as_batch=True,  # Важно для SQLite
     )
 
     with context.begin_transaction():
@@ -82,14 +110,21 @@ def do_run_migrations(connection: Connection) -> None:
 async def run_async_migrations() -> None:
     """Run migrations in 'online' mode with async engine."""
     
-    configuration = config.get_section(config.config_ini_section)
-    configuration["sqlalchemy.url"] = settings.DATABASE_URL
+    database_url = get_database_url()
+    is_sqlite = "sqlite" in database_url
     
-    connectable = async_engine_from_config(
-        configuration,
-        prefix="sqlalchemy.",
-        poolclass=pool.NullPool,
-    )
+    if is_sqlite:
+        from sqlalchemy.pool import StaticPool
+        connectable = create_async_engine(
+            database_url,
+            poolclass=StaticPool,
+            connect_args={"check_same_thread": False}
+        )
+    else:
+        connectable = create_async_engine(
+            database_url,
+            poolclass=pool.NullPool,
+        )
 
     async with connectable.connect() as connection:
         await connection.run_sync(do_run_migrations)

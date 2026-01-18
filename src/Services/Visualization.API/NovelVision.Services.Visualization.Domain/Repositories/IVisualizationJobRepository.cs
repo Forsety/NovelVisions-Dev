@@ -1,4 +1,5 @@
-using NovelVision.BuildingBlocks.SharedKernel.Repositories;
+// src/Services/Visualization.API/NovelVision.Services.Visualization.Domain/Repositories/IVisualizationJobRepository.cs
+
 using NovelVision.Services.Visualization.Domain.Aggregates.VisualizationJobAggregate;
 using NovelVision.Services.Visualization.Domain.Enums;
 using NovelVision.Services.Visualization.Domain.StronglyTypedIds;
@@ -7,35 +8,62 @@ namespace NovelVision.Services.Visualization.Domain.Repositories;
 
 /// <summary>
 /// Репозиторий для заданий визуализации
+/// Самостоятельный интерфейс без наследования от IRepository
 /// </summary>
-public interface IVisualizationJobRepository : IRepository<VisualizationJob>
+public interface IVisualizationJobRepository
 {
+    #region CRUD Operations
+
+    /// <summary>
+    /// Добавить задание
+    /// </summary>
+    void Add(VisualizationJob entity);
+
+    /// <summary>
+    /// Обновить задание
+    /// </summary>
+    void Update(VisualizationJob entity);
+
+    /// <summary>
+    /// Удалить задание
+    /// </summary>
+    void Remove(VisualizationJob entity);
+
+    /// <summary>
+    /// Сохранить изменения
+    /// </summary>
+    Task SaveChangesAsync(CancellationToken cancellationToken = default);
+
+    #endregion
+
+    #region Query Operations
+
     /// <summary>
     /// Получить задание по ID
     /// </summary>
     Task<VisualizationJob?> GetByIdAsync(
-        VisualizationJobId id, 
+        VisualizationJobId id,
         CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Получить задание с изображениями
     /// </summary>
     Task<VisualizationJob?> GetByIdWithImagesAsync(
-        VisualizationJobId id, 
+        VisualizationJobId id,
         CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Получить задания по книге
     /// </summary>
     Task<IReadOnlyList<VisualizationJob>> GetByBookIdAsync(
-        Guid bookId, 
+        Guid bookId,
         CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Получить задания по странице
     /// </summary>
     Task<IReadOnlyList<VisualizationJob>> GetByPageIdAsync(
-        Guid pageId, 
+        Guid pageId,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -65,8 +93,12 @@ public interface IVisualizationJobRepository : IRepository<VisualizationJob>
     /// Проверить существование
     /// </summary>
     Task<bool> ExistsAsync(
-        VisualizationJobId id, 
+        VisualizationJobId id,
         CancellationToken cancellationToken = default);
+
+    #endregion
+
+    #region Queue Operations
 
     /// <summary>
     /// Получить количество заданий в очереди
@@ -80,4 +112,6 @@ public interface IVisualizationJobRepository : IRepository<VisualizationJob>
     Task<int> GetQueuePositionAsync(
         VisualizationJobId id,
         CancellationToken cancellationToken = default);
+
+    #endregion
 }

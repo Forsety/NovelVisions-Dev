@@ -1,11 +1,13 @@
 // src/Services/Catalog.API/NovelVision.Services.Catalog.Application/DependencyInjection.cs
 using System.Reflection;
+using AutoMapper;
 using FluentValidation;
 using MediatR;
 using MediatR.NotificationPublishers;
 using Microsoft.Extensions.DependencyInjection;
 using NovelVision.Services.Catalog.Application.Behaviors;
 using NovelVision.Services.Catalog.Application.Services;
+using NovelVision.Services.Visualization.Application.Behaviors;
 
 namespace NovelVision.Services.Catalog.Application;
 
@@ -21,10 +23,9 @@ public static class DependencyInjection
             cfg.NotificationPublisher = new TaskWhenAllPublisher();
         });
 
-        // AutoMapper - using the extension method from AutoMapper.Extensions.Microsoft.DependencyInjection
-        services.AddAutoMapper(assembly);
-
-        // FluentValidation - using the extension method from FluentValidation.DependencyInjectionExtensions
+        // AutoMapper 13+ - передаем тип из Assembly
+        services.AddAutoMapper(cfg => cfg.AddMaps(typeof(DependencyInjection).Assembly));
+        // FluentValidation
         services.AddValidatorsFromAssembly(assembly);
 
         // MediatR Pipeline Behaviors (order matters!)
@@ -36,7 +37,6 @@ public static class DependencyInjection
 
         // Application Services
         services.AddScoped<IBookService, BookService>();
-        // services.AddScoped<IVisualizationService, VisualizationService>(); // TODO: Implement
 
         return services;
     }

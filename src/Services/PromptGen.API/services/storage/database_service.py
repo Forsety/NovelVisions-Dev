@@ -1,16 +1,16 @@
 # services/storage/database_service.py
 """
 Database service for PromptGen.API.
-
-РЕФАКТОРИНГ: Удалены импорты Story - книги теперь в Catalog.API.
+Поддержка SQLite, PostgreSQL, SQL Server.
 """
 
-from typing import TypeVar, Generic, List, Optional, Dict, Any, Type
+from typing import TypeVar, Generic, List, Optional, Type, Any
 from sqlalchemy import select, func, text
 from sqlalchemy.ext.asyncio import AsyncSession, AsyncEngine, create_async_engine, async_sessionmaker
 from sqlalchemy.orm import selectinload
+from sqlalchemy.pool import StaticPool, NullPool, QueuePool
 from contextlib import asynccontextmanager
-from asyncio import current_task
+import os
 
 from models.database.base import Base
 from app.config import settings
@@ -21,7 +21,7 @@ T = TypeVar("T", bound=Any)
 class DatabaseManager:
     """
     Менеджер подключений к базе данных.
-    Поддерживает асинхронные операции с PostgreSQL.
+    Поддерживает SQLite, PostgreSQL, SQL Server.
     """
     
     _instance: Optional['DatabaseManager'] = None
@@ -44,14 +44,7 @@ class DatabaseManager:
     def engine(self) -> AsyncEngine:
         """Возвращает engine, создавая при необходимости."""
         if self._engine is None:
-            self._engine = create_async_engine(
-                settings.DATABASE_URL,
-                echo=settings.DEBUG,
-                pool_size=5,
-                max_overflow=10,
-                pool_pre_ping=True,
-                pool_recycle=3600,
-            )
+            self._engine = self._create_engine()
         return self._engine
     
     @property
@@ -67,14 +60,66 @@ class DatabaseManager:
             )
         return self._session_factory
     
-    async def get_session(self):
-        """
-        Dependency для FastAPI - генератор сессий.
+    def _create_engine(self) -> AsyncEngine:
+        """Создаёт engine с учётом типа БД"""
         
-        Использование:
-            async for session in db_manager.get_session():
-                # работа с session
-        """
+        database_url = self._get_database_url()
+        is_sqlite = "sqlite" in database_url
+        
+        if is_sqlite:
+            # SQLite: StaticPool для async, check_same_thread=False
+            return create_async_engine(
+                database_url,
+                echo=settings.DEBUG,
+                poolclass=StaticPool,
+                connect_args={"check_same_thread": False}
+            )
+        else:
+            # PostgreSQL / SQL Server
+            return create_async_engine(
+                database_url,
+                echo=settings.DEBUG,
+                pool_size=settings.DB_POOL_SIZE,
+                max_overflow=settings.DB_MAX_OVERFLOW,
+                pool_pre_ping=True,
+                pool_recycle=settings.DB_POOL_RECYCLE,
+            )
+    
+    def _get_database_url(self) -> str:
+        """Формирует URL базы данных"""
+        
+        # Используем готовый URL если есть
+        if settings.DATABASE_URL:
+            url = settings.DATABASE_URL
+            
+            # Конвертируем в async версию
+            if url.startswith("postgresql://"):
+                return url.replace("postgresql://", "postgresql+asyncpg://")
+            elif url.startswith("sqlite:///"):
+                return url.replace("sqlite:///", "sqlite+aiosqlite:///")
+            
+            return url
+        
+        # Собираем из параметров
+        db_type = getattr(settings, 'DB_TYPE', 'sqlite').lower()
+        
+        if db_type == 'sqlite':
+            db_path = getattr(settings, 'DB_PATH', './data/promptgen.db')
+            os.makedirs(os.path.dirname(db_path) or '.', exist_ok=True)
+            return f"sqlite+aiosqlite:///{db_path}"
+        
+        elif db_type == 'postgresql':
+            return f"postgresql+asyncpg://{settings.DB_USER}:{settings.DB_PASSWORD}@{settings.DB_HOST}:{settings.DB_PORT}/{settings.DB_NAME}"
+        
+        elif db_type == 'mssql':
+            driver = getattr(settings, 'DB_DRIVER', 'ODBC+Driver+17+for+SQL+Server')
+            return f"mssql+aioodbc://{settings.DB_USER}:{settings.DB_PASSWORD}@{settings.DB_HOST}/{settings.DB_NAME}?driver={driver}"
+        
+        # Default: SQLite
+        return "sqlite+aiosqlite:///./data/promptgen.db"
+    
+    async def get_session(self):
+        """Dependency для FastAPI - генератор сессий."""
         async with self.session_factory() as session:
             try:
                 yield session
@@ -87,13 +132,7 @@ class DatabaseManager:
     
     @asynccontextmanager
     async def session_scope(self):
-        """
-        Контекстный менеджер для сессий.
-        
-        Использование:
-            async with db_manager.session_scope() as session:
-                # работа с session
-        """
+        """Контекстный менеджер для сессий."""
         session = self.session_factory()
         try:
             yield session
@@ -138,14 +177,7 @@ db_manager = DatabaseManager()
 
 # Dependency для FastAPI
 async def get_database():
-    """
-    Dependency для получения сессии БД.
-    
-    Использование в FastAPI:
-        @app.get("/items")
-        async def get_items(db: AsyncSession = Depends(get_database)):
-            ...
-    """
+    """Dependency для получения сессии БД."""
     async for session in db_manager.get_session():
         yield session
 
@@ -177,22 +209,6 @@ class BaseRepository(Generic[T]):
         )
         return list(result.scalars().all())
     
-    async def get_by_book_id(
-        self,
-        session: AsyncSession,
-        book_id: str,
-        skip: int = 0,
-        limit: int = 100
-    ) -> List[T]:
-        """Получить все записи по book_id."""
-        result = await session.execute(
-            select(self.model)
-            .where(self.model.book_id == book_id)
-            .offset(skip)
-            .limit(limit)
-        )
-        return list(result.scalars().all())
-    
     async def create(self, session: AsyncSession, obj: T) -> T:
         """Создать запись."""
         session.add(obj)
@@ -206,86 +222,14 @@ class BaseRepository(Generic[T]):
         await session.refresh(obj)
         return obj
     
-    async def delete(self, session: AsyncSession, id: str) -> bool:
-        """Удалить по ID."""
-        obj = await self.get_by_id(session, id)
-        if obj:
-            await session.delete(obj)
-            return True
-        return False
+    async def delete(self, session: AsyncSession, obj: T) -> None:
+        """Удалить запись."""
+        await session.delete(obj)
+        await session.flush()
     
     async def count(self, session: AsyncSession) -> int:
-        """Подсчитать общее количество."""
+        """Подсчёт записей."""
         result = await session.execute(
-            select(func.count(self.model.id))
+            select(func.count()).select_from(self.model)
         )
-        return result.scalar() or 0
-    
-    async def count_by_book_id(self, session: AsyncSession, book_id: str) -> int:
-        """Подсчитать количество по book_id."""
-        result = await session.execute(
-            select(func.count(self.model.id))
-            .where(self.model.book_id == book_id)
-        )
-        return result.scalar() or 0
-    
-    async def exists(self, session: AsyncSession, id: str) -> bool:
-        """Проверить существование записи."""
-        result = await session.execute(
-            select(func.count(self.model.id)).where(self.model.id == id)
-        )
-        return (result.scalar() or 0) > 0
-    
-    async def search(
-        self,
-        session: AsyncSession,
-        search_field: str,
-        search_term: str,
-        book_id: Optional[str] = None,
-        limit: int = 20
-    ) -> List[T]:
-        """Поиск по текстовому полю."""
-        if not hasattr(self.model, search_field):
-            return []
-        
-        field = getattr(self.model, search_field)
-        query = select(self.model).where(field.ilike(f"%{search_term}%"))
-        
-        if book_id and hasattr(self.model, 'book_id'):
-            query = query.where(self.model.book_id == book_id)
-        
-        query = query.limit(limit)
-        
-        result = await session.execute(query)
-        return list(result.scalars().all())
-
-
-# ===========================================
-# Инициализация базы данных
-# ===========================================
-
-async def init_database() -> None:
-    """
-    Инициализирует базу данных при старте приложения.
-    Импортирует все модели для регистрации в metadata.
-    """
-    
-    # Импортируем все модели для регистрации
-    from models.domain.character import Character
-    from models.domain.scene import Scene
-    from models.domain.story_object import StoryObject
-    from models.domain.prompt_history import PromptHistory
-    
-    # NOTE: Story и User больше не импортируются!
-    
-    # Создаём таблицы
-    await db_manager.init_db()
-    
-    print("Database initialized successfully")
-    print("Tables created: characters, scenes, story_objects, prompt_history")
-
-
-async def close_database() -> None:
-    """Закрывает подключения при остановке приложения."""
-    await db_manager.close()
-    print("Database connections closed")
+        return result.scalar_one()

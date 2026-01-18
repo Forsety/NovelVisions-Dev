@@ -106,7 +106,8 @@ public sealed class ProcessJobCommandHandler : IRequestHandler<ProcessJobCommand
                 promptResult.Value.TargetModel,
                 promptResult.Value.NegativePrompt,
                 promptResult.Value.Style,
-                promptResult.Value.Parameters);
+                    parameters: promptResult.Value.Parameters?.ToDictionary(k => k.Key, v => v.Value)
+);
 
             var setPromptResult = job.SetPromptData(promptData);
             if (setPromptResult.IsFailure)

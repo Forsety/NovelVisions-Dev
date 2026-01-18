@@ -1,3 +1,10 @@
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.csproj.AssemblyReference.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.AssemblyInfoInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.AssemblyInfo.cs
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.csproj.CoreCompileInputs.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.sourcelink.json
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\appsettings.json
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\NovelVision.Services.Catalog.API.staticwebassets.endpoints.json
@@ -19,7 +26,6 @@ C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Service
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\HealthChecks.UI.InMemory.Storage.dll
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\AspNetCoreRateLimit.dll
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\AutoMapper.dll
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\Azure.Storage.Blobs.dll
@@ -250,13 +256,7 @@ C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Service
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\NovelVision.Services.Catalog.Application.pdb
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\NovelVision.Services.Catalog.Domain.pdb
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\bin\Debug\net9.0\NovelVision.Services.Catalog.Infrastructure.pdb
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.csproj.AssemblyReference.cache
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.AssemblyInfoInputs.cache
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.AssemblyInfo.cs
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.csproj.CoreCompileInputs.cache
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.sourcelink.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\scopedcss\bundle\NovelVision.Services.Catalog.API.styles.css
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets.development.json
@@ -267,11 +267,10 @@ C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Service
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.NovelVision.Services.Catalog.API.props
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.NovelVision.Services.Catalog.API.props
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVis.C93D7CC8.Up2Date
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.dll
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\refint\NovelVision.Services.Catalog.API.dll
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.pdb
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.genruntimeconfig.cache
 C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\ref\NovelVision.Services.Catalog.API.dll
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
-C:\Users\DATART\Desktop\NovelVision\src\Services\Catalog.API\NovelVision.Services.Catalog.API\obj\Debug\net9.0\NovelVision.Services.Catalog.API.MvcApplicationPartsAssemblyInfo.cs
