@@ -1,0 +1,258 @@
+/* src/shared/ui/Button/Button.module.css */
+/* Premium Library Button Styles */
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-elegant);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* ========================================
+   SIZES
+   ======================================== */
+
+.xs {
+  height: 32px;
+  padding: 0 14px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.sm {
+  height: 38px;
+  padding: 0 18px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+.md {
+  height: 46px;
+  padding: 0 24px;
+  font-size: 14px;
+}
+
+.lg {
+  height: 54px;
+  padding: 0 32px;
+  font-size: 15px;
+}
+
+.xl {
+  height: 62px;
+  padding: 0 40px;
+  font-size: 16px;
+  border-radius: 16px;
+}
+
+/* ========================================
+   VARIANTS
+   ======================================== */
+
+/* Primary - Golden Gradient */
+.primary {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: var(--text-inverse);
+  box-shadow: 0 4px 20px rgba(212, 165, 116, 0.3);
+}
+
+.primary:hover:not(:disabled) {
+  box-shadow: 0 8px 30px rgba(212, 165, 116, 0.45);
+  transform: translateY(-2px);
+}
+
+.primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Secondary - Subtle Fill */
+.secondary {
+  background: rgba(212, 165, 116, 0.1);
+  color: var(--accent-tertiary);
+  border: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.secondary:hover:not(:disabled) {
+  background: rgba(212, 165, 116, 0.18);
+  border-color: rgba(212, 165, 116, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Outline - Bordered */
+.outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(212, 165, 116, 0.3);
+}
+
+.outline:hover:not(:disabled) {
+  background: rgba(212, 165, 116, 0.08);
+  border-color: rgba(212, 165, 116, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Ghost - Minimal */
+.ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.ghost:hover:not(:disabled) {
+  background: rgba(212, 165, 116, 0.08);
+  color: var(--text-primary);
+}
+
+/* Danger - Warning */
+.danger {
+  background: linear-gradient(135deg, var(--error) 0%, #b85454 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(214, 107, 107, 0.3);
+}
+
+.danger:hover:not(:disabled) {
+  box-shadow: 0 8px 30px rgba(214, 107, 107, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Success - Confirmation */
+.success {
+  background: linear-gradient(135deg, var(--success) 0%, #4a9468 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(109, 184, 137, 0.3);
+}
+
+.success:hover:not(:disabled) {
+  box-shadow: 0 8px 30px rgba(109, 184, 137, 0.45);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   MODIFIERS
+   ======================================== */
+
+.fullWidth {
+  width: 100%;
+}
+
+.rounded {
+  border-radius: 50px;
+}
+
+/* Glow Effect */
+.glow {
+  box-shadow: 0 0 30px rgba(212, 165, 116, 0.35);
+}
+
+.glow:hover:not(:disabled) {
+  box-shadow: 0 0 50px rgba(212, 165, 116, 0.5);
+}
+
+/* Loading State */
+.loading {
+  pointer-events: none;
+}
+
+.loading .content {
+  opacity: 0.7;
+}
+
+/* ========================================
+   INNER ELEMENTS
+   ======================================== */
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15em;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Loading Spinner */
+.spinner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner svg {
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Shine Effect for Primary */
+.shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.primary:hover .shine {
+  left: 100%;
+}
+
+/* ========================================
+   FOCUS STATES
+   ======================================== */
+
+.button:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   ICON ONLY
+   ======================================== */
+
+.iconOnly {
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+.iconOnly.sm {
+  width: 38px;
+}
+
+.iconOnly.md {
+  width: 46px;
+}
+
+.iconOnly.lg {
+  width: 54px;
+}

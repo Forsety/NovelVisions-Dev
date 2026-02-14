@@ -1,0 +1,1013 @@
+2026-02-01 11:32:29.466 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-02-01 11:32:29.794 +01:00 [INF] Hangfire SQL objects installed.
+2026-02-01 11:32:29.818 +01:00 [INF] Visualization API started successfully
+2026-02-01 11:32:29.818 +01:00 [INF] Environment: Development
+2026-02-01 11:32:29.818 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-02-01 11:32:29.818 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-02-01 11:32:29.818 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-02-01 11:32:29.879 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-02-01 11:32:29.880 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-02-01 11:32:29.880 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-02-01 11:32:29.984 +01:00 [INF] Server laptop-ohnfi7tt:656:3e525325 successfully announced in 87,3861 ms
+2026-02-01 11:32:29.986 +01:00 [INF] Server laptop-ohnfi7tt:656:3e525325 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-02-01 11:32:29.991 +01:00 [INF] Server laptop-ohnfi7tt:656:3e525325 all the dispatchers started
+2026-02-01 11:32:47.535 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-02-01 11:33:44.516 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 11:33:44.527 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 11:33:45.369 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-02-01 11:33:45.386 +01:00 [WRN] The property 'GeneratedImage.PromptData#PromptData.Parameters' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-02-01 11:33:45.393 +01:00 [WRN] The property 'VisualizationJob._promptData#PromptData.Parameters' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-02-01 11:33:45.967 +01:00 [WRN] Visualization Long Running Request: GetBookImagesQuery (1438ms) {"BookId":"b9251470-fbf2-4d46-a0c9-5911b75310f5","Skip":0,"Take":50,"$type":"GetBookImagesQuery"}
+2026-02-01 11:33:45.970 +01:00 [INF] Handled GetBookImagesQuery in 1442ms
+2026-02-01 11:33:46.013 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 11:33:46.014 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 11:33:46.063 +01:00 [INF] Handled GetBookImagesQuery in 48ms
+2026-02-01 11:33:57.901 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 11:33:57.945 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 11:34:06.142 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 11:34:07.515 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 11:34:07.516 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 11:34:07.545 +01:00 [INF] Handled GetBookImagesQuery in 28ms
+2026-02-01 11:34:07.558 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 11:34:07.559 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 11:34:07.562 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 11:34:12.151 +01:00 [ERR] Failed to enqueue job "0fea5373-1c5e-48f5-9099-4acd37adc7d6"
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout, command=ZADD, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 1, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: LAPTOP-OHNFI7TT(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=6,QueuedItems=0,CompletedItems=294,Timers=8), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout
+   --- End of inner exception stack trace ---
+   at NovelVision.Services.Visualization.Infrastructure.Services.Queue.RedisJobQueueService.EnqueueJobAsync(VisualizationJobId jobId, Int32 priority, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Infrastructure\Services\Queue\RedisJobQueueService.cs:line 49
+2026-02-01 11:34:12.183 +01:00 [ERR] Error handling CreateTextSelectionVisualizationCommand after 14237ms
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout, command=ZADD, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 1, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: LAPTOP-OHNFI7TT(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=6,QueuedItems=0,CompletedItems=294,Timers=8), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout
+   --- End of inner exception stack trace ---
+   at NovelVision.Services.Visualization.Infrastructure.Services.Queue.RedisJobQueueService.EnqueueJobAsync(VisualizationJobId jobId, Int32 priority, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Infrastructure\Services\Queue\RedisJobQueueService.cs:line 49
+   at NovelVision.Services.Visualization.Application.Commands.CreateVisualizationJob.CreateTextSelectionVisualizationCommandHandler.Handle(CreateTextSelectionVisualizationCommand request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Commands\CreateVisualizationJob\CreateTextSelectionVisualizationCommandHandler.cs:line 102
+   at NovelVision.Services.Visualization.Application.Behaviors.PerformanceBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\PerformanceBehavior.cs:line 30
+   at NovelVision.Services.Visualization.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\LoggingBehavior.cs:line 34
+2026-02-01 11:34:12.204 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout, command=ZADD, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 1, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: LAPTOP-OHNFI7TT(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=6,QueuedItems=0,CompletedItems=294,Timers=8), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout
+   --- End of inner exception stack trace ---
+   at NovelVision.Services.Visualization.Infrastructure.Services.Queue.RedisJobQueueService.EnqueueJobAsync(VisualizationJobId jobId, Int32 priority, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Infrastructure\Services\Queue\RedisJobQueueService.cs:line 49
+   at NovelVision.Services.Visualization.Application.Commands.CreateVisualizationJob.CreateTextSelectionVisualizationCommandHandler.Handle(CreateTextSelectionVisualizationCommand request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Commands\CreateVisualizationJob\CreateTextSelectionVisualizationCommandHandler.cs:line 102
+   at NovelVision.Services.Visualization.Application.Behaviors.PerformanceBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\PerformanceBehavior.cs:line 30
+   at NovelVision.Services.Visualization.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\LoggingBehavior.cs:line 34
+   at NovelVision.Services.Visualization.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\ValidationBehavior.cs:line 65
+   at NovelVision.Services.Visualization.API.Controllers.v1.VisualizationJobsController.CreateTextSelectionVisualization(CreateTextSelectionVisualizationRequest request, CancellationToken ct) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\Controllers\v1\VisualizationJobsController.cs:line 110
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-01 11:34:22.130 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 11:34:22.131 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 11:34:22.132 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 11:34:27.141 +01:00 [ERR] Failed to enqueue job "d859a504-9a19-4fff-9be5-d726054cc4b7"
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout, command=ZADD, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 2, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: LAPTOP-OHNFI7TT(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=390,Timers=8), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout
+   --- End of inner exception stack trace ---
+   at NovelVision.Services.Visualization.Infrastructure.Services.Queue.RedisJobQueueService.EnqueueJobAsync(VisualizationJobId jobId, Int32 priority, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Infrastructure\Services\Queue\RedisJobQueueService.cs:line 49
+2026-02-01 11:34:27.142 +01:00 [ERR] Error handling CreateTextSelectionVisualizationCommand after 5011ms
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout, command=ZADD, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 2, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: LAPTOP-OHNFI7TT(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=390,Timers=8), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout
+   --- End of inner exception stack trace ---
+   at NovelVision.Services.Visualization.Infrastructure.Services.Queue.RedisJobQueueService.EnqueueJobAsync(VisualizationJobId jobId, Int32 priority, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Infrastructure\Services\Queue\RedisJobQueueService.cs:line 49
+   at NovelVision.Services.Visualization.Application.Commands.CreateVisualizationJob.CreateTextSelectionVisualizationCommandHandler.Handle(CreateTextSelectionVisualizationCommand request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Commands\CreateVisualizationJob\CreateTextSelectionVisualizationCommandHandler.cs:line 102
+   at NovelVision.Services.Visualization.Application.Behaviors.PerformanceBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\PerformanceBehavior.cs:line 30
+   at NovelVision.Services.Visualization.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\LoggingBehavior.cs:line 34
+2026-02-01 11:34:27.143 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout, command=ZADD, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, rs: NotStarted, ws: Idle, in: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 2, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: LAPTOP-OHNFI7TT(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=8,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=390,Timers=8), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout
+   --- End of inner exception stack trace ---
+   at NovelVision.Services.Visualization.Infrastructure.Services.Queue.RedisJobQueueService.EnqueueJobAsync(VisualizationJobId jobId, Int32 priority, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Infrastructure\Services\Queue\RedisJobQueueService.cs:line 49
+   at NovelVision.Services.Visualization.Application.Commands.CreateVisualizationJob.CreateTextSelectionVisualizationCommandHandler.Handle(CreateTextSelectionVisualizationCommand request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Commands\CreateVisualizationJob\CreateTextSelectionVisualizationCommandHandler.cs:line 102
+   at NovelVision.Services.Visualization.Application.Behaviors.PerformanceBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\PerformanceBehavior.cs:line 30
+   at NovelVision.Services.Visualization.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\LoggingBehavior.cs:line 34
+   at NovelVision.Services.Visualization.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\ValidationBehavior.cs:line 65
+   at NovelVision.Services.Visualization.API.Controllers.v1.VisualizationJobsController.CreateTextSelectionVisualization(CreateTextSelectionVisualizationRequest request, CancellationToken ct) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\Controllers\v1\VisualizationJobsController.cs:line 110
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-01 11:34:45.244 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 11:34:45.245 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 11:34:45.248 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 11:34:51.144 +01:00 [ERR] Failed to enqueue job "035d7bfe-1ce1-4ece-899c-8d4e9de0f5f2"
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout, command=ZADD, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 3, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: LAPTOP-OHNFI7TT(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=8,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=528,Timers=7), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout
+   --- End of inner exception stack trace ---
+   at NovelVision.Services.Visualization.Infrastructure.Services.Queue.RedisJobQueueService.EnqueueJobAsync(VisualizationJobId jobId, Int32 priority, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Infrastructure\Services\Queue\RedisJobQueueService.cs:line 49
+2026-02-01 11:34:51.145 +01:00 [ERR] Error handling CreateTextSelectionVisualizationCommand after 5899ms
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout, command=ZADD, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 3, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: LAPTOP-OHNFI7TT(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=8,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=528,Timers=7), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout
+   --- End of inner exception stack trace ---
+   at NovelVision.Services.Visualization.Infrastructure.Services.Queue.RedisJobQueueService.EnqueueJobAsync(VisualizationJobId jobId, Int32 priority, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Infrastructure\Services\Queue\RedisJobQueueService.cs:line 49
+   at NovelVision.Services.Visualization.Application.Commands.CreateVisualizationJob.CreateTextSelectionVisualizationCommandHandler.Handle(CreateTextSelectionVisualizationCommand request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Commands\CreateVisualizationJob\CreateTextSelectionVisualizationCommandHandler.cs:line 102
+   at NovelVision.Services.Visualization.Application.Behaviors.PerformanceBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\PerformanceBehavior.cs:line 30
+   at NovelVision.Services.Visualization.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\LoggingBehavior.cs:line 34
+2026-02-01 11:34:51.146 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+StackExchange.Redis.RedisConnectionException: The message timed out in the backlog attempting to send because no connection became available (5000ms) - Last Connection Exception: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout, command=ZADD, timeout: 5000, inst: 0, qu: 0, qs: 0, aw: False, bw: CheckingForTimeout, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 3, serverEndpoint: localhost:6379, conn-sec: n/a, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: LAPTOP-OHNFI7TT(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=8,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=528,Timers=7), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+ ---> StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s) localhost:6379/Interactive. ConnectTimeout
+   --- End of inner exception stack trace ---
+   at NovelVision.Services.Visualization.Infrastructure.Services.Queue.RedisJobQueueService.EnqueueJobAsync(VisualizationJobId jobId, Int32 priority, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Infrastructure\Services\Queue\RedisJobQueueService.cs:line 49
+   at NovelVision.Services.Visualization.Application.Commands.CreateVisualizationJob.CreateTextSelectionVisualizationCommandHandler.Handle(CreateTextSelectionVisualizationCommand request, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Commands\CreateVisualizationJob\CreateTextSelectionVisualizationCommandHandler.cs:line 102
+   at NovelVision.Services.Visualization.Application.Behaviors.PerformanceBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\PerformanceBehavior.cs:line 30
+   at NovelVision.Services.Visualization.Application.Behaviors.LoggingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\LoggingBehavior.cs:line 34
+   at NovelVision.Services.Visualization.Application.Behaviors.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.Application\Behaviors\ValidationBehavior.cs:line 65
+   at NovelVision.Services.Visualization.API.Controllers.v1.VisualizationJobsController.CreateTextSelectionVisualization(CreateTextSelectionVisualizationRequest request, CancellationToken ct) in C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\Controllers\v1\VisualizationJobsController.cs:line 110
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.ResponseCompression.ResponseCompressionMiddleware.InvokeCore(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-01 11:36:43.010 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 11:36:43.010 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 11:36:43.011 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 11:36:43.056 +01:00 [INF] Enqueued job "de2ed234-f10f-4d3d-aa66-a7af48c5ce48" with priority 15 at position 16
+2026-02-01 11:36:43.326 +01:00 [INF] Enqueued Hangfire job 20004 for visualization job "de2ed234-f10f-4d3d-aa66-a7af48c5ce48"
+2026-02-01 11:36:43.326 +01:00 [INF] Created text selection visualization job "de2ed234-f10f-4d3d-aa66-a7af48c5ce48" for text length 1645
+2026-02-01 11:36:43.341 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 330ms
+2026-02-01 11:36:43.396 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:36:43.436 +01:00 [INF] Starting to process visualization job "de2ed234-f10f-4d3d-aa66-a7af48c5ce48"
+2026-02-01 11:36:43.437 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 11:36:43.464 +01:00 [INF] Processing visualization job "de2ed234-f10f-4d3d-aa66-a7af48c5ce48"
+2026-02-01 11:36:43.530 +01:00 [INF] Handled GetJobQuery in 133ms
+2026-02-01 11:36:43.538 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 1723
+2026-02-01 11:36:45.388 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:36:45.395 +01:00 [INF] Handled GetJobQuery in 7ms
+2026-02-01 11:36:47.397 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:36:47.400 +01:00 [INF] Handled GetJobQuery in 2ms
+2026-02-01 11:36:49.397 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:36:49.398 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:36:51.395 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:36:51.396 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:36:53.389 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:36:53.390 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:36:55.388 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:36:55.390 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:36:57.392 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:36:57.394 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:36:59.387 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:36:59.388 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:01.392 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:01.394 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:03.390 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:03.392 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:05.395 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:05.397 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:07.397 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:07.398 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:09.393 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:09.395 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:11.392 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:11.393 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:13.394 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:13.396 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:15.742 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:15.744 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:17.740 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:17.742 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:19.739 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:19.741 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:19.744 +01:00 [INF] Generated prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5". Processing time: 32879ms
+2026-02-01 11:37:19.766 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-01 11:37:19.769 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 600, Size: 1024x1024
+2026-02-01 11:37:21.739 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:21.741 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:23.741 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:23.743 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:25.743 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:25.745 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:27.743 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:27.745 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:29.740 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:29.741 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:31.742 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:31.743 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:33.386 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:33.388 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:35.737 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:35.738 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:35.938 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-MalKYPtKCDFc6AKEplVIFyFz.png?st=2026-02-01T09%3A37%3A35Z&se=2026-02-01T11%3A37%3A35Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=75dd98d5-7f83-456f-ae8d-a58a7fba1b61&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-01T10%3A37%3A35Z&ske=2026-02-02T10%3A37%3A35Z&sks=b&skv=2024-08-04&sig=3tlq7Z/5d2iwSPi3MmIcosGBRvoZA13Q8mUvoW/1AwY%3D
+2026-02-01 11:37:37.387 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:37.392 +01:00 [INF] Handled GetJobQuery in 5ms
+2026-02-01 11:37:39.393 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:39.394 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:41.391 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:41.393 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 11:37:42.923 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\b9251470-fbf2-4d46-a0c9-5911b75310f5\images\de2ed234-f10f-4d3d-aa66-a7af48c5ce48_b07a71f9ace2402ba54cf72bd88e4411.png
+2026-02-01 11:37:42.929 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 11:37:42.929 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 11:37:42.940 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 11:37:42.958 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 11:37:42.959 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 11:37:42.973 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-01 11:37:42.975 +01:00 [INF] Sent completion notification for job "de2ed234-f10f-4d3d-aa66-a7af48c5ce48" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-01 11:37:42.978 +01:00 [INF] Visualization job "de2ed234-f10f-4d3d-aa66-a7af48c5ce48" completed successfully with 1 images
+2026-02-01 11:37:42.978 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (59540ms) {"JobId":"de2ed234-f10f-4d3d-aa66-a7af48c5ce48","$type":"ProcessJobCommand"}
+2026-02-01 11:37:42.979 +01:00 [INF] Handled ProcessJobCommand in 59540ms
+2026-02-01 11:37:42.979 +01:00 [INF] Successfully processed visualization job "de2ed234-f10f-4d3d-aa66-a7af48c5ce48"
+2026-02-01 11:37:43.394 +01:00 [INF] Handling GetJobQuery
+2026-02-01 11:37:43.406 +01:00 [INF] Handled GetJobQuery in 11ms
+2026-02-01 12:50:33.164 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 12:50:33.165 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 12:50:33.183 +01:00 [INF] Handled GetBookImagesQuery in 17ms
+2026-02-01 12:50:33.192 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 12:50:33.192 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 12:50:33.196 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 12:50:37.469 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 12:50:37.470 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 12:50:37.471 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 12:50:37.504 +01:00 [INF] Enqueued job "ba921490-2d47-4848-93d5-09c161bb3caa" with priority 15 at position 17
+2026-02-01 12:50:37.524 +01:00 [INF] Enqueued Hangfire job 20005 for visualization job "ba921490-2d47-4848-93d5-09c161bb3caa"
+2026-02-01 12:50:37.524 +01:00 [INF] Created text selection visualization job "ba921490-2d47-4848-93d5-09c161bb3caa" for text length 1645
+2026-02-01 12:50:37.524 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 54ms
+2026-02-01 12:50:37.531 +01:00 [INF] Starting to process visualization job "ba921490-2d47-4848-93d5-09c161bb3caa"
+2026-02-01 12:50:37.531 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 12:50:37.535 +01:00 [INF] Processing visualization job "ba921490-2d47-4848-93d5-09c161bb3caa"
+2026-02-01 12:50:37.540 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:37.543 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 1645
+2026-02-01 12:50:37.552 +01:00 [INF] Handled GetJobQuery in 11ms
+2026-02-01 12:50:39.547 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:39.551 +01:00 [INF] Handled GetJobQuery in 4ms
+2026-02-01 12:50:41.545 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:41.547 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:50:43.545 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:43.548 +01:00 [INF] Handled GetJobQuery in 2ms
+2026-02-01 12:50:45.545 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:45.547 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:50:47.771 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:47.780 +01:00 [INF] Handled GetJobQuery in 7ms
+2026-02-01 12:50:49.737 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:49.739 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:50:51.734 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:51.735 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:50:53.735 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:53.737 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:50:55.744 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:55.746 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:50:57.750 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:57.752 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:50:59.742 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:50:59.744 +01:00 [INF] Handled GetJobQuery in 2ms
+2026-02-01 12:50:59.824 +01:00 [INF] Generated prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5". Processing time: 19002ms
+2026-02-01 12:50:59.829 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-01 12:50:59.829 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 860, Size: 1024x1024
+2026-02-01 12:51:01.736 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:01.738 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:51:03.736 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:03.738 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:51:05.740 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:05.741 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:51:07.737 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:07.738 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:51:09.739 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:09.741 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:51:11.736 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:11.738 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:51:13.736 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:13.738 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:51:15.745 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:15.747 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:51:17.266 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-Fj0NnN9lkKPNs9BjHAJIOPjS.png?st=2026-02-01T10%3A51%3A16Z&se=2026-02-01T12%3A51%3A16Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=52f8f7b3-ca8d-4b21-9807-8b9df114d84c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-01T11%3A51%3A16Z&ske=2026-02-02T11%3A51%3A16Z&sks=b&skv=2024-08-04&sig=i4T3IsfSfb/PdwLcqJg9eYagGLqaYr/ukBMe9SiB/1Q%3D
+2026-02-01 12:51:17.738 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:17.740 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:51:19.130 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\b9251470-fbf2-4d46-a0c9-5911b75310f5\images\ba921490-2d47-4848-93d5-09c161bb3caa_66a3803427624655b1fc402c14e9cc83.png
+2026-02-01 12:51:19.131 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:51:19.131 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:51:19.132 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:51:19.138 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:51:19.138 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:51:19.149 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-01 12:51:19.149 +01:00 [INF] Sent completion notification for job "ba921490-2d47-4848-93d5-09c161bb3caa" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-01 12:51:19.151 +01:00 [INF] Visualization job "ba921490-2d47-4848-93d5-09c161bb3caa" completed successfully with 1 images
+2026-02-01 12:51:19.151 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (41619ms) {"JobId":"ba921490-2d47-4848-93d5-09c161bb3caa","$type":"ProcessJobCommand"}
+2026-02-01 12:51:19.151 +01:00 [INF] Handled ProcessJobCommand in 41620ms
+2026-02-01 12:51:19.152 +01:00 [INF] Successfully processed visualization job "ba921490-2d47-4848-93d5-09c161bb3caa"
+2026-02-01 12:51:19.739 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:51:19.751 +01:00 [INF] Handled GetJobQuery in 11ms
+2026-02-01 12:51:55.761 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 12:51:55.761 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 12:51:55.772 +01:00 [INF] Handled GetBookImagesQuery in 10ms
+2026-02-01 12:52:00.451 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 12:52:00.451 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 12:52:00.454 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 12:52:00.464 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 12:52:00.464 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 12:52:00.468 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 12:52:03.063 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 12:52:03.063 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 12:52:03.064 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 12:52:03.084 +01:00 [INF] Enqueued job "f7d8e791-7933-4df7-96d2-aa578692fcbc" with priority 15 at position 18
+2026-02-01 12:52:03.099 +01:00 [INF] Enqueued Hangfire job 20006 for visualization job "f7d8e791-7933-4df7-96d2-aa578692fcbc"
+2026-02-01 12:52:03.100 +01:00 [INF] Created text selection visualization job "f7d8e791-7933-4df7-96d2-aa578692fcbc" for text length 1645
+2026-02-01 12:52:03.100 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 36ms
+2026-02-01 12:52:03.104 +01:00 [INF] Starting to process visualization job "f7d8e791-7933-4df7-96d2-aa578692fcbc"
+2026-02-01 12:52:03.105 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 12:52:03.112 +01:00 [INF] Processing visualization job "f7d8e791-7933-4df7-96d2-aa578692fcbc"
+2026-02-01 12:52:03.123 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 1645
+2026-02-01 12:52:03.134 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:03.139 +01:00 [INF] Handled GetJobQuery in 5ms
+2026-02-01 12:52:05.120 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:05.125 +01:00 [INF] Handled GetJobQuery in 4ms
+2026-02-01 12:52:07.122 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:07.124 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:09.124 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:09.126 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:11.117 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:11.118 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:13.125 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:13.126 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:15.121 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:15.122 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:17.115 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:17.117 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:19.121 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:19.123 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:21.125 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:21.127 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:21.777 +01:00 [INF] Generated prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5". Processing time: 15413ms
+2026-02-01 12:52:21.783 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-01 12:52:21.786 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 899, Size: 1024x1024
+2026-02-01 12:52:23.121 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:23.123 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:25.117 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:25.118 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:27.117 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:27.118 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:29.124 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:29.125 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:31.117 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:31.118 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:33.121 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:33.123 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:35.143 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:35.144 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:37.127 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:37.128 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:39.127 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:39.128 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:41.124 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:41.125 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:43.124 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:43.126 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:45.127 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:45.129 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:47.734 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:47.735 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:49.734 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:49.735 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:51.745 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:51.746 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:53.217 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-4qEPNJyckbrlykdm1xlshmD9.png?st=2026-02-01T10%3A52%3A52Z&se=2026-02-01T12%3A52%3A52Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=7aed557a-269d-4dda-ab8b-c66e34024151&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-01T11%3A52%3A52Z&ske=2026-02-02T11%3A52%3A52Z&sks=b&skv=2024-08-04&sig=5ArrwpXglKGGbOEQudsijOGINoLfRTivNuEboKiHnlA%3D
+2026-02-01 12:52:53.747 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:53.748 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:55.747 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:55.748 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 12:52:56.436 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\b9251470-fbf2-4d46-a0c9-5911b75310f5\images\f7d8e791-7933-4df7-96d2-aa578692fcbc_b7bcc3625bd14aee9953357751b0b1e2.png
+2026-02-01 12:52:56.437 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:52:56.437 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:52:56.437 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:52:56.444 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:52:56.444 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 12:52:56.453 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-01 12:52:56.453 +01:00 [INF] Sent completion notification for job "f7d8e791-7933-4df7-96d2-aa578692fcbc" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-01 12:52:56.455 +01:00 [INF] Visualization job "f7d8e791-7933-4df7-96d2-aa578692fcbc" completed successfully with 1 images
+2026-02-01 12:52:56.455 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (53350ms) {"JobId":"f7d8e791-7933-4df7-96d2-aa578692fcbc","$type":"ProcessJobCommand"}
+2026-02-01 12:52:56.456 +01:00 [INF] Handled ProcessJobCommand in 53350ms
+2026-02-01 12:52:56.456 +01:00 [INF] Successfully processed visualization job "f7d8e791-7933-4df7-96d2-aa578692fcbc"
+2026-02-01 12:52:57.751 +01:00 [INF] Handling GetJobQuery
+2026-02-01 12:52:57.766 +01:00 [INF] Handled GetJobQuery in 15ms
+2026-02-01 13:03:06.877 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:03:06.877 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:03:06.889 +01:00 [INF] Handled GetBookImagesQuery in 11ms
+2026-02-01 13:03:18.526 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:03:18.526 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 13:03:18.527 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "b442c6aa-c2d7-4f73-8882-af87c75da1ef"
+2026-02-01 13:03:18.549 +01:00 [INF] Enqueued job "ab3816f6-040c-4947-a0d5-646af59d35d1" with priority 15 at position 19
+2026-02-01 13:03:18.562 +01:00 [INF] Enqueued Hangfire job 20007 for visualization job "ab3816f6-040c-4947-a0d5-646af59d35d1"
+2026-02-01 13:03:18.562 +01:00 [INF] Created text selection visualization job "ab3816f6-040c-4947-a0d5-646af59d35d1" for text length 1622
+2026-02-01 13:03:18.562 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 35ms
+2026-02-01 13:03:18.572 +01:00 [INF] Starting to process visualization job "ab3816f6-040c-4947-a0d5-646af59d35d1"
+2026-02-01 13:03:18.572 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 13:03:18.575 +01:00 [INF] Processing visualization job "ab3816f6-040c-4947-a0d5-646af59d35d1"
+2026-02-01 13:03:18.585 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:18.587 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 1622
+2026-02-01 13:03:18.595 +01:00 [INF] Handled GetJobQuery in 9ms
+2026-02-01 13:03:20.585 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:20.588 +01:00 [INF] Handled GetJobQuery in 3ms
+2026-02-01 13:03:22.576 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:22.577 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:24.576 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:24.578 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:26.577 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:26.578 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:28.575 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:28.576 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:30.581 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:30.583 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:32.575 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:32.577 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:34.574 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:34.576 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:35.900 +01:00 [INF] Generated prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5". Processing time: 14120ms
+2026-02-01 13:03:35.905 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-01 13:03:35.906 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 893, Size: 1024x1024
+2026-02-01 13:03:36.583 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:36.584 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:38.575 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:38.577 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:40.579 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:40.580 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:42.576 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:42.578 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:44.583 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:44.584 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:46.575 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:46.576 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:48.583 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:48.584 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:49.815 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-GCnpdy8h0xnLIW5ZRhzI9f7W.png?st=2026-02-01T11%3A03%3A49Z&se=2026-02-01T13%3A03%3A49Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=92b997d6-f0dd-439d-8087-b26c74d72365&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-01T12%3A03%3A49Z&ske=2026-02-02T12%3A03%3A49Z&sks=b&skv=2024-08-04&sig=YlaNpoD99/MyMkoXl8by9ewjJF1Nc/3Tpbffc/bZXwA%3D
+2026-02-01 13:03:50.583 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:50.584 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:03:52.201 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\b9251470-fbf2-4d46-a0c9-5911b75310f5\images\ab3816f6-040c-4947-a0d5-646af59d35d1_6a1eef144135439eb1fd471ffca00d6c.png
+2026-02-01 13:03:52.202 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:03:52.202 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:03:52.203 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:03:52.208 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:03:52.208 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:03:52.219 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-01 13:03:52.219 +01:00 [INF] Sent completion notification for job "ab3816f6-040c-4947-a0d5-646af59d35d1" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-01 13:03:52.220 +01:00 [INF] Visualization job "ab3816f6-040c-4947-a0d5-646af59d35d1" completed successfully with 1 images
+2026-02-01 13:03:52.220 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (33648ms) {"JobId":"ab3816f6-040c-4947-a0d5-646af59d35d1","$type":"ProcessJobCommand"}
+2026-02-01 13:03:52.221 +01:00 [INF] Handled ProcessJobCommand in 33648ms
+2026-02-01 13:03:52.221 +01:00 [INF] Successfully processed visualization job "ab3816f6-040c-4947-a0d5-646af59d35d1"
+2026-02-01 13:03:52.587 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:03:52.592 +01:00 [INF] Handled GetJobQuery in 5ms
+2026-02-01 13:06:18.726 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:06:18.726 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:06:18.741 +01:00 [INF] Handled GetBookImagesQuery in 15ms
+2026-02-01 13:06:18.753 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:06:18.753 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:06:18.758 +01:00 [INF] Handled GetBookImagesQuery in 5ms
+2026-02-01 13:10:48.163 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:10:48.163 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 13:10:48.164 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "b442c6aa-c2d7-4f73-8882-af87c75da1ef"
+2026-02-01 13:10:48.181 +01:00 [INF] Enqueued job "0b641094-f25d-401f-aff5-9b8b6342f42f" with priority 15 at position 20
+2026-02-01 13:10:48.193 +01:00 [INF] Enqueued Hangfire job 20008 for visualization job "0b641094-f25d-401f-aff5-9b8b6342f42f"
+2026-02-01 13:10:48.193 +01:00 [INF] Created text selection visualization job "0b641094-f25d-401f-aff5-9b8b6342f42f" for text length 1622
+2026-02-01 13:10:48.193 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 30ms
+2026-02-01 13:10:48.198 +01:00 [INF] Starting to process visualization job "0b641094-f25d-401f-aff5-9b8b6342f42f"
+2026-02-01 13:10:48.199 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 13:10:48.199 +01:00 [INF] Processing visualization job "0b641094-f25d-401f-aff5-9b8b6342f42f"
+2026-02-01 13:10:48.207 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 1622
+2026-02-01 13:10:48.213 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:10:48.223 +01:00 [INF] Handled GetJobQuery in 9ms
+2026-02-01 13:10:50.205 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:10:50.209 +01:00 [INF] Handled GetJobQuery in 3ms
+2026-02-01 13:10:52.212 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:10:52.213 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:10:54.209 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:10:54.211 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:10:56.217 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:10:56.219 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:10:58.211 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:10:58.213 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:00.213 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:00.214 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:02.210 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:02.211 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:04.213 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:04.214 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:04.489 +01:00 [INF] Generated prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5". Processing time: 13005ms
+2026-02-01 13:11:04.494 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-01 13:11:04.494 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 824, Size: 1024x1024
+2026-02-01 13:11:06.211 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:06.212 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:08.210 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:08.212 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:10.740 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:10.742 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:12.735 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:12.737 +01:00 [INF] Handled GetJobQuery in 0ms
+2026-02-01 13:11:14.739 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:14.740 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:16.734 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:16.736 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:18.736 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:18.737 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:20.735 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:20.737 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:22.733 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:22.734 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:24.734 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:24.735 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:26.735 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:26.736 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:28.734 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:28.735 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:30.743 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:30.745 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:32.736 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:32.737 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:34.742 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:34.744 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:36.741 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:36.742 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:11:37.819 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-jZHOjfiR2TcVCx5JaJDKeYu7.png?st=2026-02-01T11%3A11%3A37Z&se=2026-02-01T13%3A11%3A37Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=1726b4ce-fee1-450b-8b92-1731ad8745f6&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-01T12%3A11%3A37Z&ske=2026-02-02T12%3A11%3A37Z&sks=b&skv=2024-08-04&sig=fF4YEUC4YwMe4kHwi0o/ssVUH2uzCNK49qzZj1YPrzg%3D
+2026-02-01 13:11:38.739 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:38.745 +01:00 [INF] Handled GetJobQuery in 5ms
+2026-02-01 13:11:39.767 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\b9251470-fbf2-4d46-a0c9-5911b75310f5\images\0b641094-f25d-401f-aff5-9b8b6342f42f_b171b071bd98440abd6332910a5274cf.png
+2026-02-01 13:11:39.767 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:11:39.768 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:11:39.768 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:11:39.774 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:11:39.774 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:11:39.785 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-01 13:11:39.786 +01:00 [INF] Sent completion notification for job "0b641094-f25d-401f-aff5-9b8b6342f42f" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-01 13:11:39.787 +01:00 [INF] Visualization job "0b641094-f25d-401f-aff5-9b8b6342f42f" completed successfully with 1 images
+2026-02-01 13:11:39.787 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (51588ms) {"JobId":"0b641094-f25d-401f-aff5-9b8b6342f42f","$type":"ProcessJobCommand"}
+2026-02-01 13:11:39.788 +01:00 [INF] Handled ProcessJobCommand in 51588ms
+2026-02-01 13:11:39.788 +01:00 [INF] Successfully processed visualization job "0b641094-f25d-401f-aff5-9b8b6342f42f"
+2026-02-01 13:11:40.738 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:11:40.752 +01:00 [INF] Handled GetJobQuery in 13ms
+2026-02-01 13:13:00.003 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:13:00.004 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:13:00.034 +01:00 [INF] Handled GetBookImagesQuery in 30ms
+2026-02-01 13:13:00.047 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:13:00.048 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:13:00.052 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 13:14:33.746 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:14:33.746 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:14:33.757 +01:00 [INF] Handled GetBookImagesQuery in 10ms
+2026-02-01 13:14:33.771 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:14:33.771 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:14:33.775 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 13:15:34.592 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:15:34.592 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 13:15:34.593 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 13:15:34.615 +01:00 [INF] Enqueued job "9b3ee03c-889b-43e7-b040-1a4630a7a2aa" with priority 15 at position 21
+2026-02-01 13:15:34.627 +01:00 [INF] Enqueued Hangfire job 20009 for visualization job "9b3ee03c-889b-43e7-b040-1a4630a7a2aa"
+2026-02-01 13:15:34.628 +01:00 [INF] Created text selection visualization job "9b3ee03c-889b-43e7-b040-1a4630a7a2aa" for text length 1645
+2026-02-01 13:15:34.628 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 35ms
+2026-02-01 13:15:34.634 +01:00 [INF] Starting to process visualization job "9b3ee03c-889b-43e7-b040-1a4630a7a2aa"
+2026-02-01 13:15:34.635 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 13:15:34.636 +01:00 [INF] Processing visualization job "9b3ee03c-889b-43e7-b040-1a4630a7a2aa"
+2026-02-01 13:15:34.645 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:34.646 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 1645
+2026-02-01 13:15:34.653 +01:00 [INF] Handled GetJobQuery in 7ms
+2026-02-01 13:15:36.647 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:36.649 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:38.647 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:38.648 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:40.642 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:40.643 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:42.646 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:42.648 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:44.642 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:44.643 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:46.650 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:46.651 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:48.643 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:48.644 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:50.640 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:50.641 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:52.645 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:52.647 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:53.960 +01:00 [INF] Generated prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5". Processing time: 16129ms
+2026-02-01 13:15:53.964 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-01 13:15:53.964 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 1074, Size: 1024x1024
+2026-02-01 13:15:54.640 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:54.641 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:56.643 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:56.644 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:15:58.653 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:15:58.655 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:16:00.647 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:16:00.649 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:16:02.651 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:16:02.653 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:16:04.647 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:16:04.648 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:16:06.644 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:16:06.645 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:16:08.647 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:16:08.648 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:16:10.653 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:16:10.654 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:16:12.646 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:16:12.647 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:16:13.794 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-slFPklEA3MrdJbs4ithgei5i.png?st=2026-02-01T11%3A16%3A13Z&se=2026-02-01T13%3A16%3A13Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=52f8f7b3-ca8d-4b21-9807-8b9df114d84c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-01T12%3A16%3A13Z&ske=2026-02-02T12%3A16%3A13Z&sks=b&skv=2024-08-04&sig=T3HiCffWB3NzBM3Aw4n1rTNCW2LKmTsjbzuXuC7lmA0%3D
+2026-02-01 13:16:14.642 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:16:14.643 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:16:15.680 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\b9251470-fbf2-4d46-a0c9-5911b75310f5\images\9b3ee03c-889b-43e7-b040-1a4630a7a2aa_bff38c81eb754622a2073c35d3054e44.png
+2026-02-01 13:16:15.680 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:16:15.680 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:16:15.681 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:16:15.685 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:16:15.685 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:16:15.692 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-01 13:16:15.693 +01:00 [INF] Sent completion notification for job "9b3ee03c-889b-43e7-b040-1a4630a7a2aa" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-01 13:16:15.694 +01:00 [INF] Visualization job "9b3ee03c-889b-43e7-b040-1a4630a7a2aa" completed successfully with 1 images
+2026-02-01 13:16:15.694 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (41059ms) {"JobId":"9b3ee03c-889b-43e7-b040-1a4630a7a2aa","$type":"ProcessJobCommand"}
+2026-02-01 13:16:15.694 +01:00 [INF] Handled ProcessJobCommand in 41059ms
+2026-02-01 13:16:15.694 +01:00 [INF] Successfully processed visualization job "9b3ee03c-889b-43e7-b040-1a4630a7a2aa"
+2026-02-01 13:16:16.640 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:16:16.644 +01:00 [INF] Handled GetJobQuery in 3ms
+2026-02-01 13:18:24.991 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:18:24.992 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:18:25.000 +01:00 [INF] Handled GetBookImagesQuery in 8ms
+2026-02-01 13:18:25.012 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:18:25.012 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:18:25.015 +01:00 [INF] Handled GetBookImagesQuery in 2ms
+2026-02-01 13:19:13.764 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:19:13.764 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:19:13.774 +01:00 [INF] Handled GetBookImagesQuery in 9ms
+2026-02-01 13:19:29.184 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:19:29.184 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:19:29.189 +01:00 [INF] Handled GetBookImagesQuery in 4ms
+2026-02-01 13:19:29.204 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:19:29.204 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:19:29.208 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 13:19:47.276 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:19:47.276 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:19:47.290 +01:00 [INF] Handled GetBookImagesQuery in 14ms
+2026-02-01 13:19:47.301 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:19:47.301 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:19:47.305 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 13:22:23.908 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:22:23.908 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 13:22:23.909 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 13:22:23.925 +01:00 [INF] Enqueued job "a5a67307-09f2-412f-a277-72b483678ecc" with priority 15 at position 22
+2026-02-01 13:22:23.938 +01:00 [INF] Enqueued Hangfire job 20010 for visualization job "a5a67307-09f2-412f-a277-72b483678ecc"
+2026-02-01 13:22:23.938 +01:00 [INF] Created text selection visualization job "a5a67307-09f2-412f-a277-72b483678ecc" for text length 821
+2026-02-01 13:22:23.938 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 29ms
+2026-02-01 13:22:23.944 +01:00 [INF] Starting to process visualization job "a5a67307-09f2-412f-a277-72b483678ecc"
+2026-02-01 13:22:23.945 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 13:22:23.946 +01:00 [INF] Processing visualization job "a5a67307-09f2-412f-a277-72b483678ecc"
+2026-02-01 13:22:23.956 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 821
+2026-02-01 13:22:23.957 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:23.967 +01:00 [INF] Handled GetJobQuery in 9ms
+2026-02-01 13:22:25.953 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:25.956 +01:00 [INF] Handled GetJobQuery in 3ms
+2026-02-01 13:22:27.954 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:27.956 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:29.951 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:29.952 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:31.951 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:31.952 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:33.952 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:33.954 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:35.955 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:35.956 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:37.960 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:37.962 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:39.959 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:39.961 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:41.963 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:41.964 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:43.963 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:43.964 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:45.956 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:45.958 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:47.960 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:47.962 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:49.959 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:49.960 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:51.964 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:51.966 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:53.966 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:53.967 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:55.960 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:55.961 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:57.968 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:57.970 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:22:59.962 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:22:59.963 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:01.962 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:01.964 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:03.962 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:03.964 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:05.951 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:05.953 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:07.960 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:07.961 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:09.960 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:09.961 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:11.961 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:11.962 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:13.964 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:13.965 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:15.955 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:15.956 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:17.953 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:17.954 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:19.962 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:19.964 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:21.966 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:21.967 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:23.958 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:23.959 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:23.963 +01:00 [WRN] PromptGen request timed out for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:23:23.964 +01:00 [WRN] Job "a5a67307-09f2-412f-a277-72b483678ecc" failed: Prompt generation failed: PromptGen request timed out
+2026-02-01 13:23:23.968 +01:00 [INF] Sent failure notification for job "a5a67307-09f2-412f-a277-72b483678ecc" to user "df8df461-7d30-4545-d6eb-08de5846968f": Prompt generation failed: PromptGen request timed out
+2026-02-01 13:23:23.970 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (60024ms) {"JobId":"a5a67307-09f2-412f-a277-72b483678ecc","$type":"ProcessJobCommand"}
+2026-02-01 13:23:23.970 +01:00 [INF] Handled ProcessJobCommand in 60025ms
+2026-02-01 13:23:23.970 +01:00 [WRN] Failed to process visualization job "a5a67307-09f2-412f-a277-72b483678ecc": Prompt generation failed: PromptGen request timed out
+2026-02-01 13:23:25.957 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:25.964 +01:00 [INF] Handled GetJobQuery in 6ms
+2026-02-01 13:23:35.953 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:23:35.954 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 13:23:35.954 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 13:23:35.973 +01:00 [INF] Enqueued job "a82f4952-ac09-4bf2-9262-42abecdb5167" with priority 15 at position 23
+2026-02-01 13:23:35.987 +01:00 [INF] Enqueued Hangfire job 20011 for visualization job "a82f4952-ac09-4bf2-9262-42abecdb5167"
+2026-02-01 13:23:35.988 +01:00 [INF] Created text selection visualization job "a82f4952-ac09-4bf2-9262-42abecdb5167" for text length 821
+2026-02-01 13:23:35.988 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 33ms
+2026-02-01 13:23:35.990 +01:00 [INF] Starting to process visualization job "a82f4952-ac09-4bf2-9262-42abecdb5167"
+2026-02-01 13:23:35.990 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 13:23:35.990 +01:00 [INF] Processing visualization job "a82f4952-ac09-4bf2-9262-42abecdb5167"
+2026-02-01 13:23:35.995 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 821
+2026-02-01 13:23:36.001 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:36.004 +01:00 [INF] Handled GetJobQuery in 3ms
+2026-02-01 13:23:38.002 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:38.003 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:40.010 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:40.011 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:42.011 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:42.012 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:44.013 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:44.014 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:46.011 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:46.012 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:48.003 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:48.005 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:50.004 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:50.006 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:51.999 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:52.000 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:54.003 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:54.005 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:54.206 +01:00 [INF] Generated prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5". Processing time: 15025ms
+2026-02-01 13:23:54.209 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-01 13:23:54.209 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 860, Size: 1024x1024
+2026-02-01 13:23:56.008 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:56.010 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:23:58.002 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:23:58.003 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:24:00.008 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:24:00.011 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:24:02.006 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:24:02.007 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:24:04.084 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:24:04.086 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:24:06.009 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:24:06.011 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:24:08.008 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:24:08.009 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:24:10.009 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:24:10.010 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:24:11.934 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-Hl2EkxJOuo4GzIsYjb0cg0kG.png?st=2026-02-01T11%3A24%3A11Z&se=2026-02-01T13%3A24%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=e12db1aa-1007-44fd-8388-3a70fd6a4956&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-01T12%3A02%3A58Z&ske=2026-02-02T12%3A02%3A58Z&sks=b&skv=2024-08-04&sig=uxAtqs%2B25tYc7C%2BJer5CHw%2BWa9sxjcnf7DRGkhpn0PY%3D
+2026-02-01 13:24:12.009 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:24:12.010 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 13:24:13.930 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\b9251470-fbf2-4d46-a0c9-5911b75310f5\images\a82f4952-ac09-4bf2-9262-42abecdb5167_af9f6c2d272e4323beec75ba36af8c2d.png
+2026-02-01 13:24:13.930 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:24:13.930 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:24:13.931 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:24:13.935 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:24:13.935 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 13:24:13.942 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-01 13:24:13.943 +01:00 [INF] Sent completion notification for job "a82f4952-ac09-4bf2-9262-42abecdb5167" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-01 13:24:13.944 +01:00 [INF] Visualization job "a82f4952-ac09-4bf2-9262-42abecdb5167" completed successfully with 1 images
+2026-02-01 13:24:13.944 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (37954ms) {"JobId":"a82f4952-ac09-4bf2-9262-42abecdb5167","$type":"ProcessJobCommand"}
+2026-02-01 13:24:13.944 +01:00 [INF] Handled ProcessJobCommand in 37954ms
+2026-02-01 13:24:13.944 +01:00 [INF] Successfully processed visualization job "a82f4952-ac09-4bf2-9262-42abecdb5167"
+2026-02-01 13:24:14.012 +01:00 [INF] Handling GetJobQuery
+2026-02-01 13:24:14.019 +01:00 [INF] Handled GetJobQuery in 6ms
+2026-02-01 13:26:52.668 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:26:52.668 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:26:52.676 +01:00 [INF] Handled GetBookImagesQuery in 8ms
+2026-02-01 13:26:52.687 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:26:52.687 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:26:52.690 +01:00 [INF] Handled GetBookImagesQuery in 2ms
+2026-02-01 13:27:36.719 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:27:36.719 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:27:36.729 +01:00 [INF] Handled GetBookImagesQuery in 9ms
+2026-02-01 13:27:36.741 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:27:36.741 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:27:36.748 +01:00 [INF] Handled GetBookImagesQuery in 7ms
+2026-02-01 13:27:51.836 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:27:51.836 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:27:51.839 +01:00 [INF] Handled GetBookImagesQuery in 2ms
+2026-02-01 13:27:51.848 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:27:51.849 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:27:51.852 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 13:36:31.148 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:36:31.148 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:36:31.157 +01:00 [INF] Handled GetBookImagesQuery in 8ms
+2026-02-01 13:36:31.165 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 13:36:31.165 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:36:31.168 +01:00 [INF] Handled GetBookImagesQuery in 2ms
+2026-02-01 13:50:07.854 +01:00 [INF] Getting images for BookId: "d5fec765-b127-4c37-b8bb-1346cdd031a0"
+2026-02-01 13:50:07.854 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:50:07.867 +01:00 [INF] Handled GetBookImagesQuery in 12ms
+2026-02-01 13:50:07.879 +01:00 [INF] Getting images for BookId: "d5fec765-b127-4c37-b8bb-1346cdd031a0"
+2026-02-01 13:50:07.879 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:50:07.880 +01:00 [INF] Handled GetBookImagesQuery in 1ms
+2026-02-01 13:50:20.998 +01:00 [INF] Getting images for BookId: "d5fec765-b127-4c37-b8bb-1346cdd031a0"
+2026-02-01 13:50:20.998 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:50:21.000 +01:00 [INF] Handled GetBookImagesQuery in 1ms
+2026-02-01 13:50:21.009 +01:00 [INF] Getting images for BookId: "d5fec765-b127-4c37-b8bb-1346cdd031a0"
+2026-02-01 13:50:21.009 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 13:50:21.010 +01:00 [INF] Handled GetBookImagesQuery in 1ms
+2026-02-01 17:00:54.968 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 17:00:54.969 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 17:00:54.988 +01:00 [INF] Handled GetBookImagesQuery in 19ms
+2026-02-01 17:00:54.996 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 17:00:54.997 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 17:00:55.000 +01:00 [INF] Handled GetBookImagesQuery in 3ms
+2026-02-01 17:01:03.020 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 17:01:03.021 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 17:01:03.022 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 17:01:03.053 +01:00 [INF] Enqueued job "8672b528-b661-4154-bb51-c78463b551a0" with priority 15 at position 24
+2026-02-01 17:01:03.073 +01:00 [INF] Enqueued Hangfire job 20012 for visualization job "8672b528-b661-4154-bb51-c78463b551a0"
+2026-02-01 17:01:03.073 +01:00 [INF] Created text selection visualization job "8672b528-b661-4154-bb51-c78463b551a0" for text length 272
+2026-02-01 17:01:03.073 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 52ms
+2026-02-01 17:01:03.079 +01:00 [INF] Starting to process visualization job "8672b528-b661-4154-bb51-c78463b551a0"
+2026-02-01 17:01:03.080 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 17:01:03.082 +01:00 [INF] Processing visualization job "8672b528-b661-4154-bb51-c78463b551a0"
+2026-02-01 17:01:03.092 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 272
+2026-02-01 17:01:03.093 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:03.106 +01:00 [INF] Handled GetJobQuery in 12ms
+2026-02-01 17:01:05.090 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:05.095 +01:00 [INF] Handled GetJobQuery in 4ms
+2026-02-01 17:01:07.091 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:07.094 +01:00 [INF] Handled GetJobQuery in 2ms
+2026-02-01 17:01:09.087 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:09.088 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:11.088 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:11.089 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:13.093 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:13.094 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:15.100 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:15.101 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:17.090 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:17.091 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:19.090 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:19.097 +01:00 [INF] Handled GetJobQuery in 6ms
+2026-02-01 17:01:20.758 +01:00 [INF] Generated prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5". Processing time: 14199ms
+2026-02-01 17:01:20.762 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-01 17:01:20.762 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 826, Size: 1024x1024
+2026-02-01 17:01:21.099 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:21.103 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:23.089 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:23.091 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:25.096 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:25.098 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:27.742 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:27.743 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:29.746 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:29.748 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:31.749 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:31.750 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:33.740 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:33.741 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:34.145 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-AP17tJmsbwTA9Wd1qWlAjriS.png?st=2026-02-01T15%3A01%3A33Z&se=2026-02-01T17%3A01%3A33Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=67205dde-9780-4119-bbff-6343b48e42b6&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-01T16%3A01%3A33Z&ske=2026-02-02T16%3A01%3A33Z&sks=b&skv=2024-08-04&sig=mBpqB5104UvN4QmC7LyBca0PjaIhrV8e1TQwdg2m6JI%3D
+2026-02-01 17:01:35.741 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:35.742 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 17:01:36.249 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\b9251470-fbf2-4d46-a0c9-5911b75310f5\images\8672b528-b661-4154-bb51-c78463b551a0_c636a49177ff4dc08f7a6557739306db.png
+2026-02-01 17:01:36.250 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 17:01:36.250 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 17:01:36.250 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 17:01:36.257 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 17:01:36.258 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 17:01:36.266 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-01 17:01:36.266 +01:00 [INF] Sent completion notification for job "8672b528-b661-4154-bb51-c78463b551a0" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-01 17:01:36.268 +01:00 [INF] Visualization job "8672b528-b661-4154-bb51-c78463b551a0" completed successfully with 1 images
+2026-02-01 17:01:36.268 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (33188ms) {"JobId":"8672b528-b661-4154-bb51-c78463b551a0","$type":"ProcessJobCommand"}
+2026-02-01 17:01:36.269 +01:00 [INF] Handled ProcessJobCommand in 33189ms
+2026-02-01 17:01:36.269 +01:00 [INF] Successfully processed visualization job "8672b528-b661-4154-bb51-c78463b551a0"
+2026-02-01 17:01:37.739 +01:00 [INF] Handling GetJobQuery
+2026-02-01 17:01:37.755 +01:00 [INF] Handled GetJobQuery in 16ms
+2026-02-01 19:23:53.964 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 19:23:53.964 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 19:23:53.979 +01:00 [INF] Handled GetBookImagesQuery in 15ms
+2026-02-01 19:23:53.993 +01:00 [INF] Getting images for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 19:23:53.993 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-01 19:23:54.000 +01:00 [INF] Handled GetBookImagesQuery in 6ms
+2026-02-01 19:24:03.050 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5"
+2026-02-01 19:24:03.051 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-01 19:24:03.053 +01:00 [INF] Creating text selection visualization for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", PageId: "ad6a1677-aa32-4830-91fe-07221d84757d"
+2026-02-01 19:24:03.087 +01:00 [INF] Enqueued job "853b7f1e-23d4-4c7e-beb6-606194c8153c" with priority 15 at position 25
+2026-02-01 19:24:03.106 +01:00 [INF] Enqueued Hangfire job 20013 for visualization job "853b7f1e-23d4-4c7e-beb6-606194c8153c"
+2026-02-01 19:24:03.106 +01:00 [INF] Created text selection visualization job "853b7f1e-23d4-4c7e-beb6-606194c8153c" for text length 389
+2026-02-01 19:24:03.106 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 54ms
+2026-02-01 19:24:03.113 +01:00 [INF] Starting to process visualization job "853b7f1e-23d4-4c7e-beb6-606194c8153c"
+2026-02-01 19:24:03.113 +01:00 [INF] Handling ProcessJobCommand
+2026-02-01 19:24:03.116 +01:00 [INF] Processing visualization job "853b7f1e-23d4-4c7e-beb6-606194c8153c"
+2026-02-01 19:24:03.126 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:03.128 +01:00 [INF] Generating prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5", Model: dalle3, TextLength: 389
+2026-02-01 19:24:03.142 +01:00 [INF] Handled GetJobQuery in 16ms
+2026-02-01 19:24:05.126 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:05.133 +01:00 [INF] Handled GetJobQuery in 6ms
+2026-02-01 19:24:07.125 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:07.127 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:09.129 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:09.131 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:11.132 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:11.138 +01:00 [INF] Handled GetJobQuery in 6ms
+2026-02-01 19:24:13.128 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:13.130 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:15.129 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:15.130 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:17.120 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:17.121 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:19.127 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:19.128 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:21.121 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:21.123 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:21.863 +01:00 [INF] Generated prompt for BookId: "b9251470-fbf2-4d46-a0c9-5911b75310f5". Processing time: 15405ms
+2026-02-01 19:24:21.868 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-01 19:24:21.868 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 771, Size: 1024x1024
+2026-02-01 19:24:23.121 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:23.122 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:25.124 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:25.126 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:27.128 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:27.129 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:29.122 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:29.123 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:31.134 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:31.135 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:33.122 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:33.123 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:35.131 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:35.135 +01:00 [INF] Handled GetJobQuery in 3ms
+2026-02-01 19:24:37.135 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:37.136 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:39.126 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:39.127 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:41.129 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:41.130 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:43.126 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:43.128 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:43.523 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-boWQw66LcCIthmrvFe5GAqVO.png?st=2026-02-01T17%3A24%3A43Z&se=2026-02-01T19%3A24%3A43Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=67205dde-9780-4119-bbff-6343b48e42b6&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-01T18%3A24%3A43Z&ske=2026-02-02T18%3A24%3A43Z&sks=b&skv=2024-08-04&sig=5wa1UsDZcLmCiBwlSesLmXcgwa/0NmYYGW0KW8IbiEo%3D
+2026-02-01 19:24:45.130 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:45.132 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-01 19:24:45.462 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\b9251470-fbf2-4d46-a0c9-5911b75310f5\images\853b7f1e-23d4-4c7e-beb6-606194c8153c_0af2511ca1b948dcb2b92029ab536746.png
+2026-02-01 19:24:45.463 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 19:24:45.463 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 19:24:45.464 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 19:24:45.471 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 19:24:45.471 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-01 19:24:45.482 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-01 19:24:45.482 +01:00 [INF] Sent completion notification for job "853b7f1e-23d4-4c7e-beb6-606194c8153c" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-01 19:24:45.484 +01:00 [INF] Visualization job "853b7f1e-23d4-4c7e-beb6-606194c8153c" completed successfully with 1 images
+2026-02-01 19:24:45.484 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (42370ms) {"JobId":"853b7f1e-23d4-4c7e-beb6-606194c8153c","$type":"ProcessJobCommand"}
+2026-02-01 19:24:45.484 +01:00 [INF] Handled ProcessJobCommand in 42371ms
+2026-02-01 19:24:45.484 +01:00 [INF] Successfully processed visualization job "853b7f1e-23d4-4c7e-beb6-606194c8153c"
+2026-02-01 19:24:47.126 +01:00 [INF] Handling GetJobQuery
+2026-02-01 19:24:47.136 +01:00 [INF] Handled GetJobQuery in 9ms

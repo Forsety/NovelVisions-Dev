@@ -1,0 +1,609 @@
+/* src/pages/GutenbergPage/GutenbergPage.module.css */
+/* Premium Library - Gutenberg Classics Page */
+
+.page {
+  min-height: 100vh;
+  padding-top: 76px;
+}
+
+/* ========================================
+   HEADER - Classic Library Entrance
+   ======================================== */
+
+.header {
+  position: relative;
+  padding: 70px 24px 60px;
+  background: linear-gradient(180deg, rgba(212, 165, 116, 0.1) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(212, 165, 116, 0.1);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Vintage Pattern Background */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 25% 25%, rgba(212, 165, 116, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 75%, rgba(139, 58, 76, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Decorative Frame */
+.header::after {
+  content: '❧ ❧ ❧';
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: var(--accent-primary);
+  opacity: 0.4;
+  letter-spacing: 16px;
+}
+
+.headerContent {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.titleIcon {
+  font-size: clamp(44px, 6vw, 60px);
+  filter: drop-shadow(0 4px 12px rgba(212, 165, 116, 0.3));
+}
+
+.subtitle {
+  font-family: var(--font-reading);
+  font-size: 18px;
+  color: var(--text-tertiary);
+  margin: 0 0 40px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Search Form */
+.searchForm {
+  display: flex;
+  gap: 14px;
+  max-width: 600px;
+  margin: 0 auto 28px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filterSelect {
+  padding: 12px 40px 12px 18px;
+  background: rgba(255, 248, 240, 0.04);
+  border: 1px solid rgba(212, 165, 116, 0.15);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-family: var(--font-elegant);
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23d4a574' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  min-width: 160px;
+  transition: all 0.3s ease;
+}
+
+.filterSelect:hover {
+  background-color: rgba(212, 165, 116, 0.08);
+  border-color: rgba(212, 165, 116, 0.3);
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.15);
+}
+
+/* ========================================
+   CONTENT AREA
+   ======================================== */
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* Results Header */
+.resultsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(212, 165, 116, 0.1);
+}
+
+.resultsCount {
+  font-family: var(--font-elegant);
+  font-size: 15px;
+  color: var(--text-tertiary);
+}
+
+.resultsCount strong {
+  color: var(--accent-tertiary);
+  font-weight: 600;
+}
+
+.sortOptions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sortLabel {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.sortSelect {
+  padding: 10px 36px 10px 14px;
+  background: rgba(255, 248, 240, 0.03);
+  border: 1px solid rgba(212, 165, 116, 0.12);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-family: var(--font-elegant);
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%239a918a' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+/* ========================================
+   BOOKS GRID - Vintage Style Cards
+   ======================================== */
+
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 32px;
+}
+
+/* Book Card - Aged Paper Look */
+.bookCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 248, 240, 0.04) 0%, rgba(255, 248, 240, 0.01) 100%);
+  border: 1px solid rgba(212, 165, 116, 0.12);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bookCard:hover {
+  transform: translateY(-10px);
+  border-color: rgba(212, 165, 116, 0.3);
+  box-shadow: var(--shadow-book-hover);
+}
+
+/* Book Cover */
+.bookCover {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  background: linear-gradient(135deg, var(--wood-medium) 0%, var(--wood-dark) 100%);
+  overflow: hidden;
+}
+
+/* Vintage Book Spine */
+.bookCover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    transparent 100%
+  );
+  z-index: 2;
+}
+
+/* Aged Page Effect */
+.bookCover::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 8px;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(245, 235, 220, 0.9) 0px,
+    rgba(235, 225, 210, 0.7) 1px,
+    rgba(215, 200, 180, 0.5) 2px
+  );
+  border-radius: 0 4px 4px 0;
+  z-index: 2;
+}
+
+.bookCover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bookCard:hover .bookCover img {
+  transform: scale(1.06);
+}
+
+/* Placeholder Cover - Classic Design */
+.placeholderCover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(60, 48, 40, 1) 0%,
+    rgba(45, 35, 30, 1) 100%
+  );
+}
+
+/* Decorative Border on Placeholder */
+.placeholderCover::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 2px solid rgba(212, 165, 116, 0.25);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.placeholderIcon {
+  font-size: 44px;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+.placeholderTitle {
+  font-family: var(--font-elegant);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-tertiary);
+  line-height: 1.4;
+  max-width: 140px;
+}
+
+/* Public Domain Badge */
+.publicDomainBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  background: rgba(74, 124, 111, 0.9);
+  border-radius: 6px;
+  font-family: var(--font-elegant);
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Book Info */
+.bookInfo {
+  padding: 20px;
+}
+
+.bookTitle {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 6px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bookAuthor {
+  font-family: var(--font-reading);
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin: 0 0 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.authorYears {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Book Meta */
+.bookMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.metaDot {
+  width: 3px;
+  height: 3px;
+  background: var(--text-muted);
+  border-radius: 50%;
+}
+
+/* Card Actions */
+.cardActions {
+  display: flex;
+  gap: 10px;
+}
+
+.viewLink {
+  flex: 1;
+  text-align: center;
+  padding: 10px 16px;
+  background: rgba(212, 165, 116, 0.06);
+  border: 1px solid rgba(212, 165, 116, 0.15);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  font-family: var(--font-elegant);
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.viewLink:hover {
+  background: rgba(212, 165, 116, 0.12);
+  border-color: rgba(212, 165, 116, 0.25);
+  color: var(--text-primary);
+}
+
+/* Import Button */
+.importBtn {
+  flex: 1;
+}
+
+.importBtn.imported {
+  background: rgba(109, 184, 137, 0.15);
+  border-color: var(--success);
+  color: var(--success);
+  pointer-events: none;
+}
+
+/* ========================================
+   STATES
+   ======================================== */
+
+.loadingState,
+.errorState,
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  padding: 40px;
+}
+
+.stateIcon {
+  font-size: 72px;
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+
+.emptyState h3,
+.errorState h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 12px;
+}
+
+.emptyState p,
+.errorState p {
+  font-family: var(--font-reading);
+  font-size: 16px;
+  color: var(--text-tertiary);
+  margin: 0 0 28px;
+  max-width: 400px;
+}
+
+/* ========================================
+   PAGINATION
+   ======================================== */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(212, 165, 116, 0.1);
+}
+
+.pageInfo {
+  font-family: var(--font-elegant);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ========================================
+   INFO SECTION
+   ======================================== */
+
+.infoSection {
+  padding: 60px 24px 100px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.infoCard {
+  text-align: center;
+  padding: 48px 40px;
+  background: linear-gradient(180deg, rgba(28, 24, 31, 0.7) 0%, rgba(28, 24, 31, 0.5) 100%);
+  border: 1px solid rgba(212, 165, 116, 0.12);
+  border-radius: 24px;
+}
+
+.infoCard h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 16px;
+}
+
+.infoCard p {
+  font-family: var(--font-reading);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-tertiary);
+  margin: 0 0 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infoFeatures {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.infoFeature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-elegant);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.infoFeature span:first-child {
+  font-size: 22px;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .booksGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 50px 20px 50px;
+  }
+  
+  .header::after {
+    display: none;
+  }
+  
+  .title {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .searchForm {
+    flex-direction: column;
+  }
+  
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .filterSelect {
+    min-width: unset;
+  }
+  
+  .content {
+    padding: 32px 20px 60px;
+  }
+  
+  .resultsHeader {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  
+  .booksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .infoFeatures {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booksGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  
+  .bookInfo {
+    padding: 14px;
+  }
+  
+  .bookTitle {
+    font-size: 14px;
+  }
+  
+  .bookAuthor {
+    font-size: 12px;
+  }
+  
+  .cardActions {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

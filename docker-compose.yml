@@ -1,0 +1,59 @@
+services:
+  # ===========================================
+  # INFRASTRUCTURE
+  # ===========================================
+  
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: novelvision-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=NovelVision123!
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+
+  redis:
+    image: redis:7-alpine
+    container_name: novelvision-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  # ===========================================
+  # BACKEND SERVICES
+  # ===========================================
+
+  catalog-api:
+    build:
+      context: .
+      dockerfile: src/Services/Catalog.API/NovelVision.Services.Catalog.API/Dockerfile
+    container_name: novelvision-catalog-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=NovelVision_Catalog;User Id=sa;Password=NovelVision123!;TrustServerCertificate=True
+    ports:
+      - "5001:80"
+    depends_on:
+      - sqlserver
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: src/ApiGateway/Gateway.API/Dockerfile
+    container_name: novelvision-gateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "7295:80"
+    depends_on:
+      - catalog-api
+
+volumes:
+  sqlserver_data:
+  redis_data:

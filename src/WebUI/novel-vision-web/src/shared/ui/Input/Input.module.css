@@ -1,0 +1,247 @@
+/* src/shared/ui/Input/Input.module.css */
+/* Premium Library Input Styles */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* ========================================
+   LABEL
+   ======================================== */
+
+.label {
+  font-family: var(--font-elegant);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.required {
+  color: var(--accent-burgundy);
+  margin-left: 4px;
+}
+
+/* ========================================
+   INPUT WRAPPER
+   ======================================== */
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 248, 240, 0.03);
+  border: 1px solid rgba(212, 165, 116, 0.12);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.inputWrapper:hover:not(.disabled) {
+  border-color: rgba(212, 165, 116, 0.25);
+  background: rgba(255, 248, 240, 0.04);
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.15);
+  background: rgba(255, 248, 240, 0.05);
+}
+
+/* Has Error */
+.hasError {
+  border-color: var(--error) !important;
+  background: rgba(214, 107, 107, 0.05);
+}
+
+.hasError:focus-within {
+  box-shadow: 0 0 0 3px rgba(214, 107, 107, 0.15);
+}
+
+/* Disabled */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(255, 248, 240, 0.02);
+}
+
+/* Icon Padding */
+.hasIconLeft .input {
+  padding-left: 48px;
+}
+
+.hasIconRight .input {
+  padding-right: 48px;
+}
+
+/* ========================================
+   SIZES
+   ======================================== */
+
+.sm {
+  height: 42px;
+}
+
+.sm .input {
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.md {
+  height: 50px;
+}
+
+.md .input {
+  padding: 0 18px;
+  font-size: 15px;
+}
+
+.lg {
+  height: 58px;
+}
+
+.lg .input {
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+/* ========================================
+   INPUT ELEMENT
+   ======================================== */
+
+.input {
+  flex: 1;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-reading);
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ========================================
+   ICONS
+   ======================================== */
+
+.icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--text-muted);
+  font-size: 18px;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.iconLeft {
+  left: 16px;
+}
+
+.iconRight {
+  right: 16px;
+}
+
+.inputWrapper:focus-within .icon {
+  color: var(--accent-primary);
+}
+
+/* ========================================
+   ACTION BUTTONS
+   ======================================== */
+
+.togglePassword,
+.clearButton {
+  position: absolute;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.togglePassword:hover,
+.clearButton:hover {
+  background: rgba(212, 165, 116, 0.1);
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   MESSAGE
+   ======================================== */
+
+.message {
+  font-family: var(--font-reading);
+  font-size: 13px;
+  color: var(--text-tertiary);
+  margin: 0;
+  padding-left: 4px;
+}
+
+.errorMessage {
+  color: var(--error);
+}
+
+/* ========================================
+   TEXTAREA VARIANT
+   ======================================== */
+
+.textareaWrapper {
+  height: auto;
+  min-height: 120px;
+}
+
+.textareaWrapper .input {
+  padding: 16px 18px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ========================================
+   SEARCH VARIANT
+   ======================================== */
+
+.searchWrapper {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 165, 116, 0.06) 0%,
+    rgba(139, 58, 76, 0.04) 100%
+  );
+}
+
+.searchWrapper:focus-within {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 165, 116, 0.1) 0%,
+    rgba(139, 58, 76, 0.06) 100%
+  );
+}
+
+/* ========================================
+   FOCUS VISIBLE
+   ======================================== */
+
+.input:focus-visible {
+  outline: none;
+}

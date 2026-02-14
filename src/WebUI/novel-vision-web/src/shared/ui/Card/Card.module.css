@@ -1,0 +1,216 @@
+/* src/shared/ui/Card/Card.module.css */
+/* Premium Library Card Styles */
+
+.card {
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+/* ========================================
+   VARIANTS
+   ======================================== */
+
+/* Default - Subtle Surface */
+.default {
+  background: rgba(255, 248, 240, 0.02);
+  border: 1px solid rgba(212, 165, 116, 0.1);
+}
+
+/* Glass - Frosted Effect */
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 24, 31, 0.8) 0%,
+    rgba(28, 24, 31, 0.6) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 165, 116, 0.12);
+}
+
+/* Elevated - Raised with Shadow */
+.elevated {
+  background: linear-gradient(
+    180deg,
+    rgba(34, 30, 37, 0.95) 0%,
+    rgba(28, 24, 31, 0.95) 100%
+  );
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(212, 165, 116, 0.08);
+}
+
+/* Bordered - Prominent Border */
+.bordered {
+  background: transparent;
+  border: 2px solid rgba(212, 165, 116, 0.2);
+}
+
+/* Gradient - Accent Background */
+.gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 165, 116, 0.1) 0%,
+    rgba(139, 58, 76, 0.08) 50%,
+    rgba(74, 124, 111, 0.06) 100%
+  );
+  border: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+/* Book - Paper-like */
+.book {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 248, 240, 0.05) 0%,
+    rgba(255, 248, 240, 0.02) 100%
+  );
+  border: 1px solid rgba(212, 165, 116, 0.15);
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   PADDING
+   ======================================== */
+
+.padding-none { padding: 0; }
+.padding-sm { padding: 16px; }
+.padding-md { padding: 24px; }
+.padding-lg { padding: 36px; }
+
+/* ========================================
+   STATES
+   ======================================== */
+
+/* Hover Effect */
+.hover:hover {
+  border-color: rgba(212, 165, 116, 0.3);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(212, 165, 116, 0.08);
+}
+
+/* Clickable */
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:active {
+  transform: scale(0.98);
+}
+
+/* Glow Effect */
+.glow {
+  box-shadow: 0 0 40px rgba(212, 165, 116, 0.12);
+}
+
+.glow:hover {
+  box-shadow: 0 0 60px rgba(212, 165, 116, 0.2);
+}
+
+/* ========================================
+   SUB-COMPONENTS
+   ======================================== */
+
+/* Card Header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(212, 165, 116, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Card Body */
+.body {
+  flex: 1;
+}
+
+/* Card Footer */
+.footer {
+  padding-top: 20px;
+  border-top: 1px solid rgba(212, 165, 116, 0.1);
+  margin-top: 20px;
+}
+
+/* ========================================
+   DECORATIVE ELEMENTS
+   ======================================== */
+
+/* Corner Ornament */
+.ornament {
+  position: relative;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '❦';
+  position: absolute;
+  font-size: 14px;
+  color: var(--accent-primary);
+  opacity: 0.4;
+}
+
+.ornament::before {
+  top: 12px;
+  left: 12px;
+}
+
+.ornament::after {
+  bottom: 12px;
+  right: 12px;
+  transform: rotate(180deg);
+}
+
+/* Gold Border Top */
+.goldTop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-primary),
+    transparent
+  );
+  opacity: 0.5;
+}
+
+/* ========================================
+   FOCUS
+   ======================================== */
+
+.card:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   LOADING STATE
+   ======================================== */
+
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 165, 116, 0.1),
+    transparent
+  );
+  animation: shimmer 2s ease infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

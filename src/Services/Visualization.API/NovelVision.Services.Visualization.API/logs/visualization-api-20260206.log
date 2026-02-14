@@ -1,0 +1,118 @@
+2026-02-06 20:20:50.101 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-02-06 20:20:52.089 +01:00 [INF] Hangfire SQL objects installed.
+2026-02-06 20:20:52.264 +01:00 [INF] Visualization API started successfully
+2026-02-06 20:20:52.282 +01:00 [INF] Environment: Development
+2026-02-06 20:20:52.290 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-02-06 20:20:52.293 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-02-06 20:20:52.296 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-02-06 20:20:53.055 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-02-06 20:20:53.215 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-02-06 20:20:53.223 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-02-06 20:20:54.774 +01:00 [INF] Server laptop-ohnfi7tt:22684:30875f1e successfully announced in 1345,6893 ms
+2026-02-06 20:20:54.783 +01:00 [INF] Server laptop-ohnfi7tt:22684:30875f1e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-02-06 20:20:55.114 +01:00 [INF] Server laptop-ohnfi7tt:22684:30875f1e all the dispatchers started
+2026-02-06 21:02:39.187 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-02-06 21:03:30.261 +01:00 [INF] Getting images for BookId: "78bf8202-3aa0-46cb-9e05-2da6c1b04eac"
+2026-02-06 21:03:30.268 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-06 21:03:30.964 +01:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-02-06 21:03:30.983 +01:00 [WRN] The property 'GeneratedImage.PromptData#PromptData.Parameters' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-02-06 21:03:30.990 +01:00 [WRN] The property 'VisualizationJob._promptData#PromptData.Parameters' is a collection or enumeration type with a value converter but with no value comparer. Set a value comparer to ensure the collection/enumeration elements are compared correctly.
+2026-02-06 21:03:31.450 +01:00 [WRN] Visualization Long Running Request: GetBookImagesQuery (1179ms) {"BookId":"78bf8202-3aa0-46cb-9e05-2da6c1b04eac","Skip":0,"Take":50,"$type":"GetBookImagesQuery"}
+2026-02-06 21:03:31.452 +01:00 [INF] Handled GetBookImagesQuery in 1183ms
+2026-02-06 21:03:31.507 +01:00 [INF] Getting images for BookId: "78bf8202-3aa0-46cb-9e05-2da6c1b04eac"
+2026-02-06 21:03:31.507 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-06 21:03:31.565 +01:00 [INF] Handled GetBookImagesQuery in 57ms
+2026-02-06 21:03:52.133 +01:00 [INF] Creating text selection visualization for BookId: "78bf8202-3aa0-46cb-9e05-2da6c1b04eac"
+2026-02-06 21:03:52.170 +01:00 [INF] Handling CreateTextSelectionVisualizationCommand
+2026-02-06 21:03:52.271 +01:00 [INF] Creating text selection visualization for BookId: "78bf8202-3aa0-46cb-9e05-2da6c1b04eac", PageId: "eb2b532c-2963-400b-9dec-2589e7a9c8c9"
+2026-02-06 21:03:52.365 +01:00 [INF] Enqueued job "e97dc957-d4cc-4a11-b99f-4296e071efba" with priority 15 at position 26
+2026-02-06 21:03:52.659 +01:00 [INF] Enqueued Hangfire job 20014 for visualization job "e97dc957-d4cc-4a11-b99f-4296e071efba"
+2026-02-06 21:03:52.660 +01:00 [INF] Created text selection visualization job "e97dc957-d4cc-4a11-b99f-4296e071efba" for text length 801
+2026-02-06 21:03:52.674 +01:00 [WRN] Visualization Long Running Request: CreateTextSelectionVisualizationCommand (502ms) {"BookId":"78bf8202-3aa0-46cb-9e05-2da6c1b04eac","UserId":"df8df461-7d30-4545-d6eb-08de5846968f","SelectedText":"and unsought by any man. Ay, _there_ lay the sting. Valancy did not mind so much being an old maid. After all, she thought, being an old maid couldn’t possibly be as dreadful as being married to an Uncle Wellington or an Uncle Benjamin, or even an Uncle Herbert. What hurt her was that she had never had a chance to be anything but an old maid. No man had ever desired her. The tears came into her eyes as she lay there alone in the faintly greying darkness. She dared not let herself cry as hard as she wanted to, for two reasons. She was afraid that crying might bring on another attack of that pain around the heart. She had had a spell of it after she had got into bed—rather worse than any she had had yet. And she was afraid her mother would notice her red eyes at breakfast and keep at her with","StartPosition":0,"EndPosition":801,"PageId":"eb2b532c-2963-400b-9dec-2589e7a9c8c9","ChapterId":null,"ContextBefore":null,"ContextAfter":null,"PreferredProvider":"DallE3","Parameters":null,"$type":"CreateTextSelectionVisualizationCommand"}
+2026-02-06 21:03:52.675 +01:00 [INF] Handled CreateTextSelectionVisualizationCommand in 504ms
+2026-02-06 21:03:52.725 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:03:52.757 +01:00 [INF] Starting to process visualization job "e97dc957-d4cc-4a11-b99f-4296e071efba"
+2026-02-06 21:03:52.758 +01:00 [INF] Handling ProcessJobCommand
+2026-02-06 21:03:52.781 +01:00 [INF] Processing visualization job "e97dc957-d4cc-4a11-b99f-4296e071efba"
+2026-02-06 21:03:52.865 +01:00 [INF] Handled GetJobQuery in 139ms
+2026-02-06 21:03:52.871 +01:00 [INF] Generating prompt for BookId: "78bf8202-3aa0-46cb-9e05-2da6c1b04eac", Model: dalle3, TextLength: 801
+2026-02-06 21:03:54.724 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:03:54.732 +01:00 [INF] Handled GetJobQuery in 8ms
+2026-02-06 21:03:56.728 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:03:56.732 +01:00 [INF] Handled GetJobQuery in 4ms
+2026-02-06 21:03:58.991 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:03:59.038 +01:00 [INF] Handled GetJobQuery in 47ms
+2026-02-06 21:04:00.993 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:00.995 +01:00 [INF] Handled GetJobQuery in 2ms
+2026-02-06 21:04:03.005 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:03.006 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:05.001 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:05.004 +01:00 [INF] Handled GetJobQuery in 2ms
+2026-02-06 21:04:06.999 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:07.001 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:09.001 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:09.003 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:10.996 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:10.999 +01:00 [INF] Handled GetJobQuery in 2ms
+2026-02-06 21:04:13.002 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:13.003 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:14.993 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:14.995 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:16.368 +01:00 [INF] Generated prompt for BookId: "78bf8202-3aa0-46cb-9e05-2da6c1b04eac". Processing time: 20050ms
+2026-02-06 21:04:16.386 +01:00 [INF] Starting image generation with provider: DallE3
+2026-02-06 21:04:16.388 +01:00 [INF] Starting DALL-E 3 generation. Prompt length: 674, Size: 1024x1024
+2026-02-06 21:04:16.991 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:16.997 +01:00 [INF] Handled GetJobQuery in 5ms
+2026-02-06 21:04:18.996 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:18.999 +01:00 [INF] Handled GetJobQuery in 2ms
+2026-02-06 21:04:21.005 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:21.007 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:23.001 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:23.002 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:24.995 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:24.998 +01:00 [INF] Handled GetJobQuery in 2ms
+2026-02-06 21:04:27.003 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:27.005 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:28.995 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:28.996 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:31.003 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:31.005 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:33.001 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:33.003 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:34.994 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:34.996 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:36.996 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:36.998 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:38.997 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:38.999 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:41.004 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:41.008 +01:00 [INF] Handled GetJobQuery in 3ms
+2026-02-06 21:04:42.999 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:43.001 +01:00 [INF] Handled GetJobQuery in 1ms
+2026-02-06 21:04:44.270 +01:00 [INF] DALL-E 3 generation completed. URL: https://oaidalleapiprodscus.blob.core.windows.net/private/org-oOAeYDSWMHE7ISd2IgAR2YDD/user-IJ2KJNMcuzo58wV51CSB6orV/img-LbwUIqeiLQd2ehq5x09uUbZQ.png?st=2026-02-06T19%3A04%3A44Z&se=2026-02-06T21%3A04%3A44Z&sp=r&sv=2026-02-06&sr=b&rscd=inline&rsct=image/png&skoid=e12db1aa-1007-44fd-8388-3a70fd6a4956&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-02-06T00%3A29%3A52Z&ske=2026-02-07T00%3A29%3A52Z&sks=b&skv=2026-02-06&sig=1VSfJGYro2vbT8CvZlXGXukbpArD5ItYv4y3T11FkkY%3D
+2026-02-06 21:04:45.028 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:45.033 +01:00 [INF] Handled GetJobQuery in 4ms
+2026-02-06 21:04:46.538 +01:00 [INF] Saved image locally: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot\uploads\books\78bf8202-3aa0-46cb-9e05-2da6c1b04eac\images\e97dc957-d4cc-4a11-b99f-4296e071efba_e8478728328549629aa673f1431695f2.png
+2026-02-06 21:04:46.569 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-06 21:04:46.570 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-06 21:04:46.600 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-06 21:04:46.633 +01:00 [WRN] The same entity is being tracked as different entity types 'GeneratedImage.PromptData#PromptData' and 'VisualizationJob._promptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-06 21:04:46.633 +01:00 [WRN] The same entity is being tracked as different entity types 'VisualizationJob._promptData#PromptData' and 'GeneratedImage.PromptData#PromptData' with defining navigations. If a property value changes, it will result in two store changes, which might not be the desired outcome.
+2026-02-06 21:04:46.658 +01:00 [WRN] Failed to update page visualization. Status: "MethodNotAllowed", Error: 
+2026-02-06 21:04:46.668 +01:00 [INF] Sent completion notification for job "e97dc957-d4cc-4a11-b99f-4296e071efba" to user "df8df461-7d30-4545-d6eb-08de5846968f"
+2026-02-06 21:04:46.672 +01:00 [INF] Visualization job "e97dc957-d4cc-4a11-b99f-4296e071efba" completed successfully with 1 images
+2026-02-06 21:04:46.672 +01:00 [WRN] Visualization Long Running Request: ProcessJobCommand (53913ms) {"JobId":"e97dc957-d4cc-4a11-b99f-4296e071efba","$type":"ProcessJobCommand"}
+2026-02-06 21:04:46.673 +01:00 [INF] Handled ProcessJobCommand in 53914ms
+2026-02-06 21:04:46.673 +01:00 [INF] Successfully processed visualization job "e97dc957-d4cc-4a11-b99f-4296e071efba"
+2026-02-06 21:04:47.004 +01:00 [INF] Handling GetJobQuery
+2026-02-06 21:04:47.027 +01:00 [INF] Handled GetJobQuery in 23ms
+2026-02-06 21:17:27.726 +01:00 [INF] Getting images for BookId: "fb95a2c3-3039-4cf2-98f1-57c7cc5dd77b"
+2026-02-06 21:17:27.727 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-06 21:17:27.736 +01:00 [INF] Handled GetBookImagesQuery in 9ms
+2026-02-06 21:17:27.746 +01:00 [INF] Getting images for BookId: "fb95a2c3-3039-4cf2-98f1-57c7cc5dd77b"
+2026-02-06 21:17:27.746 +01:00 [INF] Handling GetBookImagesQuery
+2026-02-06 21:17:27.749 +01:00 [INF] Handled GetBookImagesQuery in 1ms

@@ -1,0 +1,17 @@
+2026-02-07 20:06:42.198 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:5231"}, Body: 
+2026-02-07 20:06:47.720 +01:00 [INF] HTTP GET /health responded 200 in 12.9082 ms
+2026-02-07 20:06:49.320 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 7121, Body: {"status":"Healthy","totalDuration":"00:00:00.0126796","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0124207","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000023","status":"Healthy","tags":["self"]}}}
+2026-02-07 20:06:52.146 +01:00 [WRN] Slow request detected: GET /health took 7121ms
+2026-02-07 20:07:25.990 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:5231"}, Body: 
+2026-02-07 20:07:26.825 +01:00 [INF] HTTP GET /health responded 200 in 20.7627 ms
+2026-02-07 20:07:27.391 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 1400, Body: {"status":"Healthy","totalDuration":"00:00:00.0205008","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0201784","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000021","status":"Healthy","tags":["self"]}}}
+2026-02-07 20:07:27.814 +01:00 [WRN] Slow request detected: GET /health took 1400ms
+2026-02-07 20:07:58.310 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:5231"}, Body: 
+2026-02-07 20:07:58.912 +01:00 [INF] HTTP GET /health responded 200 in 17.3688 ms
+2026-02-07 20:07:59.281 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 971, Body: {"status":"Healthy","totalDuration":"00:00:00.0171017","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0166080","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000014","status":"Healthy","tags":["self"]}}}
+2026-02-07 20:08:29.448 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:5231"}, Body: 
+2026-02-07 20:08:29.458 +01:00 [INF] HTTP GET /health responded 200 in 5.6704 ms
+2026-02-07 20:08:29.464 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 16, Body: {"status":"Healthy","totalDuration":"00:00:00.0052812","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0042817","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000015","status":"Healthy","tags":["self"]}}}
+2026-02-07 20:08:59.479 +01:00 [INF] HTTP Request Information: Method: GET, Path: /health, QueryString: , Headers: {"Host":"localhost:5231"}, Body: 
+2026-02-07 20:08:59.486 +01:00 [INF] HTTP GET /health responded 200 in 2.2397 ms
+2026-02-07 20:08:59.490 +01:00 [INF] HTTP Response Information: StatusCode: 200, ElapsedMs: 10, Body: {"status":"Healthy","totalDuration":"00:00:00.0019786","entries":{"catalog-db":{"data":{},"duration":"00:00:00.0013917","status":"Healthy","tags":["db","sql","catalog"]},"self":{"data":{},"duration":"00:00:00.0000021","status":"Healthy","tags":["self"]}}}

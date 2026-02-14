@@ -1,0 +1,168 @@
+2026-02-10 16:24:52.794 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-02-10 16:24:55.465 +01:00 [INF] Hangfire SQL objects installed.
+2026-02-10 16:24:55.586 +01:00 [INF] Visualization API started successfully
+2026-02-10 16:24:55.592 +01:00 [INF] Environment: Development
+2026-02-10 16:24:55.597 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-02-10 16:24:55.600 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-02-10 16:24:55.600 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-02-10 16:24:55.792 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-02-10 16:24:55.794 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-02-10 16:24:55.795 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-02-10 16:24:56.630 +01:00 [INF] Server laptop-ohnfi7tt:32516:d001384a successfully announced in 663,616 ms
+2026-02-10 16:24:56.647 +01:00 [INF] Server laptop-ohnfi7tt:32516:d001384a is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-02-10 16:24:57.366 +01:00 [INF] Server laptop-ohnfi7tt:32516:d001384a all the dispatchers started
+2026-02-10 16:45:31.745 +01:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2026-02-10 16:45:31.746 +01:00 [INF] Server laptop-ohnfi7tt:32516:d001384a caught stopping signal...
+2026-02-10 16:45:31.747 +01:00 [INF] Server laptop-ohnfi7tt:32516:d001384a caught stopped signal...
+2026-02-10 16:45:31.747 +01:00 [WRN] Server laptop-ohnfi7tt:32516:d001384a caught shutdown signal...
+2026-02-10 16:45:31.748 +01:00 [WRN] Server laptop-ohnfi7tt:32516:d001384a stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-02-10 16:45:31.760 +01:00 [INF] Server laptop-ohnfi7tt:32516:d001384a successfully reported itself as stopped in 9,6831 ms
+2026-02-10 16:45:31.760 +01:00 [INF] Server laptop-ohnfi7tt:32516:d001384a has been stopped in total 13,1849 ms
+2026-02-10 16:47:58.184 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-02-10 16:47:58.737 +01:00 [INF] Hangfire SQL objects installed.
+2026-02-10 16:47:58.772 +01:00 [INF] Visualization API started successfully
+2026-02-10 16:47:58.772 +01:00 [INF] Environment: Development
+2026-02-10 16:47:58.773 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-02-10 16:47:58.773 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-02-10 16:47:58.774 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-02-10 16:47:58.920 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-02-10 16:47:58.922 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-02-10 16:47:58.922 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-02-10 16:47:59.081 +01:00 [INF] Server laptop-ohnfi7tt:21360:b88db41b successfully announced in 116,6239 ms
+2026-02-10 16:47:59.083 +01:00 [INF] Server laptop-ohnfi7tt:21360:b88db41b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-02-10 16:47:59.102 +01:00 [INF] Server laptop-ohnfi7tt:21360:b88db41b all the dispatchers started
+2026-02-10 17:08:26.548 +01:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2026-02-10 17:08:26.549 +01:00 [INF] Server laptop-ohnfi7tt:21360:b88db41b caught stopping signal...
+2026-02-10 17:08:26.550 +01:00 [INF] Server laptop-ohnfi7tt:21360:b88db41b caught stopped signal...
+2026-02-10 17:08:26.551 +01:00 [WRN] Server laptop-ohnfi7tt:21360:b88db41b caught shutdown signal...
+2026-02-10 17:08:26.551 +01:00 [WRN] Server laptop-ohnfi7tt:21360:b88db41b stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-02-10 17:08:26.561 +01:00 [INF] Server laptop-ohnfi7tt:21360:b88db41b successfully reported itself as stopped in 8,3776 ms
+2026-02-10 17:08:26.561 +01:00 [INF] Server laptop-ohnfi7tt:21360:b88db41b has been stopped in total 11,3858 ms
+2026-02-10 17:16:51.945 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-02-10 17:16:52.434 +01:00 [INF] Hangfire SQL objects installed.
+2026-02-10 17:16:52.459 +01:00 [INF] Visualization API started successfully
+2026-02-10 17:16:52.459 +01:00 [INF] Environment: Development
+2026-02-10 17:16:52.459 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-02-10 17:16:52.459 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-02-10 17:16:52.459 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-02-10 17:16:52.536 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-02-10 17:16:52.536 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-02-10 17:16:52.537 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-02-10 17:16:52.647 +01:00 [INF] Server laptop-ohnfi7tt:36380:f5eb44b9 successfully announced in 90,9203 ms
+2026-02-10 17:16:52.650 +01:00 [INF] Server laptop-ohnfi7tt:36380:f5eb44b9 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-02-10 17:16:52.680 +01:00 [INF] Server laptop-ohnfi7tt:36380:f5eb44b9 all the dispatchers started
+2026-02-10 17:18:43.636 +01:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2026-02-10 17:18:43.637 +01:00 [INF] Server laptop-ohnfi7tt:36380:f5eb44b9 caught stopping signal...
+2026-02-10 17:18:43.638 +01:00 [INF] Server laptop-ohnfi7tt:36380:f5eb44b9 caught stopped signal...
+2026-02-10 17:18:43.639 +01:00 [WRN] Server laptop-ohnfi7tt:36380:f5eb44b9 caught shutdown signal...
+2026-02-10 17:18:43.639 +01:00 [WRN] Server laptop-ohnfi7tt:36380:f5eb44b9 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-02-10 17:18:43.646 +01:00 [INF] Server laptop-ohnfi7tt:36380:f5eb44b9 successfully reported itself as stopped in 5,9093 ms
+2026-02-10 17:18:43.646 +01:00 [INF] Server laptop-ohnfi7tt:36380:f5eb44b9 has been stopped in total 8,0247 ms
+2026-02-10 17:19:05.889 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-02-10 17:19:06.327 +01:00 [INF] Hangfire SQL objects installed.
+2026-02-10 17:19:06.349 +01:00 [INF] Visualization API started successfully
+2026-02-10 17:19:06.350 +01:00 [INF] Environment: Development
+2026-02-10 17:19:06.350 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-02-10 17:19:06.350 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-02-10 17:19:06.350 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-02-10 17:19:06.433 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-02-10 17:19:06.433 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-02-10 17:19:06.434 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-02-10 17:19:06.544 +01:00 [INF] Server laptop-ohnfi7tt:32444:289b23e4 successfully announced in 90,7476 ms
+2026-02-10 17:19:06.546 +01:00 [INF] Server laptop-ohnfi7tt:32444:289b23e4 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-02-10 17:19:06.597 +01:00 [INF] Server laptop-ohnfi7tt:32444:289b23e4 all the dispatchers started
+2026-02-10 17:20:18.910 +01:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2026-02-10 17:20:18.910 +01:00 [INF] Server laptop-ohnfi7tt:32444:289b23e4 caught stopping signal...
+2026-02-10 17:20:18.911 +01:00 [INF] Server laptop-ohnfi7tt:32444:289b23e4 caught stopped signal...
+2026-02-10 17:20:18.911 +01:00 [WRN] Server laptop-ohnfi7tt:32444:289b23e4 caught shutdown signal...
+2026-02-10 17:20:18.912 +01:00 [WRN] Server laptop-ohnfi7tt:32444:289b23e4 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-02-10 17:20:18.922 +01:00 [INF] Server laptop-ohnfi7tt:32444:289b23e4 successfully reported itself as stopped in 7,6526 ms
+2026-02-10 17:20:18.923 +01:00 [INF] Server laptop-ohnfi7tt:32444:289b23e4 has been stopped in total 11,874 ms
+2026-02-10 17:20:39.801 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-02-10 17:20:40.194 +01:00 [INF] Hangfire SQL objects installed.
+2026-02-10 17:20:40.216 +01:00 [INF] Visualization API started successfully
+2026-02-10 17:20:40.216 +01:00 [INF] Environment: Development
+2026-02-10 17:20:40.217 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-02-10 17:20:40.217 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-02-10 17:20:40.217 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-02-10 17:20:40.294 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-02-10 17:20:40.294 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-02-10 17:20:40.295 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-02-10 17:20:40.436 +01:00 [INF] Server laptop-ohnfi7tt:37596:da2c9819 successfully announced in 104,6881 ms
+2026-02-10 17:20:40.440 +01:00 [INF] Server laptop-ohnfi7tt:37596:da2c9819 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-02-10 17:20:40.510 +01:00 [INF] Server laptop-ohnfi7tt:37596:da2c9819 all the dispatchers started
+2026-02-10 17:24:52.275 +01:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2026-02-10 17:24:52.276 +01:00 [INF] Server laptop-ohnfi7tt:37596:da2c9819 caught stopping signal...
+2026-02-10 17:24:52.277 +01:00 [INF] Server laptop-ohnfi7tt:37596:da2c9819 caught stopped signal...
+2026-02-10 17:24:52.278 +01:00 [WRN] Server laptop-ohnfi7tt:37596:da2c9819 caught shutdown signal...
+2026-02-10 17:24:52.279 +01:00 [WRN] Server laptop-ohnfi7tt:37596:da2c9819 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-02-10 17:24:52.289 +01:00 [INF] Server laptop-ohnfi7tt:37596:da2c9819 successfully reported itself as stopped in 8,5775 ms
+2026-02-10 17:24:52.289 +01:00 [INF] Server laptop-ohnfi7tt:37596:da2c9819 has been stopped in total 12,349 ms
+2026-02-10 17:25:08.811 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-02-10 17:25:09.200 +01:00 [INF] Hangfire SQL objects installed.
+2026-02-10 17:25:09.220 +01:00 [INF] Visualization API started successfully
+2026-02-10 17:25:09.220 +01:00 [INF] Environment: Development
+2026-02-10 17:25:09.220 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-02-10 17:25:09.220 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-02-10 17:25:09.221 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-02-10 17:25:09.298 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-02-10 17:25:09.298 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-02-10 17:25:09.298 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-02-10 17:25:09.431 +01:00 [INF] Server laptop-ohnfi7tt:5080:a8008a1e successfully announced in 112,1112 ms
+2026-02-10 17:25:09.434 +01:00 [INF] Server laptop-ohnfi7tt:5080:a8008a1e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-02-10 17:25:09.441 +01:00 [INF] Server laptop-ohnfi7tt:5080:a8008a1e all the dispatchers started
+2026-02-10 17:30:49.588 +01:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2026-02-10 17:30:49.588 +01:00 [INF] Server laptop-ohnfi7tt:5080:a8008a1e caught stopping signal...
+2026-02-10 17:30:49.590 +01:00 [INF] Server laptop-ohnfi7tt:5080:a8008a1e caught stopped signal...
+2026-02-10 17:30:49.601 +01:00 [WRN] Server laptop-ohnfi7tt:5080:a8008a1e caught shutdown signal...
+2026-02-10 17:30:49.609 +01:00 [WRN] Server laptop-ohnfi7tt:5080:a8008a1e stopped non-gracefully due to ServerWatchdog. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-02-10 17:30:49.673 +01:00 [INF] Server laptop-ohnfi7tt:5080:a8008a1e successfully reported itself as stopped in 50,0511 ms
+2026-02-10 17:30:49.674 +01:00 [INF] Server laptop-ohnfi7tt:5080:a8008a1e has been stopped in total 83,3078 ms
+2026-02-10 17:31:03.277 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-02-10 17:31:03.868 +01:00 [INF] Hangfire SQL objects installed.
+2026-02-10 17:31:03.896 +01:00 [INF] Visualization API started successfully
+2026-02-10 17:31:03.897 +01:00 [INF] Environment: Development
+2026-02-10 17:31:03.897 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-02-10 17:31:03.897 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-02-10 17:31:03.897 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-02-10 17:31:04.010 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-02-10 17:31:04.021 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-02-10 17:31:04.026 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-02-10 17:31:04.392 +01:00 [INF] Server laptop-ohnfi7tt:39028:425d5bd0 successfully announced in 279,7345 ms
+2026-02-10 17:31:04.395 +01:00 [INF] Server laptop-ohnfi7tt:39028:425d5bd0 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-02-10 17:31:04.525 +01:00 [INF] Server laptop-ohnfi7tt:39028:425d5bd0 all the dispatchers started
+2026-02-10 17:36:01.997 +01:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2026-02-10 17:36:01.998 +01:00 [INF] Server laptop-ohnfi7tt:39028:425d5bd0 caught stopping signal...
+2026-02-10 17:36:01.998 +01:00 [INF] Server laptop-ohnfi7tt:39028:425d5bd0 caught stopped signal...
+2026-02-10 17:36:01.998 +01:00 [WRN] Server laptop-ohnfi7tt:39028:425d5bd0 caught shutdown signal...
+2026-02-10 17:36:02.000 +01:00 [WRN] Server laptop-ohnfi7tt:39028:425d5bd0 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-02-10 17:36:02.009 +01:00 [INF] Server laptop-ohnfi7tt:39028:425d5bd0 successfully reported itself as stopped in 7,1915 ms
+2026-02-10 17:36:02.009 +01:00 [INF] Server laptop-ohnfi7tt:39028:425d5bd0 has been stopped in total 10,9754 ms

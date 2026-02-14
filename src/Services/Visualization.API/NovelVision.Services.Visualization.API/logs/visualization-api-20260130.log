@@ -1,0 +1,429 @@
+2026-01-30 16:04:42.732 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-01-30 16:04:43.605 +01:00 [INF] Hangfire SQL objects installed.
+2026-01-30 16:04:43.627 +01:00 [INF] Visualization API started successfully
+2026-01-30 16:04:43.627 +01:00 [INF] Environment: Development
+2026-01-30 16:04:43.627 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-01-30 16:04:43.628 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-01-30 16:04:43.628 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-01-30 16:04:43.646 +01:00 [INF] User profile is available. Using 'C:\Users\DATART\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-30 16:04:43.677 +01:00 [WRN] The WebRootPath was not found: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot. Static files may be unavailable.
+2026-01-30 16:04:43.701 +01:00 [INF] Now listening on: http://localhost:5284
+2026-01-30 16:04:43.709 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-01-30 16:04:43.709 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-01-30 16:04:43.709 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-01-30 16:04:43.719 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-30 16:04:43.719 +01:00 [INF] Hosting environment: Development
+2026-01-30 16:04:43.719 +01:00 [INF] Content root path: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API
+2026-01-30 16:04:43.725 +01:00 [DBG] Execution loop BackgroundServerProcess:55980dbc has started in 2,3958 ms
+2026-01-30 16:04:43.831 +01:00 [INF] Server laptop-ohnfi7tt:27924:48ca31d5 successfully announced in 103,35 ms
+2026-01-30 16:04:43.833 +01:00 [DBG] Execution loop ServerHeartbeatProcess:96f4ee08 has started in 0,9872 ms
+2026-01-30 16:04:43.833 +01:00 [INF] Server laptop-ohnfi7tt:27924:48ca31d5 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-01-30 16:04:43.834 +01:00 [DBG] Execution loop ServerWatchdog:fc0881b2 has started in 0,2793 ms
+2026-01-30 16:04:43.834 +01:00 [DBG] Execution loop ServerJobCancellationWatcher:a5591073 has started in 0,2005 ms
+2026-01-30 16:04:43.836 +01:00 [DBG] Execution loop SqlServerHeartbeatProcess:4b3d14ff has started in 1,377 ms
+2026-01-30 16:04:43.836 +01:00 [DBG] Execution loop ExpirationManager:365f1ece has started in 0,6667 ms
+2026-01-30 16:04:43.837 +01:00 [DBG] Execution loop CountersAggregator:bbe7cba3 has started in 0,9753 ms
+2026-01-30 16:04:43.838 +01:00 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2026-01-30 16:04:43.838 +01:00 [DBG] Execution loop Worker:bbba40b9 has started in 0,3842 ms
+2026-01-30 16:04:43.838 +01:00 [DBG] Aggregating records in 'Counter' table...
+2026-01-30 16:04:43.838 +01:00 [DBG] Execution loop Worker:b4f92783 has started in 0,6128 ms
+2026-01-30 16:04:43.839 +01:00 [DBG] Execution loop Worker:19c56fa1 has started in 1,4828 ms
+2026-01-30 16:04:43.839 +01:00 [DBG] Execution loop Worker:b7316636 has started in 1,9213 ms
+2026-01-30 16:04:43.839 +01:00 [INF] 1 servers were removed due to timeout
+2026-01-30 16:04:43.840 +01:00 [DBG] Execution loop Worker:dd5593f7 has started in 2,3415 ms
+2026-01-30 16:04:43.841 +01:00 [DBG] Execution loop Worker:df86d01a has started in 3,4413 ms
+2026-01-30 16:04:43.842 +01:00 [DBG] Execution loop Worker:5074dd11 has started in 4,522 ms
+2026-01-30 16:04:43.843 +01:00 [DBG] Execution loop Worker:5d1cd7d5 has started in 5,4778 ms
+2026-01-30 16:04:43.843 +01:00 [DBG] Execution loop Worker:422bf6a2 has started in 5,8988 ms
+2026-01-30 16:04:43.846 +01:00 [DBG] Execution loop Worker:7d1692ab has started in 8,4519 ms
+2026-01-30 16:04:43.848 +01:00 [DBG] Execution loop Worker:1d4bf3f5 has started in 10,7223 ms
+2026-01-30 16:04:43.850 +01:00 [DBG] Execution loop Worker:da1cddd7 has started in 12,9688 ms
+2026-01-30 16:04:43.856 +01:00 [DBG] Execution loop Worker:93866a80 has started in 18,2497 ms
+2026-01-30 16:04:43.857 +01:00 [DBG] Execution loop Worker:79b0d84c has started in 19,8095 ms
+2026-01-30 16:04:43.857 +01:00 [DBG] Removing outdated records from the 'Job' table...
+2026-01-30 16:04:43.860 +01:00 [DBG] Execution loop Worker:414b43a3 has started in 22,7557 ms
+2026-01-30 16:04:43.865 +01:00 [DBG] Execution loop Worker:415ae444 has started in 27,6274 ms
+2026-01-30 16:04:43.866 +01:00 [DBG] Execution loop DelayedJobScheduler:1fb21098 has started in 1,1047 ms
+2026-01-30 16:04:43.868 +01:00 [DBG] Execution loop RecurringJobScheduler:23a1b8ab has started in 1,4292 ms
+2026-01-30 16:04:43.868 +01:00 [INF] Server laptop-ohnfi7tt:27924:48ca31d5 all the dispatchers started
+2026-01-30 16:04:43.872 +01:00 [DBG] Removing outdated records from the 'List' table...
+2026-01-30 16:04:43.874 +01:00 [DBG] Removing outdated records from the 'Set' table...
+2026-01-30 16:04:43.877 +01:00 [DBG] Removing outdated records from the 'Hash' table...
+2026-01-30 16:05:06.049 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/v1/visualization/books/8a2d8817-74d8-4cb2-934a-036d40700e00/visualizations - null null
+2026-01-30 16:05:06.054 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-01-30 16:05:06.056 +01:00 [INF] CORS policy execution successful.
+2026-01-30 16:05:06.139 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-30 16:05:06.145 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-01-30 16:05:06.150 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/v1/visualization/books/8a2d8817-74d8-4cb2-934a-036d40700e00/visualizations - 404 0 null 101.391ms
+2026-01-30 16:05:06.155 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5284/api/v1/visualization/books/8a2d8817-74d8-4cb2-934a-036d40700e00/visualizations, Response status code: 404
+2026-01-30 16:05:06.167 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/v1/visualization/books/8a2d8817-74d8-4cb2-934a-036d40700e00/visualizations - null null
+2026-01-30 16:05:06.168 +01:00 [INF] CORS policy execution successful.
+2026-01-30 16:05:06.171 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-30 16:05:06.173 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-01-30 16:05:06.174 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/v1/visualization/books/8a2d8817-74d8-4cb2-934a-036d40700e00/visualizations - 404 0 null 7.1645ms
+2026-01-30 16:05:06.174 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5284/api/v1/visualization/books/8a2d8817-74d8-4cb2-934a-036d40700e00/visualizations, Response status code: 404
+2026-01-30 16:05:13.846 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:05:21.216 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/v1/visualization/books/0087d576-f86c-4b8e-83d5-1d96d7fe37b9/visualizations - null null
+2026-01-30 16:05:21.217 +01:00 [INF] CORS policy execution successful.
+2026-01-30 16:05:21.219 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-30 16:05:21.219 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-01-30 16:05:21.219 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/v1/visualization/books/0087d576-f86c-4b8e-83d5-1d96d7fe37b9/visualizations - 404 0 null 3.2039ms
+2026-01-30 16:05:21.220 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5284/api/v1/visualization/books/0087d576-f86c-4b8e-83d5-1d96d7fe37b9/visualizations, Response status code: 404
+2026-01-30 16:05:21.229 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/v1/visualization/books/0087d576-f86c-4b8e-83d5-1d96d7fe37b9/visualizations - null null
+2026-01-30 16:05:21.229 +01:00 [INF] CORS policy execution successful.
+2026-01-30 16:05:21.229 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-30 16:05:21.230 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-01-30 16:05:21.230 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/v1/visualization/books/0087d576-f86c-4b8e-83d5-1d96d7fe37b9/visualizations - 404 0 null 1.5428ms
+2026-01-30 16:05:21.230 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5284/api/v1/visualization/books/0087d576-f86c-4b8e-83d5-1d96d7fe37b9/visualizations, Response status code: 404
+2026-01-30 16:05:25.808 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/v1/visualization/generate/text-selection - application/json 2064
+2026-01-30 16:05:25.808 +01:00 [INF] CORS policy execution successful.
+2026-01-30 16:05:25.808 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-30 16:05:25.809 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-01-30 16:05:25.810 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/v1/visualization/generate/text-selection - 404 0 null 1.926ms
+2026-01-30 16:05:25.810 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5284/api/v1/visualization/generate/text-selection, Response status code: 404
+2026-01-30 16:05:30.332 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/v1/visualization/generate/text-selection - application/json 2064
+2026-01-30 16:05:30.333 +01:00 [INF] CORS policy execution successful.
+2026-01-30 16:05:30.333 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-30 16:05:30.341 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-01-30 16:05:30.342 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/v1/visualization/generate/text-selection - 404 0 null 9.28ms
+2026-01-30 16:05:30.343 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5284/api/v1/visualization/generate/text-selection, Response status code: 404
+2026-01-30 16:05:43.854 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:06:13.858 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:06:43.861 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:07:13.879 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:07:43.886 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:08:13.892 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:08:43.894 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:09:00.193 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/v1/visualization/generate/text-selection - null null
+2026-01-30 16:09:00.195 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/v1/visualization/generate/text-selection - 404 0 null 2.2938ms
+2026-01-30 16:09:00.196 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5284/api/v1/visualization/generate/text-selection, Response status code: 404
+2026-01-30 16:09:13.896 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:09:39.145 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/ - null null
+2026-01-30 16:09:39.146 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/ - 404 0 null 0.5999ms
+2026-01-30 16:09:39.146 +01:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5284/, Response status code: 404
+2026-01-30 16:09:42.849 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/swagger/index.html - null null
+2026-01-30 16:09:42.915 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/swagger/index.html - 200 null text/html;charset=utf-8 65.1735ms
+2026-01-30 16:09:42.951 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/swagger/index.js - null null
+2026-01-30 16:09:42.953 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/swagger/index.js - 200 null application/javascript;charset=utf-8 2.4405ms
+2026-01-30 16:09:43.136 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - null null
+2026-01-30 16:09:43.255 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.2501ms
+2026-01-30 16:09:43.870 +01:00 [DBG] Aggregating records in 'Counter' table...
+2026-01-30 16:09:43.906 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:10:13.907 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:10:43.918 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:11:13.950 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:11:43.965 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:12:13.966 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:12:43.974 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:13:13.982 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:13:43.990 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:14:13.998 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:14:43.895 +01:00 [DBG] Aggregating records in 'Counter' table...
+2026-01-30 16:14:44.013 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:15:14.028 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:15:44.030 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:16:14.041 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:16:44.043 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:17:14.056 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:17:44.063 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:18:14.063 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:18:44.069 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:19:14.081 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:19:43.907 +01:00 [DBG] Aggregating records in 'Counter' table...
+2026-01-30 16:19:44.090 +01:00 [DBG] Server laptop-ohnfi7tt:27924:48ca31d5 heartbeat successfully sent
+2026-01-30 16:20:10.269 +01:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2026-01-30 16:20:10.269 +01:00 [INF] Server laptop-ohnfi7tt:27924:48ca31d5 caught stopping signal...
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop RecurringJobScheduler:23a1b8ab stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop DelayedJobScheduler:1fb21098 stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:bbba40b9 stopped in 0,0371 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:b7316636 stopped in 0,2174 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:414b43a3 stopped in 0,319 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop ExpirationManager:365f1ece stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:422bf6a2 stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:df86d01a stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:79b0d84c stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:dd5593f7 stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:93866a80 stopped in 0,0888 ms
+2026-01-30 16:20:10.270 +01:00 [INF] Server laptop-ohnfi7tt:27924:48ca31d5 caught stopped signal...
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop ServerJobCancellationWatcher:a5591073 stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:b4f92783 stopped in 0,1557 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:7d1692ab stopped in 0,1849 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:19c56fa1 stopped in 0,1882 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop ServerWatchdog:fc0881b2 stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:5074dd11 stopped in 0,2605 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:5d1cd7d5 stopped in 0,2938 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:da1cddd7 stopped in 0,294 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop CountersAggregator:bbe7cba3 stopped in 0 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:1d4bf3f5 stopped in 0,3326 ms
+2026-01-30 16:20:10.270 +01:00 [DBG] Execution loop Worker:415ae444 stopped in 0,3741 ms
+2026-01-30 16:20:10.271 +01:00 [WRN] Server laptop-ohnfi7tt:27924:48ca31d5 caught shutdown signal...
+2026-01-30 16:20:10.273 +01:00 [DBG] Execution loop SqlServerHeartbeatProcess:4b3d14ff stopped in 3,1876 ms
+2026-01-30 16:20:10.273 +01:00 [DBG] Execution loop ServerHeartbeatProcess:96f4ee08 stopped in 0,0853 ms
+2026-01-30 16:20:10.273 +01:00 [WRN] Server laptop-ohnfi7tt:27924:48ca31d5 stopped non-gracefully due to SqlServerHeartbeatProcess. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-01-30 16:20:10.281 +01:00 [INF] Server laptop-ohnfi7tt:27924:48ca31d5 successfully reported itself as stopped in 6,6297 ms
+2026-01-30 16:20:10.282 +01:00 [INF] Server laptop-ohnfi7tt:27924:48ca31d5 has been stopped in total 11,8059 ms
+2026-01-30 16:20:10.282 +01:00 [DBG] Execution loop BackgroundServerProcess:55980dbc stopped in 12,0714 ms
+2026-01-30 16:20:49.261 +01:00 [INF] Start installing Hangfire SQL objects...
+2026-01-30 16:20:49.727 +01:00 [INF] Hangfire SQL objects installed.
+2026-01-30 16:20:49.751 +01:00 [INF] Visualization API started successfully
+2026-01-30 16:20:49.751 +01:00 [INF] Environment: Development
+2026-01-30 16:20:49.751 +01:00 [INF] Swagger UI: https://localhost:7130/swagger
+2026-01-30 16:20:49.751 +01:00 [INF] Health Check: https://localhost:7130/health
+2026-01-30 16:20:49.751 +01:00 [INF] SignalR Hub: wss://localhost:7130/hubs/visualization
+2026-01-30 16:20:49.770 +01:00 [INF] User profile is available. Using 'C:\Users\DATART\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-30 16:20:49.806 +01:00 [WRN] The WebRootPath was not found: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API\wwwroot. Static files may be unavailable.
+2026-01-30 16:20:49.835 +01:00 [INF] Now listening on: http://localhost:5284
+2026-01-30 16:20:49.844 +01:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: LAPTOP-OHNFI7TT@NovelVision.Visualization'
+2026-01-30 16:20:49.844 +01:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:15.
+2026-01-30 16:20:49.844 +01:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 16
+    Listening queues: 'visualization', 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-01-30 16:20:49.854 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-30 16:20:49.855 +01:00 [INF] Hosting environment: Development
+2026-01-30 16:20:49.855 +01:00 [INF] Content root path: C:\Users\DATART\Desktop\NovelVision\src\Services\Visualization.API\NovelVision.Services.Visualization.API
+2026-01-30 16:20:49.862 +01:00 [DBG] Execution loop BackgroundServerProcess:d3c6c1cb has started in 2,1112 ms
+2026-01-30 16:20:49.966 +01:00 [INF] Server laptop-ohnfi7tt:20076:4073b97a successfully announced in 101,1714 ms
+2026-01-30 16:20:49.968 +01:00 [DBG] Execution loop ServerHeartbeatProcess:af071886 has started in 1,0981 ms
+2026-01-30 16:20:49.970 +01:00 [INF] Server laptop-ohnfi7tt:20076:4073b97a is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-01-30 16:20:49.971 +01:00 [DBG] Execution loop ServerWatchdog:4c164e86 has started in 0,8335 ms
+2026-01-30 16:20:49.972 +01:00 [DBG] Execution loop ServerJobCancellationWatcher:bedf2a12 has started in 0,279 ms
+2026-01-30 16:20:49.972 +01:00 [DBG] Execution loop SqlServerHeartbeatProcess:649bbe0d has started in 0,7221 ms
+2026-01-30 16:20:49.974 +01:00 [DBG] Execution loop ExpirationManager:8aaf0512 has started in 1,7506 ms
+2026-01-30 16:20:49.975 +01:00 [DBG] Execution loop CountersAggregator:8ddbfda9 has started in 0,4379 ms
+2026-01-30 16:20:49.976 +01:00 [DBG] Aggregating records in 'Counter' table...
+2026-01-30 16:20:49.976 +01:00 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2026-01-30 16:20:49.976 +01:00 [DBG] Execution loop Worker:fefd6dfa has started in 1,4568 ms
+2026-01-30 16:20:49.978 +01:00 [DBG] Execution loop Worker:28a571df has started in 2,6855 ms
+2026-01-30 16:20:49.979 +01:00 [DBG] Execution loop Worker:90a5d342 has started in 4,2858 ms
+2026-01-30 16:20:49.981 +01:00 [DBG] Execution loop Worker:f1cc00fe has started in 6,1663 ms
+2026-01-30 16:20:49.981 +01:00 [DBG] Execution loop Worker:63f5cbae has started in 6,4203 ms
+2026-01-30 16:20:49.982 +01:00 [DBG] Execution loop Worker:70384484 has started in 6,8711 ms
+2026-01-30 16:20:49.983 +01:00 [DBG] Execution loop Worker:c87b5d4a has started in 8,2243 ms
+2026-01-30 16:20:49.986 +01:00 [DBG] Execution loop Worker:76b1fb4b has started in 11,2513 ms
+2026-01-30 16:20:49.989 +01:00 [DBG] Execution loop Worker:abf4bb98 has started in 14,4734 ms
+2026-01-30 16:20:49.990 +01:00 [DBG] Execution loop Worker:6161a56b has started in 15,1808 ms
+2026-01-30 16:20:49.992 +01:00 [DBG] Execution loop Worker:bb95a864 has started in 16,9651 ms
+2026-01-30 16:20:49.993 +01:00 [DBG] Removing outdated records from the 'Job' table...
+2026-01-30 16:20:49.994 +01:00 [DBG] Execution loop Worker:46d6448a has started in 19,4137 ms
+2026-01-30 16:20:49.995 +01:00 [DBG] Execution loop Worker:b9c35123 has started in 19,6551 ms
+2026-01-30 16:20:49.995 +01:00 [DBG] Execution loop Worker:6e581166 has started in 20,1753 ms
+2026-01-30 16:20:49.997 +01:00 [DBG] Execution loop Worker:00ff6640 has started in 21,6583 ms
+2026-01-30 16:20:49.999 +01:00 [DBG] Execution loop Worker:8d09d6ca has started in 23,5935 ms
+2026-01-30 16:20:49.999 +01:00 [DBG] Execution loop DelayedJobScheduler:d3fc450e has started in 0,3148 ms
+2026-01-30 16:20:49.999 +01:00 [DBG] Execution loop RecurringJobScheduler:bb657c2a has started in 0,3079 ms
+2026-01-30 16:20:49.999 +01:00 [INF] Server laptop-ohnfi7tt:20076:4073b97a all the dispatchers started
+2026-01-30 16:20:50.004 +01:00 [DBG] Removing outdated records from the 'List' table...
+2026-01-30 16:20:50.008 +01:00 [DBG] Removing outdated records from the 'Set' table...
+2026-01-30 16:20:50.011 +01:00 [DBG] Removing outdated records from the 'Hash' table...
+2026-01-30 16:21:00.255 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/v1/visualization/images/book/0087d576-f86c-4b8e-83d5-1d96d7fe37b9 - null null
+2026-01-30 16:21:00.259 +01:00 [WRN] Failed to determine the https port for redirect.
+2026-01-30 16:21:00.261 +01:00 [INF] CORS policy execution successful.
+2026-01-30 16:21:00.324 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-30 16:21:00.329 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-01-30 16:21:00.333 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-30 16:21:00.335 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-30 16:21:00.338 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/v1/visualization/images/book/0087d576-f86c-4b8e-83d5-1d96d7fe37b9 - 401 0 null 83.4117ms
+2026-01-30 16:21:00.351 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5284/api/v1/visualization/images/book/0087d576-f86c-4b8e-83d5-1d96d7fe37b9 - null null
+2026-01-30 16:21:00.353 +01:00 [INF] CORS policy execution successful.
+2026-01-30 16:21:00.356 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-30 16:21:00.357 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-01-30 16:21:00.359 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-30 16:21:00.359 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-30 16:21:00.359 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5284/api/v1/visualization/images/book/0087d576-f86c-4b8e-83d5-1d96d7fe37b9 - 401 0 null 8.0811ms
+2026-01-30 16:21:02.619 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5284/api/v1/visualization/jobs/text-selection - application/json 2064
+2026-01-30 16:21:02.620 +01:00 [INF] CORS policy execution successful.
+2026-01-30 16:21:02.621 +01:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-30 16:21:02.622 +01:00 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'VrNp10zUnuE83CgzdQuRTzPi6QTdoSkFkQTKJ6GK_sU'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-01-30 16:21:02.623 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-01-30 16:21:02.623 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-30 16:21:02.623 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5284/api/v1/visualization/jobs/text-selection - 401 0 null 3.9355ms
+2026-01-30 16:21:19.979 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:21:49.995 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:22:20.044 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:22:50.063 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:23:20.070 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:23:50.079 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:24:20.087 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:24:50.102 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:25:20.105 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:25:49.988 +01:00 [DBG] Aggregating records in 'Counter' table...
+2026-01-30 16:25:50.120 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:26:20.134 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:26:50.144 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:27:20.146 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:27:50.153 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:28:20.155 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:28:50.159 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:29:20.160 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:29:50.164 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:30:20.169 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:30:49.997 +01:00 [DBG] Aggregating records in 'Counter' table...
+2026-01-30 16:30:50.169 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:31:20.174 +01:00 [DBG] Server laptop-ohnfi7tt:20076:4073b97a heartbeat successfully sent
+2026-01-30 16:31:38.803 +01:00 [WRN] Stopping the server due to DomainUnload or ProcessExit event...
+2026-01-30 16:31:38.803 +01:00 [INF] Server laptop-ohnfi7tt:20076:4073b97a caught stopping signal...
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop CountersAggregator:8ddbfda9 stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:63f5cbae stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:76b1fb4b stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop ServerJobCancellationWatcher:bedf2a12 stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:70384484 stopped in 0,1842 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop ServerWatchdog:4c164e86 stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:b9c35123 stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop DelayedJobScheduler:d3fc450e stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop RecurringJobScheduler:bb657c2a stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:f1cc00fe stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop ExpirationManager:8aaf0512 stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:abf4bb98 stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:90a5d342 stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:6161a56b stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:fefd6dfa stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:6e581166 stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:c87b5d4a stopped in 0 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:bb95a864 stopped in 0,0617 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:28a571df stopped in 0,082 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:46d6448a stopped in 0,0969 ms
+2026-01-30 16:31:38.804 +01:00 [INF] Server laptop-ohnfi7tt:20076:4073b97a caught stopped signal...
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:8d09d6ca stopped in 0,1601 ms
+2026-01-30 16:31:38.804 +01:00 [DBG] Execution loop Worker:00ff6640 stopped in 0,1699 ms
+2026-01-30 16:31:38.805 +01:00 [WRN] Server laptop-ohnfi7tt:20076:4073b97a caught shutdown signal...
+2026-01-30 16:31:38.806 +01:00 [DBG] Execution loop SqlServerHeartbeatProcess:649bbe0d stopped in 1,4574 ms
+2026-01-30 16:31:38.806 +01:00 [DBG] Execution loop ServerHeartbeatProcess:af071886 stopped in 0,0306 ms
+2026-01-30 16:31:38.806 +01:00 [WRN] Server laptop-ohnfi7tt:20076:4073b97a stopped non-gracefully due to SqlServerHeartbeatProcess. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-01-30 16:31:38.813 +01:00 [INF] Server laptop-ohnfi7tt:20076:4073b97a successfully reported itself as stopped in 6,5195 ms
+2026-01-30 16:31:38.814 +01:00 [INF] Server laptop-ohnfi7tt:20076:4073b97a has been stopped in total 9,3907 ms
+2026-01-30 16:31:38.814 +01:00 [DBG] Execution loop BackgroundServerProcess:d3c6c1cb stopped in 9,5585 ms

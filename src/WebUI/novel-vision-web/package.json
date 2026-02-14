@@ -1,0 +1,51 @@
+{
+  "name": "novelvision-web",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
+    "axios": "^1.6.7",
+    "clsx": "^2.1.0",
+    "framer-motion": "^12.27.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.50.1",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.0.1",
+    "react-intersection-observer": "^9.8.1",
+    "react-router-dom": "^6.22.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "zod": "^3.22.4",
+    "zustand": "^4.5.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3"
+  }
+}

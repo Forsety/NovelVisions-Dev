@@ -1,0 +1,40 @@
+# docker-compose.yml
+# Конфигурация для разработки с SQLite
+# Для продакшена с PostgreSQL см. docker-compose.prod.yml
+
+version: '3.8'
+
+services:
+  promptgen-api:
+    build: .
+    container_name: promptgen-api
+    environment:
+      - DEBUG=True
+      - DEVELOPMENT_MODE=True
+      - DB_TYPE=sqlite
+      - DATABASE_URL=sqlite+aiosqlite:///./data/promptgen.db
+      - REDIS_ENABLED=False
+      - LOG_LEVEL=DEBUG
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./storage:/app/storage
+    restart: unless-stopped
+    # Для hot reload в разработке
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  # Redis опционален для разработки
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: promptgen-redis
+  #   ports:
+  #     - "6379:6379"
+  #   volumes:
+  #     - redis_data:/data
+  #   restart: unless-stopped
+
+# volumes:
+#   redis_data:

@@ -1,0 +1,121 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+  z-index: 10;
+}
+
+.errorCode {
+  font-size: 8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a78bfa 0%, #6366f1 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.links {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #a78bfa;
+}
+
+/* Floating books animation */
+.floatingBooks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floatingBook {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.1;
+  animation: float 20s infinite ease-in-out;
+}
+
+.floatingBook:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+.floatingBook:nth-child(2) { left: 20%; top: 60%; animation-delay: 2s; }
+.floatingBook:nth-child(3) { left: 70%; top: 30%; animation-delay: 4s; }
+.floatingBook:nth-child(4) { left: 80%; top: 70%; animation-delay: 6s; }
+.floatingBook:nth-child(5) { left: 50%; top: 80%; animation-delay: 8s; }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .errorCode {
+    font-size: 5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
